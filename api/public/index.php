@@ -4,8 +4,7 @@
     require __DIR__ . '/../vendor/autoload.php';
 
     use Slim\Factory\AppFactory;
-    use Slim\Psr7\Response;
-    use Slim\Exception\HttpNotFoundException;
+    
 
     $container = require __DIR__ . '/../src/Config/dependencies.php';
     AppFactory::setContainer($container);

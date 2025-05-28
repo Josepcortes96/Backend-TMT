@@ -31,9 +31,10 @@
             $this->direccion = $data['direccion'];
             $this->ciudad = $data['ciudad'];
             $this->fechaNacimiento = $data['fecha_de_nacimiento'];
-            $this->centroId = $data['centro_id'];
+            $this->centroId = $data['id_centro'];
             $this->edad = $data['edad'] ?? null;
             $this->altura = $data['altura'] ?? null;
             $this->peso = $data['peso'] ?? null;
         }
     }
+?>

@@ -37,11 +37,20 @@
 
         public function update(Request $request, Response $response, array $args): Response {
             $data = $request->getParsedBody();
+
+            if (!isset($data['centro_id'])) {
+                $userId = (int) $args['id'];
+                $rol = $this->userService->getUserRol($userId);
+                $data['centro_id'] = $this->userService->getCentroId($userId, $rol);
+            }
+
             $user = new User($data);
             $this->userService->updateUser((int) $args['id'], $user);
+
             $response->getBody()->write(json_encode(['status' => 'updated']));
             return $response->withHeader('Content-Type', 'application/json');
         }
+
 
         public function delete(Request $request, Response $response, array $args): Response {
             $this->userService->deleteUser((int) $args['id']);

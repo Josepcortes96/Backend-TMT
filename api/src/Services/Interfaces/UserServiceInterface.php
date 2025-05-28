@@ -11,6 +11,7 @@
         public function deleteUser(int $id): bool;
         public function desactivarUser(int $id): bool;
         public function getUserRol(int $id): string;
+        public function getCentroId(int $id, string $rol): int;
 
     }
 

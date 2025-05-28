@@ -57,4 +57,10 @@
         public function getUserRol(int $id): string {
             return $this->userRepository->getRol($id);
         }
+        
+        public function getCentroId(int $id, string $rol): int {
+            return $this->userRepository->capturarCentroId($id, $rol)
+                ?? throw new \Exception("Centro no encontrado para el usuario con id $id y rol $rol");
+        }
+
     }
