@@ -16,8 +16,9 @@
     $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
     // RUTAS
-    (require __DIR__ . '/../src/Routes/userRoutes.php')($app);
+    (require __DIR__ . '/../src/Routes/userRoutes.php')($app, $container);
 
+  
 
     $app->run();
 
