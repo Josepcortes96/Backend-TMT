@@ -17,6 +17,7 @@
     // RUTAS
     (require __DIR__ . '/../src/Routes/userRoutes.php')($app, $container);
     (require __DIR__ . '/../src/Routes/centroRoutes.php')($app, $container);
+    (require __DIR__ . '/../src/Routes/authRoutes.php')($app, $container);
 
   
 
