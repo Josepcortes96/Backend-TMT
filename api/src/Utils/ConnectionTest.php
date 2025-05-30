@@ -11,7 +11,7 @@ class ConnectionTest
         try {
             $stmt = $pdo->query("SELECT NOW()");
             $result = $stmt->fetchColumn();
-            echo "✅ Conexión exitosa. Fecha del servidor: $result\n";
+            echo "Conexión exitosa.";
         } catch (Exception $e) {
             echo "❌ Error de conexión: " . $e->getMessage() . "\n";
         }
