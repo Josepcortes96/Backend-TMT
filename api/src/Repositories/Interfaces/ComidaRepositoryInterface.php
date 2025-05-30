@@ -10,9 +10,6 @@
         public function asociarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): void;
         public function agregarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool;
         public function actualizarCantidadAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool;
-        public function verificarAlimentoAsociado(int $comidaId, int $alimentoId): bool;
-        public function actualizarCantidadSuplemento(int $comidaId, int $suplementoId, float $cantidad, array $nutricion): void;
-        public function verificarSuplementoAsociado(int $comidaId, int $suplementoId): bool;
         public function eliminarAlimentoDeComida(int $comidaId, int $alimentoId): bool;
         public function eliminarSuplementoDeComida(int $comidaId, int $suplementoId): bool;
         public function actualizarTotalesComida(int $comidaId): void;

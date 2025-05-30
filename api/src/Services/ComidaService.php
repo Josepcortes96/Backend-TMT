@@ -2,23 +2,30 @@
 
     namespace App\Services;
 
-    use App\Repositories\Interfaces\ComidaRepositoryInterface;
+use App\Repositories\Interfaces\AlimentoRepositoryInterface;
+use App\Repositories\Interfaces\ComidaRepositoryInterface;
     use App\Services\Interfaces\ComidaServiceInterface;
-    use Exception;
-
+   
+    /**
+     * Servicio para manejar la logica de negocio de las comidas.
+     */
     class ComidaService implements ComidaServiceInterface {
         public function __construct(
             private ComidaRepositoryInterface $repo,
-            private $alimentoModel
+            private AlimentoRepositoryInterface $alimentoRepository
         ) {}
-
+        /**
+         * Funcion para crear distintas comidas con los alimentos que estan asociados asi como los valores nutricionales de estos.
+         * @param array $datos, Son los datos del tipo de comida con sus valores y los alimentos.
+         * @return array Ids de las comidas que han sido creadas 
+         */
         public function crearComidasConAlimentos(array $datos): array {
             $respuestas = [];
             foreach ($datos as $comidaData) {
                 $idComida = $this->repo->createComida($comidaData);
                 foreach ($comidaData['alimentos'] as $al) {
-                    $alimento = $this->alimentoModel->getAlimentoPorId($al['id_alimento']);
-                    $valores = $this->alimentoModel->calcularValoresNutricionales($alimento, $al['cantidad']);
+                    $alimento = $this->alimentoRepository->getAlimentoPorId($al['id_alimento']);
+                    $valores = $this->alimentoRepository->calcularValoresNutricionales($alimento, $al['cantidad']);
                     $this->repo->asociarAlimento($idComida, $al['id_alimento'], $al['cantidad'], $valores);
 
                     if (isset($al['equivalentes'])) {
@@ -41,11 +48,17 @@
             return $respuestas;
         }
 
+        /**
+         * Funcion para agregar a las comidas alimentos adicionales
+         * @param array $datos. Estructura de la comida donde se van a añadir los alimentos.
+         * @return array Retorna la comida actualizada
+         */
+
         public function agregarAlimentosAComida(array $datos): array {
             $idComida = $datos['id_comida'];
             foreach ($datos['alimentos'] as $al) {
-                $alimento = $this->alimentoModel->getAlimentoPorId($al['id_alimento']);
-                $valores = $this->alimentoModel->calcularValoresNutricionales($alimento, $al['cantidad']);
+                $alimento = $this->alimentoRepository->getAlimentoPorId($al['id_alimento']);
+                $valores = $this->alimentoRepository->calcularValoresNutricionales($alimento, $al['cantidad']);
                 $this->repo->agregarAlimento($idComida, $al['id_alimento'], $al['cantidad'], $valores);
             }
             $this->repo->actualizarTotalesComida($idComida);
