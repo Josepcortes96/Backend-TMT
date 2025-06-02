@@ -15,17 +15,15 @@
     $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
     // RUTAS
-    (require __DIR__ . '/../src/Routes/userRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/centroRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/authRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/alimentoRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/comidaRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/equivalenciaRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/dietaRoutes.php')($app, $container);
-    (require __DIR__ . '/../src/Routes/datoRoutes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/User/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Equivalencia/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Dieta/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Dato/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Comida/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Centro/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Auth/routes.php')($app, $container);
+    (require __DIR__ . '/../src/Modules/Alimento/routes.php')($app, $container);
 
-
-  
 
     $app->run();
 
