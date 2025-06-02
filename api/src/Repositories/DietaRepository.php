@@ -1,57 +1,129 @@
 <?php
+namespace App\Repositories;
+use App\Repositories\Interfaces\DietaRepositoryInterface;
+use PDO;
+use Exception;
 
-    namespace App\Repositories;
+class DietaRepository implements DietaRepositoryInterface {
+    private PDO $pdo;
 
-    use App\Repositories\Interfaces\DietaRepositoryInterface;
-    use PDO;
+    public function __construct(PDO $pdo) {
+        $this->pdo = $pdo;
+    }
 
-    class DietaRepository implements DietaRepositoryInterface {
-        public function __construct(private PDO $pdo) {}
+            public function createDieta(string $nombre, ?string $descripcion, int $id_usuario, int $id_dato, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int{
+                
+                    $sql = "INSERT INTO dietas (
+                                nombre, descripcion, id_usuario, id_dato, proteinas_dieta, grasas_dieta, carbohidratos_dieta, fecha_creacion
+                            ) VALUES (
+                                :nombre, :descripcion, :id_usuario, :id_dato, :proteinas_dieta, :grasas_dieta, :carbohidratos_dieta, :fecha_creacion
+                            )";
 
-        public function create(string $nombre, string $descripcion , int $id_dato): int {
-            $sql = "INSERT INTO dietas (nombre, descripcion, id_dato) VALUES (:nombre, :descripcion, :id_dato)";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([':nombre' => $nombre, ':descripcion' => $descripcion]);
-            return (int)$this->pdo->lastInsertId();
+                    $stmt = $this->pdo->prepare($sql);
+
+                    try {
+                        $stmt->execute([
+                            ':nombre' => $nombre,
+                            ':descripcion' => $descripcion,
+                            ':id_usuario' => $id_usuario,
+                            ':id_dato' => $id_dato,
+                            ':proteinas_dieta' => $proteinas_dieta,
+                            ':grasas_dieta' => $grasas_dieta,
+                            ':carbohidratos_dieta' => $carbohidratos_dieta,
+                            ':fecha_creacion' => $fecha_creacion ?? date('Y-m-d')
+                        ]);
+                    } catch (Exception $e) {
+                        throw new Exception("Error al crear la dieta: " . $e->getMessage());
+                    }
+
+                    $id_dieta = $this->pdo->lastInsertId();
+
+                    if (!$id_dieta) {
+                        throw new Exception("No se pudo obtener el ID de la dieta recién creada.");
+                    }
+
+                    return $id_dieta;
+            }
+
+    
+
+    public function getDietas():array {
+        $sql = "SELECT * FROM dietas";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getDietaById($id_dieta):bool {
+        $sql = "SELECT COUNT(*) FROM dietas WHERE id_dieta = :id_dieta";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':id_dieta' => $id_dieta]);
+        return $stmt->fetchColumn() > 0;
+    }
+
+    public function getDieta($id_dieta):array {
+        $sql = "SELECT nombre, descripcion FROM dietas WHERE id_dieta = :id_dieta";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id_dieta', $id_dieta, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function deleteDieta($id_dieta):bool {
+        $sql = "DELETE FROM dietas WHERE id_dieta = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id', $id_dieta);
+        return $stmt->execute();
+    }
+
+    public function asociarComidaDieta($id_dieta, $id_comida):void {
+        if (!is_int($id_dieta) || !is_int($id_comida)) {
+            throw new Exception("Los IDs deben ser números enteros.");
         }
 
-        public function getAll(): array {
-            $stmt = $this->pdo->query("SELECT * FROM dietas");
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $check = $this->pdo->prepare("SELECT COUNT(*) FROM dieta_comida WHERE id_dieta = :id_dieta AND id_comida = :id_comida");
+        $check->execute([
+            ':id_dieta' => $id_dieta,
+            ':id_comida' => $id_comida
+        ]);
+
+        if ((int)$check->fetchColumn() > 0) {
+            return;
         }
 
-        public function getById(int $id): ?array {
-            $stmt = $this->pdo->prepare("SELECT nombre, descripcion FROM dietas WHERE id_dieta = :id");
-            $stmt->execute([':id' => $id]);
-            return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
-        }
+        $sql = "INSERT INTO dieta_comida (id_dieta, id_comida) VALUES (:id_dieta, :id_comida)";
+        $stmt = $this->pdo->prepare($sql);
 
-        public function exists(int $id): bool {
-            $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM dietas WHERE id_dieta = :id");
-            $stmt->execute([':id' => $id]);
-            return $stmt->fetchColumn() > 0;
-        }
-
-        public function delete(int $id): bool {
-            $stmt = $this->pdo->prepare("DELETE FROM dietas WHERE id_dieta = :id");
-            return $stmt->execute([':id' => $id]);
-        }
-
-        public function asociarComida(int $id_dieta, int $id_comida): void {
-            $stmt = $this->pdo->prepare("INSERT INTO dieta_comida (id_dieta, id_comida) VALUES (:id_dieta, :id_comida)");
-            $stmt->execute([':id_dieta' => $id_dieta, ':id_comida' => $id_comida]);
-        }
-
-        public function updateMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): bool {
-            $sql = "UPDATE dietas SET proteinas_dieta = :proteinas, grasas_dieta = :grasas, carbohidratos_dieta = :carbohidratos WHERE id_dieta = :id";
-            $stmt = $this->pdo->prepare($sql);
+        try {
             $stmt->execute([
-                ':id' => $id_dieta,
-                ':proteinas' => $proteinas,
-                ':grasas' => $grasas,
-                ':carbohidratos' => $carbohidratos
+                ':id_dieta' => $id_dieta,
+                ':id_comida' => $id_comida
             ]);
-            return $stmt->rowCount() > 0;
+        } catch (Exception $e) {
+            throw new Exception("Error al asociar comida a dieta: " . $e->getMessage());
         }
     }
+
+    public function actualizarDieta($id_dieta, $proteinas_dieta, $grasas_dieta, $carbohidratos_dieta):array {
+        $stmt = $this->pdo->prepare("
+            UPDATE dietas
+            SET proteinas_dieta = :proteinas_dieta,
+                grasas_dieta = :grasas_dieta,
+                carbohidratos_dieta = :carbohidratos_dieta
+            WHERE id_dieta = :id_dieta
+        ");
+        $stmt->execute([
+            'id_dieta' => $id_dieta,
+            'proteinas_dieta' => $proteinas_dieta,
+            'grasas_dieta' => $grasas_dieta,
+            'carbohidratos_dieta' => $carbohidratos_dieta
+        ]);
+
+        if ($stmt->rowCount() > 0) {
+            return ["message" => "Dieta actualizada correctamente"];
+        } else {
+            return ["error" => "No se pudo actualizar la dieta"];
+        }
+    }
+}
 ?>

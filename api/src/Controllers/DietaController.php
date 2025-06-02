@@ -15,64 +15,41 @@ class DietaController
         $this->dietaService = $dietaService;
     }
 
-    public function obtenerTodas(Request $request, Response $response): Response
-    {
-        try {
-            $dietas = $this->dietaService->getAllDietas();
-
-            $response->getBody()->write(json_encode([
-                'success' => true,
-                'data' => $dietas
-            ]));
-        } catch (\Throwable $e) {
-            $response->getBody()->write(json_encode([
-                'success' => false,
-                'message' => $e->getMessage()
-            ]));
-            return $response->withStatus(500);
-        }
-
-        return $response->withHeader('Content-Type', 'application/json');
-    }
-
-    public function obtenerPorId(Request $request, Response $response, array $args): Response
-    {
-        try {
-            $id = (int) $args['id'];
-            $dieta = $this->dietaService->getDietaById($id);
-
-            if (!$dieta) {
-                $response->getBody()->write(json_encode([
-                    'success' => false,
-                    'message' => 'Dieta no encontrada'
-                ]));
-                return $response->withStatus(404);
-            }
-
-            $response->getBody()->write(json_encode([
-                'success' => true,
-                'data' => $dieta
-            ]));
-        } catch (\Throwable $e) {
-            $response->getBody()->write(json_encode([
-                'success' => false,
-                'message' => $e->getMessage()
-            ]));
-            return $response->withStatus(500);
-        }
-
-        return $response->withHeader('Content-Type', 'application/json');
-    }
-
     public function crear(Request $request, Response $response): Response
     {
         try {
             $data = $request->getParsedBody();
-            $result = $this->dietaService->createDieta($data);
+            $idDieta = $this->dietaService->crearDietaConMacros($data);
 
             $response->getBody()->write(json_encode([
                 'success' => true,
-                'data' => $result
+                'id_dieta' => $idDieta
+            ]));
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+            return $response->withStatus(500);
+        }
+
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function asociarComidas(Request $request, Response $response): Response
+    {
+        try {
+            $data = $request->getParsedBody();
+
+            if (!isset($data['id_dieta']) || !isset($data['comidas']) || !is_array($data['comidas'])) {
+                throw new \Exception("Se requiere id_dieta y un array de comidas.");
+            }
+
+            $this->dietaService->asociarComidas((int) $data['id_dieta'], $data['comidas']);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'message' => 'Comidas asociadas correctamente.'
             ]));
         } catch (\Throwable $e) {
             $response->getBody()->write(json_encode([
@@ -88,9 +65,15 @@ class DietaController
     public function actualizar(Request $request, Response $response, array $args): Response
     {
         try {
-            $id = (int) $args['id'];
-            $macros = $request->getParsedBody();
-            $result = $this->dietaService->actualizarDieta($id, $macros);
+            $id_dieta = (int) $args['id'];
+            $data = $request->getParsedBody();
+
+            $result = $this->dietaService->actualizarMacros(
+                $id_dieta,
+                $data['proteinas_dieta'] ?? 0,
+                $data['grasas_dieta'] ?? 0,
+                $data['carbohidratos_dieta'] ?? 0
+            );
 
             $response->getBody()->write(json_encode([
                 'success' => true,
@@ -110,11 +93,12 @@ class DietaController
     public function eliminar(Request $request, Response $response, array $args): Response
     {
         try {
-            $id = (int) $args['id'];
-            $success = $this->dietaService->deleteDieta($id);
+            $id_dieta = (int) $args['id'];
+            $this->dietaService->eliminarDieta($id_dieta);
 
             $response->getBody()->write(json_encode([
-                'success' => $success
+                'success' => true,
+                'message' => 'Dieta eliminada correctamente.'
             ]));
         } catch (\Throwable $e) {
             $response->getBody()->write(json_encode([
@@ -127,21 +111,35 @@ class DietaController
         return $response->withHeader('Content-Type', 'application/json');
     }
 
-    public function asociarComidas(Request $request, Response $response, array $args): Response
+    public function listar(Request $request, Response $response): Response
     {
         try {
-            $id_dieta = (int) $args['id'];
-            $body = $request->getParsedBody();
-
-            if (!isset($body['comidas']) || !is_array($body['comidas'])) {
-                throw new \Exception("Se espera un array de comidas");
-            }
-
-            $result = $this->dietaService->asociarComidas($id_dieta, $body['comidas']);
+            $dietas = $this->dietaService->obtenerTodas();
 
             $response->getBody()->write(json_encode([
                 'success' => true,
-                'data' => $result
+                'data' => $dietas
+            ]));
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+            return $response->withStatus(500);
+        }
+
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function obtener(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_dieta = (int) $args['id'];
+            $dieta = $this->dietaService->obtenerPorId($id_dieta);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $dieta
             ]));
         } catch (\Throwable $e) {
             $response->getBody()->write(json_encode([

@@ -2,62 +2,92 @@
 
 namespace App\Services;
 
-use App\Repositories\Interfaces\DietaRepositoryInterface;
 use App\Services\Interfaces\DietaServiceInterface;
+
+use App\Repositories\Interfaces\DietaRepositoryInterface;
+use App\Repositories\Interfaces\ComidaRepositoryInterface;
+use Exception;
 
 class DietaService implements DietaServiceInterface
 {
-    public function __construct(private DietaRepositoryInterface $repo) {}
+    private DietaRepositoryInterface $dietaRepository;
+    private ComidaRepositoryInterface $comidaRepository;
 
-    public function createDieta(array $data): array
-    {
-        $id = $this->repo->create($data['nombre'], $data['descripcion'], $data['id_dato']);
-        return ["id_dieta" => $id];
+    public function __construct(
+        DietaRepositoryInterface $dietaRepository,
+        ComidaRepositoryInterface $comidaRepository
+    ) {
+        $this->dietaRepository = $dietaRepository;
+        $this->comidaRepository = $comidaRepository;
     }
 
-    public function getAllDietas(): array
+    public function crearDietaConMacros(array $datos): int
     {
-        return $this->repo->getAll();
+        if (
+            empty($datos['nombre']) ||
+            !isset($datos['descripcion']) ||
+            empty($datos['id_usuario']) ||
+            empty($datos['id_dato']) ||
+            !isset($datos['proteinas_dieta']) ||
+            !isset($datos['grasas_dieta']) ||
+            !isset($datos['carbohidratos_dieta'])
+        ) {
+            throw new Exception("Faltan datos obligatorios para crear la dieta.");
+        }
+
+        return $this->dietaRepository->createDieta(
+            $datos['nombre'],
+            $datos['descripcion'],
+            $datos['id_usuario'],
+            $datos['id_dato'],
+            $datos['proteinas_dieta'],
+            $datos['grasas_dieta'],
+            $datos['carbohidratos_dieta'],
+            $datos['fecha_creacion'] ?? null
+        );
     }
 
-    public function getDietaById(int $id_dieta): ?array
+    public function actualizarMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): array
     {
-        return $this->repo->getById($id_dieta);
+        return $this->dietaRepository->actualizarDieta($id_dieta, $proteinas, $grasas, $carbohidratos);
     }
 
-    public function deleteDieta(int $id_dieta): bool
+    public function asociarComidas(int $id_dieta, array $comidas): void
     {
-        return $this->repo->delete($id_dieta);
-    }
-
-    public function asociarComidas(int $id_dieta, array $comidas): array
-    {
-        if (!$this->repo->exists($id_dieta)) {
-            throw new \Exception("La dieta no existe.");
+        if (!$this->dietaRepository->getDietaById($id_dieta)) {
+            throw new Exception("La dieta con ID $id_dieta no existe.");
         }
 
         foreach ($comidas as $comida) {
-            if (!isset($comida['id_comida'])) {
-                throw new \Exception("Comida inválida.");
-            }
-            $this->repo->asociarComida($id_dieta, (int)$comida['id_comida']);
-        }
+            $id_comida = is_array($comida) ? $comida['id_comida'] ?? null : $comida;
 
-        return ["message" => "Comidas asociadas correctamente"];
+            if (!$id_comida || !$this->comidaRepository->getComidaId($id_comida)) {
+                throw new Exception("La comida con ID $id_comida no existe.");
+            }
+
+            $this->dietaRepository->asociarComidaDieta($id_dieta, (int)$id_comida);
+        }
     }
 
-    public function actualizarDieta(int $id_dieta, array $macros): array
+    public function eliminarDieta(int $id_dieta): bool
     {
-        $ok = $this->repo->updateMacros(
-            $id_dieta,
-            $macros['proteinas_dieta'],
-            $macros['grasas_dieta'],
-            $macros['carbohidratos_dieta']
-        );
+        return $this->dietaRepository->deleteDieta($id_dieta);
+    }
 
-        return $ok
-            ? ["message" => "Dieta actualizada correctamente"]
-            : ["error" => "No se pudo actualizar la dieta"];
+    public function obtenerTodas(): array
+    {
+        return $this->dietaRepository->getDietas();
+    }
+
+    public function obtenerPorId(int $id_dieta): ?array
+    {
+        return $this->dietaRepository->getDieta($id_dieta);
+    }
+
+    public function dietaExiste(int $id_dieta): bool
+    {
+        return $this->dietaRepository->getDietaById($id_dieta);
     }
 }
+
 ?>

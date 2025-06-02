@@ -2,57 +2,21 @@
 
 namespace App\Services\Interfaces;
 
-/**
- * Interfaz para los servicios relacionados con la gestión de dietas.
- */
 interface DietaServiceInterface
 {
-    /**
-     * Crea una nueva dieta.
-     *
-     * @param array $data
-     * @return array
-     */
-    public function createDieta(array $data): array;
+    public function crearDietaConMacros(array $datos): int;
 
-    /**
-     * Obtiene todas las dietas.
-     *
-     * @return array
-     */
-    public function getAllDietas(): array;
+    public function actualizarMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): array;
 
-    /**
-     * Verifica si una dieta existe por su ID.
-     *
-     * @param int $id_dieta
-     * @return array|null
-     */
-    public function getDietaById(int $id_dieta): ?array;
+    public function asociarComidas(int $id_dieta, array $comidas): void;
 
-    /**
-     * Elimina una dieta por su ID.
-     *
-     * @param int $id_dieta
-     * @return bool
-     */
-    public function deleteDieta(int $id_dieta): bool;
+    public function eliminarDieta(int $id_dieta): bool;
 
-    /**
-     * Asocia varias comidas a una dieta.
-     *
-     * @param int $id_dieta
-     * @param array $comidas
-     * @return array
-     */
-    public function asociarComidas(int $id_dieta, array $comidas): array;
+    public function obtenerTodas(): array;
 
-    /**
-     * Actualiza los macronutrientes de una dieta.
-     *
-     * @param int $id_dieta
-     * @param array $macros
-     * @return array
-     */
-    public function actualizarDieta(int $id_dieta, array $macros): array;
+    public function obtenerPorId(int $id_dieta): ?array;
+
+    public function dietaExiste(int $id_dieta): bool;
 }
+?>
+
