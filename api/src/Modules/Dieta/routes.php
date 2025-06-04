@@ -1,6 +1,6 @@
 <?php
 use Slim\App;
-use App\Controllers\DietaController;
+use App\Modules\Dieta\DietaController;
 use Psr\Container\ContainerInterface;
 
 return function (App $app, ContainerInterface $container) {

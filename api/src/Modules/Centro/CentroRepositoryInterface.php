@@ -1,7 +1,7 @@
 <?php
 
     namespace App\Modules\Centro;
-    use App\Modules\Centro;
+    
 
     interface CentroRepositoryInterface {
         public function createCentro(string $nombre, string $direccion, string $telefono, string $nombre_fiscal, string $NIF, string $ciudad, string $codigo_postal, string $pais, string $correo): bool;

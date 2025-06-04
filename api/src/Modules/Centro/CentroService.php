@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Centro;
+namespace App\Modules\Centro;
 
-use App\Centro\CentroRepositoryInterface;
-use App\Centro\CentroServiceInterface;
-use Exception;
+use App\Modules\Centro\CentroRepositoryInterface;
+use App\Modules\Centro\CentroServiceInterface;
+
 
 class CentroService implements CentroServiceInterface {
 

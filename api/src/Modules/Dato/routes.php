@@ -1,7 +1,7 @@
 <?php
 
     use Slim\App;
-    use App\Controllers\DatoController;
+    use App\Modules\Dato\DatoController;
     use Psr\Container\ContainerInterface;
 
     return function (App $app, ContainerInterface $container) {
