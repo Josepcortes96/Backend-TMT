@@ -1,9 +1,9 @@
 <?php
 
-use App\Repositories\DatoRepository;
-use App\Repositories\Interfaces\DatoRepositoryInterface;
-use App\Services\DatoService;
-use App\Services\Interfaces\DatoServiceInterface;
+use App\Modules\Dato\DatoRepository;
+use App\Modules\Dato\DatoRepositoryInterface;
+use App\Modules\Dato\DatoService;
+use App\Modules\Dato\DatoServiceInterface;
 
 return[
     DatoServiceInterface::class => DI\autowire(DatoService::class),

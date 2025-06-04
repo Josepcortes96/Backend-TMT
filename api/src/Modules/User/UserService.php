@@ -1,10 +1,10 @@
 <?php
 
-    namespace App\Services;
+    namespace App\Modules\User;
 
-    use App\Models\User;
-    use App\Repositories\Interfaces\UserRepositoryInterface;
-    use App\Services\Interfaces\UserServiceInterface;
+    
+    use App\Modules\User\UserRepositoryInterface;
+    use App\Modules\User\UserServiceInterface;
  
 
     class UserService implements UserServiceInterface{

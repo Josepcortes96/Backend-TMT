@@ -1,9 +1,9 @@
 <?php
 
-    use App\Repositories\AlimentoRepository;
-    use App\Repositories\Interfaces\AlimentoRepositoryInterface;
-    use App\Services\AlimentoService;
-    use App\Services\Interfaces\AlimentoServiceInterface;
+    use App\Modules\Alimento\AlimentoRepository;
+    use App\Modules\Alimento\AlimentoRepositoryInterface;
+    use App\Modules\Alimento\AlimentoService;
+    use App\Modules\Alimento\AlimentoServiceInterface;
 
     return[
         AlimentoServiceInterface::class  => DI\autowire(AlimentoService::class),

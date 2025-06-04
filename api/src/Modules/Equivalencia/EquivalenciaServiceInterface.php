@@ -1,6 +1,8 @@
 <?php
 
-    namespace App\Services\Interfaces;
+    
+    namespace App\Modules\Equivalencia;
+
     
     interface EquivalenciaServiceInterface{
 

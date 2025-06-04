@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Modules\Equivalencia;
 
-use App\Services\Interfaces\EquivalenciaServiceInterface;
+use App\Modules\Equivalencia\EquivalenciaServiceInterface;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 

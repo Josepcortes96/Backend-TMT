@@ -1,5 +1,5 @@
 <?php
-    use App\Controllers\EquivalenciaController;
+    use App\Modules\Equivalencia\EquivalenciaController;
     use Psr\Container\ContainerInterface;
     use Slim\App;
 

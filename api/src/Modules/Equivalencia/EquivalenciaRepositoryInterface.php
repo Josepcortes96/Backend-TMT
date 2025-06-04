@@ -1,7 +1,9 @@
 <?php
 
    
-namespace App\Repositories\Interfaces;
+
+namespace App\Modules\Equivalencia;
+
 
 /**
  * Interface para el repositorio de equivalencias.

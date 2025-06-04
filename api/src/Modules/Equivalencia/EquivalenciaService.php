@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Services;
 
-use App\Repositories\Interfaces\EquivalenciaRepositoryInterface;
-use App\Services\Interfaces\EquivalenciaServiceInterface;
+namespace App\Modules\Equivalencia;
+
+
+use App\Modules\Equivalencia\EquivalenciaRepositoryInterface;
+use App\Modules\Equivalencia\EquivalenciaServiceInterface;
 
 /**
  * Servicio para calcular equivalencias nutricionales entre alimentos.
@@ -68,3 +70,4 @@ class EquivalenciaService implements EquivalenciaServiceInterface
         ];
     }
 }
+?>

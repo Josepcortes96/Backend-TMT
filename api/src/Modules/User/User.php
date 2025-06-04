@@ -1,6 +1,6 @@
 <?php
 
-    namespace App\Models;
+    namespace App\Modules\User;
 
     class User{
         public string $username;

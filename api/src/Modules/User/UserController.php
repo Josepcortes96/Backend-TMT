@@ -1,9 +1,9 @@
 <?php
 
-    namespace App\Controllers;
+    namespace App\Modules\User;
 
-    use App\Models\User;
-    use App\Services\Interfaces\UserServiceInterface;
+    
+    use App\Modules\User\UserServiceInterface;
     use Psr\Http\Message\ResponseInterface as Response;
     use Psr\Http\Message\ServerRequestInterface as Request;
 

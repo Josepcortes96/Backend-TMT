@@ -1,9 +1,9 @@
 <?php
 
-use App\Auth\AuthRepository;
-use App\Auth\AuthRepositoryInterface;
-use App\Auth\AuthService;
-use App\Auth\AuthServiceInterface;
+use App\Modules\Auth\AuthRepository;
+use App\Modules\Auth\AuthRepositoryInterface;
+use App\Modules\Auth\AuthService;
+use App\Modules\Auth\AuthServiceInterface;
 
 
 

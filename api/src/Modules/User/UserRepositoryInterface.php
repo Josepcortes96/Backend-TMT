@@ -1,7 +1,7 @@
 <?php
 
-    namespace App\Repositories\Interfaces;
-    use App\Models\User;
+    namespace App\Modules\User;
+    
 
     interface UserRepositoryInterface {
         public function create(User $user): int;

@@ -2,10 +2,10 @@
 
 
 
-use App\Repositories\Interfaces\UserRepositoryInterface;
-use App\Repositories\UserRepository;
-use App\Services\Interfaces\UserServiceInterface;
-use App\Services\UserService;
+use App\Modules\User\UserRepositoryInterface;
+use App\Modules\User\UserRepository;
+use App\Modules\User\UserServiceInterface;
+use App\Modules\User\UserService;
 
 
 return [

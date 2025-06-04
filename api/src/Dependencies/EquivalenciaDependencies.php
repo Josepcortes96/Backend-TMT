@@ -1,9 +1,9 @@
 <?php
 
-use App\Repositories\EquivalenciaRepository;
-use App\Repositories\Interfaces\EquivalenciaRepositoryInterface;
-use App\Services\EquivalenciaService;
-use App\Services\Interfaces\EquivalenciaServiceInterface;
+use App\Modules\Equivalencia\EquivalenciaRepository;
+use App\Modules\Equivalencia\EquivalenciaRepositoryInterface;
+use App\Modules\Equivalencia\EquivalenciaService;
+use App\Modules\Equivalencia\EquivalenciaServiceInterface;
 
     return[
         EquivalenciaServiceInterface::class => DI\autowire(EquivalenciaService::class),

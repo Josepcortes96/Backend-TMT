@@ -1,9 +1,9 @@
 <?php
 
-use App\Repositories\Interfaces\CentroRepositoryInterface;
-use App\Repositories\CentroRepository;
-use App\Services\Interfaces\CentroServiceInterface;
-use App\Services\CentroService;
+use App\Modules\Centro\CentroRepositoryInterface;
+use App\Modules\Centro\CentroRepository;
+use App\Modules\Centro\CentroServiceInterface;
+use App\Modules\Centro\CentroService;
 
 return [
     CentroRepositoryInterface::class => DI\autowire(CentroRepository::class),

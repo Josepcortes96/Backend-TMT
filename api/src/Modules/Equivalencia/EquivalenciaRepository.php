@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Modules\Equivalencia;
 
-use App\Repositories\Interfaces\EquivalenciaRepositoryInterface;
+
+use App\Modules\Equivalencia\EquivalenciaRepositoryInterface;
 use PDO;
 
 /**

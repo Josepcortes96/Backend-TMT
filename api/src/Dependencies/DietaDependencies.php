@@ -1,9 +1,9 @@
 <?php
 
-use App\Repositories\DietaRepository;
-use App\Repositories\Interfaces\DietaRepositoryInterface;
-use App\Services\DietaService;
-use App\Services\Interfaces\DietaServiceInterface;
+use App\Modules\Dieta\DietaRepository;
+use App\Modules\Dieta\DietaRepositoryInterface;
+use App\Modules\Dieta\DietaService;
+use App\Modules\Dieta\DietaServiceInterface;
 
 
     return[

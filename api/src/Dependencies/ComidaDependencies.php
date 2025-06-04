@@ -1,11 +1,11 @@
 <?php
 
-use App\Repositories\AlimentoRepository;
-use App\Repositories\ComidaRepository;
-use App\Repositories\Interfaces\AlimentoRepositoryInterface;
-use App\Repositories\Interfaces\ComidaRepositoryInterface;
-use App\Services\ComidaService;
-use App\Services\Interfaces\ComidaServiceInterface;
+use App\Modules\Alimento\AlimentoRepository;
+use App\Modules\Comida\ComidaRepository;
+use App\Modules\Alimento\AlimentoRepositoryInterface;
+use App\Modules\Comida\ComidaRepositoryInterface;
+use App\Modules\Comida\ComidaService;
+use App\Modules\Comida\ComidaServiceInterface;
 
 
 

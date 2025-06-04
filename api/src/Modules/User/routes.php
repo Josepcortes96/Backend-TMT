@@ -1,7 +1,7 @@
 <?php
 
     use Slim\App;
-    use App\Controllers\UserController;
+    use App\Modules\User\UserController;
     use Psr\Container\ContainerInterface;
 
     return function (App $app, ContainerInterface $container) {
