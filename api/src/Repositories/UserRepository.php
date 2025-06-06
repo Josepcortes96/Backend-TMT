@@ -219,4 +219,19 @@ class UserRepository implements UserRepositoryInterface {
             default => throw new Exception("Rol no válido: $rol")
         };
     }
+   public function getUsersByCentro(int $centroId): array {
+        $stmt = $this->pdo->prepare("
+            SELECT u.*, c.nombre AS nombre_centro
+            FROM usuarios u
+            INNER JOIN clientes cli ON u.id_usuario = cli.id_usuario
+            INNER JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
+            INNER JOIN centros c ON cc.id_centro = c.id_centro
+            WHERE c.id_centro = :centro_id
+        ");
+        $stmt->execute([':centro_id' => $centroId]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
 }

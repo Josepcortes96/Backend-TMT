@@ -35,6 +35,41 @@
                 ':jwtHash' => $jwtHash
             ]);
         }
+
+        public function obtenerRolYCentro(int $id_usuario): array {
+            $stmt = $this->pdo->prepare("
+               SELECT 
+                    u.rol,
+                    CASE
+                        WHEN u.rol = 'Cliente' THEN cc.id_centro
+                        WHEN u.rol = 'Preparador' THEN pc.id_centro
+                        WHEN u.rol = 'Propietario' THEN prc.id_centro
+                        ELSE NULL
+                    END AS id_centro
+                FROM usuarios u
+                LEFT JOIN clientes c ON u.id_usuario = c.id_usuario
+                LEFT JOIN centro_cliente cc ON c.id_cliente = cc.id_cliente
+
+                LEFT JOIN preparadores p ON u.id_usuario = p.id_usuario
+                LEFT JOIN centro_preparador pc ON p.id_preparador = pc.id_preparador
+
+                LEFT JOIN propietarios pr ON u.id_usuario = pr.id_usuario
+                LEFT JOIN centro_propietario prc ON pr.id_propietario = prc.id_propietario
+
+                WHERE u.id_usuario = :id_usuario
+            ");
+
+            $stmt->execute([':id_usuario' => $id_usuario]);
+            $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$data || !$data['id_centro']) {
+                throw new Exception("No se pudo obtener rol o centro del usuario.");
+            }
+
+            return $data;
+        }
+
+
     }
 
       

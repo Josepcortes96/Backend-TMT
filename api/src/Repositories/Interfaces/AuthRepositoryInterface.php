@@ -6,5 +6,7 @@
         public function verificarCredenciales(string $username, string $password): int;
 
         public function registrarLogin(int $id_usuario, string $ip, string $userAgent, string $jwtHash): void;
+
+        public function obtenerRolYCentro(int $id_usuario): array;
     }
 ?>

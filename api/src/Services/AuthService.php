@@ -21,11 +21,19 @@
 
             $userId = $this->authRepository->verificarCredenciales($username, $password);
 
+            // Obtener rol y centro
+            $info = $this->authRepository->obtenerRolYCentro($userId);
+            $rol = $info['rol'];
+            $centroId = $info['id_centro'];
+
+            // Construir el JWT
             $payload = [
                 'iss' => 'localhost',
                 'iat' => time(),
                 'exp' => time() + 7200,
-                'id_usuario' => $userId
+                'id_usuario' => $userId,
+                'rol' => $rol,
+                'centro_id' => $centroId
             ];
 
             return JWT::encode($payload, $this->secretKey, 'HS256');

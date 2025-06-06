@@ -75,5 +75,9 @@
             }
         }
 
+         public function getUsersByCentro(int $centroId): array {
+            return $this->userRepository->getUsersByCentro($centroId);
+        }
+
 
     }
