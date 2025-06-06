@@ -31,13 +31,13 @@ class UserRepository implements UserRepositoryInterface {
 
             $sql = "INSERT INTO usuarios (username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad) VALUES (:username, :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad)";
             $stmt = $this->pdo->prepare($sql);
-            $hashed = password_hash($user->password, PASSWORD_BCRYPT);
+           
 
             $stmt->execute([
                 ':username' => $user->username,
                 ':nombre' => $user->nombre,
                 ':apellidos' => $user->apellidos,
-                ':password' => $hashed,
+                ':password' => $user->password,
                 ':rol' => $user->rol,
                 ':correo' => $user->correo,
                 ':estado' => $user->estado,

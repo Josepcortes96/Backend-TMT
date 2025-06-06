@@ -16,7 +16,11 @@
         }
 
         public function createUser(User $user): int {
-            return $this->userRepository->create($user);
+            $this->validarFormatoPassword($user->password); // ⬅️ validación
+
+            $user->password = password_hash($user->password, PASSWORD_DEFAULT); // ⬅️ solo aquí se hashea
+
+            return $this->userRepository->create($user); // el repositorio ya no vuelve a hashear
         }
 
         public function getAll(): array {
@@ -62,5 +66,14 @@
             return $this->userRepository->capturarCentroId($id, $rol)
                 ?? throw new \Exception("Centro no encontrado para el usuario con id $id y rol $rol");
         }
+
+        private function validarFormatoPassword(string $password): void {
+            $regex = '/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/';
+
+            if (!preg_match($regex, $password)) {
+                throw new \Exception("La contraseña debe contener al menos una mayúscula, un número y un carácter especial.");
+            }
+        }
+
 
     }

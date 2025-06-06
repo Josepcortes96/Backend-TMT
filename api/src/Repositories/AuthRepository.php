@@ -25,5 +25,18 @@
 
             return (int) $user['id_usuario'];
         }
+        
+          public function registrarLogin(int $id_usuario, string $ip, string $userAgent, string $jwtHash): void {
+            $stmt = $this->pdo->prepare("CALL sp_log_user_login(:id_usuario, :ip, :userAgent, :jwtHash)");
+            $stmt->execute([
+                ':id_usuario' => $id_usuario,
+                ':ip' => $ip,
+                ':userAgent' => $userAgent,
+                ':jwtHash' => $jwtHash
+            ]);
+        }
     }
+
+      
+
 ?>

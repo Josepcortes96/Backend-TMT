@@ -16,7 +16,9 @@
             $this->secretKey = $_ENV['JWT_SECRET'] ?? throw new \Exception("JWT_SECRET no está definido en .env");
         }
 
-        public function login(string $username, string $password): string {
+       public function login(string $username, string $password): string {
+            $this->validarFormatoPassword($password); 
+
             $userId = $this->authRepository->verificarCredenciales($username, $password);
 
             $payload = [
@@ -29,6 +31,7 @@
             return JWT::encode($payload, $this->secretKey, 'HS256');
         }
 
+
         public function validarToken(string $token): bool {
             try {
                 JWT::decode($token, new Key($this->secretKey, 'HS256'));
@@ -37,6 +40,15 @@
                 return false;
             }
         }
+
+        private function validarFormatoPassword(string $password): void {
+            $regex = '/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/';
+
+            if (!preg_match($regex, $password)) {
+                throw new \Exception("La contraseña debe contener al menos una mayúscula, un número y un signo.");
+            }
+        }
+
     }
 
 ?>
