@@ -27,17 +27,30 @@
             return $response->withHeader('Content-Type', 'application/json');
         }
 
-        public function check(Request $request, Response $response): Response {
-            $data = $request->getParsedBody();
-            $token = $data['token'] ?? '';
+       public function check(Request $request, Response $response): Response {
+            $authHeader = $request->getHeaderLine('Authorization');
+
+            if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
+                $token = $matches[1];
+            } else {
+                $response->getBody()->write(json_encode([
+                    'message' => 'NO_TOKEN'
+                ]));
+                return $response
+                    ->withHeader('Content-Type', 'application/json')
+                    ->withStatus(400);
+            }
 
             $valido = $this->authService->validarToken($token);
 
             $response->getBody()->write(json_encode([
-                'valido' => $valido ? 'OK' : 'NO'
+                'message' => $valido ? 'OK' : 'NO'
             ]));
 
-            return $response->withHeader('Content-Type', 'application/json');
+            return $response
+                ->withHeader('Content-Type', 'application/json')
+                ->withStatus($valido ? 200 : 401);
         }
+
     }
 ?>

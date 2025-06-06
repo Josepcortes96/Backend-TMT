@@ -7,9 +7,9 @@
     return function (App $app, ContainerInterface $container) {
         $controller = $container->get(AuthController::class);
 
-        $app->group('/auth', function ($group) use ($controller) {
+        $app->group('/api/v1/auth', function ($group) use ($controller) {
             $group->post('/login', [$controller, 'login']);
-            $group->post('/check', [$controller, 'check']);
+            $group->get('/check', [$controller, 'check']);
         });
     };
 ?>
