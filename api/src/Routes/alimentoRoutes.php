@@ -7,7 +7,7 @@ use Psr\Container\ContainerInterface;
 return function (App $app, ContainerInterface $container) {
     $controller = $container->get(AlimentoController::class);
 
-    $app->group('/alimentos', function ($group) use ($controller) {
+    $app->group('/api/v1/alimentos', function ($group) use ($controller) {
         $group->post('', [$controller, 'create']);                  // Crear alimento
         $group->get('', [$controller, 'getAll']);                   // Obtener todos los alimentos
         $group->get('/id/{id}', [$controller, 'getById']);          // Obtener por ID

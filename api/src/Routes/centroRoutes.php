@@ -8,7 +8,7 @@ return function (App $app, ContainerInterface $container) {
 
     $controller = $container->get(CentroController::class);
 
-    $app->group('/centros', function ($group) use ($controller) {
+    $app->group('/api/v1/centros', function ($group) use ($controller) {
         $group->post('', [$controller, 'create']);
         $group->get('', [$controller, 'getAll']);
         $group->put('/{id}', [$controller, 'update']);

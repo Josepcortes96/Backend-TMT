@@ -6,7 +6,7 @@
     return function (App $app, ContainerInterface $container) {
         $controller = $container->get(EquivalenciaController::class);
 
-        $app->group('/equivalencias', function ($group) use ($controller) {
+        $app->group('/api/v1/equivalencias', function ($group) use ($controller) {
             $group->get('/calcular', [$controller, 'calcular']);
         });
     };

@@ -6,7 +6,7 @@ use Psr\Container\ContainerInterface;
 return function (App $app, ContainerInterface $container) {
     $controller = $container->get(DietaController::class);
 
-    $app->group('/dietas', function ($group) use ($controller) {
+    $app->group('/api/v1/dietas', function ($group) use ($controller) {
         $group->post('', [$controller, 'crear']); // Crear dieta con macros
         $group->post('/asociar-comidas', [$controller, 'asociarComidas']); // Asociar comidas a dieta
         $group->put('/{id}', [$controller, 'actualizar']); // Actualizar macros de dieta

@@ -9,7 +9,7 @@
         $controller = $container->get(DatoController::class);
         $jwtMiddleware = $container->get(JwtMiddleware::class);
 
-        $app->group('/datos', function ($group) use ($controller) {
+        $app->group('/api/v1/datos', function ($group) use ($controller) {
             $group->post('', [$controller, 'crear']);
             $group->get('', [$controller, 'obtenerTodos']);
             $group->get('/{id}', [$controller, 'obtener']);

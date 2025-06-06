@@ -13,7 +13,7 @@
         $authService = new AuthService($authRepository);
         $jwtMiddleware = new JwtMiddleware($authService);
 
-        $app->group('/usuarios', function ($group) {
+        $app->group('/api/v1/usuarios', function ($group) {
             $group->get('', [UserController::class, 'getAll']);
             $group->post('', [UserController::class, 'create']);
             $group->get('/{id}', [UserController::class, 'getOne']);
