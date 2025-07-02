@@ -13,6 +13,8 @@
         public function getUserRol(int $id): string;
         public function getCentroId(int $id, string $rol): int;
          public function getUsersByCentro(int $centroId): array;
+        public function getUserName(string $nombre): array;
+         
 
     }
 

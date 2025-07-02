@@ -31,6 +31,10 @@
             return $this->userRepository->getUser($id);
         }
 
+        public function getUserName(string $nombre): array {
+            return $this->userRepository->getUserName($nombre);
+        }
+
         public function updateUser(int $id, User $user): void {
             $rolActual = $this->userRepository->getRol($id);
 
@@ -61,6 +65,7 @@
         public function getUserRol(int $id): string {
             return $this->userRepository->getRol($id);
         }
+        
         
         public function getCentroId(int $id, string $rol): int {
             return $this->userRepository->capturarCentroId($id, $rol)

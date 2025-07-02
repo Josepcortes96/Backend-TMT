@@ -18,9 +18,10 @@
             $group->get('/centro', [UserController::class, 'getByCentro']);
             $group->post('', [UserController::class, 'create']);
             $group->get('/{id}', [UserController::class, 'getOne']);
+            $group->get('/nombre/{nombre}', [UserController::class, 'getByName']);
             $group->put('/{id}', [UserController::class, 'update']);
             $group->delete('/{id}', [UserController::class, 'delete']);
             $group->patch('/{id}/inactivar', [UserController::class, 'deactivate']);
-        })->add($jwtMiddleware);
+        })->add($jwtMiddleware); 
     };
 ?>

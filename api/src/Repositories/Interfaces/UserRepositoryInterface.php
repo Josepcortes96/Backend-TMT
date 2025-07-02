@@ -21,6 +21,7 @@
         public function relacionDietaUsuario(int $userId, ?int $dietaId, string $rol): void;
         public function validarCentro(int $centroId): bool;
          public function getUsersByCentro(int $centroId): array;
+         
     }
 
 ?>

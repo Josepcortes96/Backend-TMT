@@ -10,10 +10,18 @@ use Exception;
 class UserRepository implements UserRepositoryInterface {
     private PDO $pdo;
 
+    /**
+     * @param PDO $pdo
+     */
     public function __construct(PDO $pdo) {
         $this->pdo = $pdo;
     }
 
+    /**
+     * Valida si existe un centro con el ID dado.
+     * @param int $centroId
+     * @return bool
+     */
     public function validarCentro(int $centroId): bool {
         $stmt = $this->pdo->prepare("SELECT 1 FROM centros WHERE id_centro = :centro_id");
         $stmt->bindParam(':centro_id', $centroId);
@@ -21,6 +29,12 @@ class UserRepository implements UserRepositoryInterface {
         return $stmt->rowCount() > 0;
     }
 
+    /**
+     * Crea un nuevo usuario y sus relaciones.
+     * @param User $user
+     * @return int El ID del usuario creado
+     * @throws Exception
+     */
     public function create(User $user): int {
         try {
             $this->pdo->beginTransaction();
@@ -31,7 +45,6 @@ class UserRepository implements UserRepositoryInterface {
 
             $sql = "INSERT INTO usuarios (username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad) VALUES (:username, :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad)";
             $stmt = $this->pdo->prepare($sql);
-           
 
             $stmt->execute([
                 ':username' => $user->username,
@@ -61,17 +74,57 @@ class UserRepository implements UserRepositoryInterface {
         }
     }
 
+    /**
+     * Obtiene un usuario por su ID.
+     * @param int $id
+     * @return array
+     * @throws Exception
+     */
+    public function getUser(int $id): array {
+        $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE id_usuario = :id");
+        $stmt->execute([':id' => $id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$user) {
+            throw new \Exception("Usuario con ID $id no encontrado.");
+        }
+
+        return $user;
+    }
+
+    /**
+     * Obtiene todos los usuarios.
+     * @return array
+     */
     public function read(): array {
         $stmt = $this->pdo->query("SELECT * FROM usuarios");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getUser(int $id): array {
-        $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE id_usuario = :id");
-        $stmt->execute([':id' => $id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+    /**
+     * Obtiene el ID de usuario por nombre.
+     * @param string $nombre
+     * @return array
+     * @throws Exception
+     */
+    public function getUserName(string $nombre): array {
+        $stmt = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE nombre = :nombre");
+        $stmt->execute([':nombre' => $nombre]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$user) {
+            throw new \Exception("Usuario con nombre $nombre no encontrado.");
+        }
+
+        return $user;
     }
 
+    /**
+     * Actualiza los datos de un usuario.
+     * @param int $id
+     * @param User $user
+     * @return void
+     */
     public function update(int $id, User $user): void {
         $sql = "UPDATE usuarios SET username = :username, nombre = :nombre, apellidos = :apellidos, password = :password, rol = :rol, correo = :correo, estado = :estado, telefono = :telefono, direccion = :direccion, fecha_de_nacimiento = :fechaNacimiento, ciudad = :ciudad WHERE id_usuario = :id";
         $stmt = $this->pdo->prepare($sql);
@@ -91,22 +144,60 @@ class UserRepository implements UserRepositoryInterface {
         ]);
     }
 
+    /**
+     * Elimina un usuario por su ID.
+     * @param int $id
+     * @return bool
+     */
     public function delete(int $id): bool {
         $stmt = $this->pdo->prepare("DELETE FROM usuarios WHERE id_usuario = :id");
         return $stmt->execute([':id' => $id]);
     }
 
+    /**
+     * Desactiva un usuario (cambia su estado a 'inactivo').
+     * @param int $id
+     * @return bool
+     */
     public function desactivar(int $id): bool {
-        $stmt = $this->pdo->prepare("UPDATE usuarios SET estado = 'inactivo' WHERE id_usuario = :id");
-        return $stmt->execute([':id' => $id]);
+        // Obtener estado actual
+        $stmt = $this->pdo->prepare("SELECT estado FROM usuarios WHERE id_usuario = :id");
+        $stmt->execute([':id' => $id]);
+        $estadoActual = $stmt->fetchColumn();
+
+        if ($estadoActual === false) {
+            throw new \Exception("Usuario con ID $id no encontrado.");
+        }
+
+        // Determinar nuevo estado
+        $nuevoEstado = strtolower($estadoActual) === 'activo' ? 'inactivo' : 'activo';
+
+        // Actualizar estado
+        $stmt = $this->pdo->prepare("UPDATE usuarios SET estado = :estado WHERE id_usuario = :id");
+        return $stmt->execute([
+            ':estado' => $nuevoEstado,
+            ':id' => $id
+        ]);
     }
 
+
+    /**
+     * Obtiene el rol de un usuario por su ID.
+     * @param int $id
+     * @return string
+     */
     public function getRol(int $id): string {
         $stmt = $this->pdo->prepare("SELECT rol FROM usuarios WHERE id_usuario = :id");
         $stmt->execute([':id' => $id]);
         return (string) $stmt->fetchColumn();
     }
 
+    /**
+     * Inserta el usuario en la tabla correspondiente a su rol.
+     * @param int $userId
+     * @param string $rol
+     * @return int
+     */
     public function insertUsuarioRol(int $userId, string $rol): int {
         $tabla = $this->getTablaUsuario($rol);
         $stmt = $this->pdo->prepare("INSERT INTO $tabla (id_usuario) VALUES (:id_usuario)");
@@ -114,6 +205,14 @@ class UserRepository implements UserRepositoryInterface {
         return (int) $this->pdo->lastInsertId();
     }
 
+    /**
+     * Relaciona un usuario con un centro según su rol.
+     * @param int $userId
+     * @param int $centroId
+     * @param string $rol
+     * @return void
+     * @throws Exception
+     */
     public function relacionCentroUsuario(int $userId, int $centroId, string $rol): void {
         $tablaCentro = match ($rol) {
             'Cliente' => 'centro_cliente',
@@ -137,12 +236,25 @@ class UserRepository implements UserRepositoryInterface {
         ]);
     }
 
+    /**
+     * Elimina un usuario de la tabla correspondiente a su rol.
+     * @param int $id
+     * @param string $rol
+     * @return void
+     */
     public function eliminarUsuarioTabla(int $id, string $rol): void {
         $tabla = $this->getTablaUsuario($rol);
         $stmt = $this->pdo->prepare("DELETE FROM $tabla WHERE id_usuario = :id");
         $stmt->execute([':id' => $id]);
     }
 
+    /**
+     * Elimina la relación entre un usuario y un centro según su rol.
+     * @param int $id
+     * @param string $rol
+     * @return void
+     * @throws Exception
+     */
     public function eliminarRelacionCentroRol(int $id, string $rol): void {
         $col = match ($rol) {
             'Cliente' => 'cliente',
@@ -155,6 +267,13 @@ class UserRepository implements UserRepositoryInterface {
         $stmt->execute([':id' => $id]);
     }
 
+    /**
+     * Elimina la relación entre un usuario y una dieta según su rol.
+     * @param int $id
+     * @param string $rol
+     * @return void
+     * @throws Exception
+     */
     public function eliminarRelacionDietaRol(int $id, string $rol): void {
         $col = match ($rol) {
             'Cliente' => 'cliente',
@@ -167,6 +286,13 @@ class UserRepository implements UserRepositoryInterface {
         $stmt->execute([':id' => $id]);
     }
 
+    /**
+     * Captura el ID del centro asociado a un usuario según su rol.
+     * @param int $id
+     * @param string $rol
+     * @return int|null
+     * @throws Exception
+     */
     public function capturarCentroId(int $id, string $rol): ?int {
         $tablaUsuario = $this->getTablaUsuario($rol);
         $col = match ($rol) {
@@ -181,6 +307,13 @@ class UserRepository implements UserRepositoryInterface {
         return $stmt->fetchColumn() ?: null;
     }
 
+    /**
+     * Captura el ID de la dieta asociada a un usuario según su rol.
+     * @param int $id
+     * @param string $rol
+     * @return int|null
+     * @throws Exception
+     */
     public function capturarDietaId(int $id, string $rol): ?int {
         $tablaUsuario = $this->getTablaUsuario($rol);
         $col = match ($rol) {
@@ -195,6 +328,14 @@ class UserRepository implements UserRepositoryInterface {
         return $stmt->fetchColumn() ?: null;
     }
 
+    /**
+     * Relaciona un usuario con una dieta según su rol.
+     * @param int $userId
+     * @param int|null $dietaId
+     * @param string $rol
+     * @return void
+     * @throws Exception
+     */
     public function relacionDietaUsuario(int $userId, ?int $dietaId, string $rol): void {
         if ($dietaId === null) return;
 
@@ -211,6 +352,12 @@ class UserRepository implements UserRepositoryInterface {
         $stmt->execute([':dieta_id' => $dietaId, ':id_usuario' => $userId]);
     }
 
+    /**
+     * Obtiene el nombre de la tabla de usuario según el rol.
+     * @param string $rol
+     * @return string
+     * @throws Exception
+     */
     private function getTablaUsuario(string $rol): string {
         return match ($rol) {
             'Cliente' => 'clientes',
@@ -219,7 +366,13 @@ class UserRepository implements UserRepositoryInterface {
             default => throw new Exception("Rol no válido: $rol")
         };
     }
-   public function getUsersByCentro(int $centroId): array {
+
+    /**
+     * Obtiene todos los usuarios de un centro.
+     * @param int $centroId
+     * @return array
+     */
+    public function getUsersByCentro(int $centroId): array {
         $stmt = $this->pdo->prepare("
             SELECT u.*, c.nombre AS nombre_centro
             FROM usuarios u

@@ -25,6 +25,7 @@
             $info = $this->authRepository->obtenerRolYCentro($userId);
             $rol = $info['rol'];
             $centroId = $info['id_centro'];
+             $nombre = $info['nombre']; // Nombre del usuario, por defecto 'Usuario'
 
             // Construir el JWT
             $payload = [
@@ -33,7 +34,8 @@
                 'exp' => time() + 7200,
                 'id_usuario' => $userId,
                 'rol' => $rol,
-                'centro_id' => $centroId
+                'centro_id' => $centroId,
+                'nombre' => $nombre // 
             ];
 
             return JWT::encode($payload, $this->secretKey, 'HS256');

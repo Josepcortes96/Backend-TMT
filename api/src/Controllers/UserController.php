@@ -37,6 +37,16 @@
             return $response->withHeader('Content-Type', 'application/json');
         }
 
+        public function getByName(Request $request, Response $response, array $args): Response {
+            $nombre = $args['nombre'] ?? '';
+            $user = $this->userService->getUserName($nombre);
+            if (empty($user)) {
+                return $response->withStatus(404)->write(json_encode(['error' => 'Usuario no encontrado']));
+            }
+            $response->getBody()->write(json_encode($user));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
         public function update(Request $request, Response $response, array $args): Response {
             $data = $request->getParsedBody();
 

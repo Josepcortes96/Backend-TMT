@@ -39,6 +39,7 @@
         public function obtenerRolYCentro(int $id_usuario): array {
             $stmt = $this->pdo->prepare("
                SELECT 
+                u.nombre,
                     u.rol,
                     CASE
                         WHEN u.rol = 'Cliente' THEN cc.id_centro
