@@ -8,7 +8,7 @@ interface DatoServiceInterface
 
     public function obtenerPorId(int $id_dato): array;
 
-    public function obtenerPorControl(string $control): array;
+    public function getDatoByNombre(string $nombre, int $idUsuario): array;
 
     public function actualizar(int $id_dato, array $data): bool;
 
@@ -17,5 +17,7 @@ interface DatoServiceInterface
     public function obtenerTodos(): array;
 
     public function obtenerPeso(int $id_usuario): float;
+
+    public function getUltimosControles(int $idUsuario): array;
 }
 ?>

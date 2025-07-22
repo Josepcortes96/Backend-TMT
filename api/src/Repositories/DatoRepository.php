@@ -40,17 +40,20 @@ class DatoRepository implements DatoRepositoryInterface
         return $dato;
     }
 
-    public function getDatoByControl(string $control): array
+    public function getDatoByNombre(string $nombre, int $idUsuario): array
     {
-        $sql = "SELECT d.* FROM datos d
-                
-                WHERE d.control = :control";
+        $sql = "SELECT d.id_dato FROM datos d
+        WHERE d.nombre = :nombre AND d.id_usuario = :id_usuario";
 
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([':control' => $control]);
+        $stmt->execute([
+            ':nombre' => $nombre,
+            ':id_usuario' => $idUsuario
+        ]);
 
         $dato = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $dato ;
+        return $dato;
+
     }
 
     public function actualizarDato(int $id_dato, array $data): bool
@@ -95,6 +98,21 @@ class DatoRepository implements DatoRepositoryInterface
 
         return (float) $result['peso'];
     }
+
+
+    public function getUltimosControles(int $idUsuario): array
+    {
+          $sql = "SELECT * FROM datos 
+            WHERE id_usuario = :id_usuario 
+            ORDER BY id_dato DESC 
+            LIMIT 3";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute(['id_usuario' => $idUsuario]);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 }
 ?>
