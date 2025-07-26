@@ -19,5 +19,7 @@ interface DatoServiceInterface
     public function obtenerPeso(int $id_usuario): float;
 
     public function getUltimosControles(int $idUsuario): array;
+
+    public function getTodosControles(int $idUsuario): array;
 }
 ?>

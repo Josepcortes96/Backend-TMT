@@ -42,7 +42,7 @@ class DatoRepository implements DatoRepositoryInterface
 
     public function getDatoByNombre(string $nombre, int $idUsuario): array
     {
-        $sql = "SELECT d.id_dato FROM datos d
+        $sql = "SELECT * FROM datos d
         WHERE d.nombre = :nombre AND d.id_usuario = :id_usuario";
 
         $stmt = $this->pdo->prepare($sql);
@@ -99,19 +99,35 @@ class DatoRepository implements DatoRepositoryInterface
         return (float) $result['peso'];
     }
 
-
+    /*FUNCION PARA RECIBIR LOS ULTIMSO 4 CONTROLES DEL USUARIO*/
     public function getUltimosControles(int $idUsuario): array
     {
           $sql = "SELECT * FROM datos 
             WHERE id_usuario = :id_usuario 
             ORDER BY id_dato DESC 
-            LIMIT 3";
+            LIMIT 4";
 
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute(['id_usuario' => $idUsuario]);
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+    /** FUNCION DE REPOSITORIO PARA MOSTRAR LOS NOMBRES DE LSO CONTROLES DEL USUARIO. */
+     public function getTodosControles(int $idUsuario): array
+    {
+          $sql = "SELECT nombre FROM datos 
+            WHERE id_usuario = :id_usuario 
+            ORDER BY id_dato DESC 
+            ";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute(['id_usuario' => $idUsuario]);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 
 }

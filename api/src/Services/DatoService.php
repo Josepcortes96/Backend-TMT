@@ -55,5 +55,10 @@ class DatoService implements DatoServiceInterface
      {
         return $this->datoRepository->getUltimosControles($idUsuario);
      }
+
+
+    public function getTodosControles(int $idUsuario): array{
+        return $this->datoRepository->getTodosControles($idUsuario);
+    }
 }
 ?>

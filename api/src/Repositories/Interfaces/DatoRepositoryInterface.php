@@ -11,6 +11,7 @@
         public function deleteDato(int $id): bool;
         public function getAll():array;
         public function getPeso(int $id_usuario): float;
-        public function getUltimosControles(int $idUsuario): array;
+        public function getTodosControles(int $idUsuario): array;
+        
     }
 ?>

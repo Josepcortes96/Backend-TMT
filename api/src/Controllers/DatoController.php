@@ -177,6 +177,27 @@ public function obtenerUltimosControles(Request $request, Response $response, ar
 }
 
 
+public function obtenerControles(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $controles = $this->datoService->getTodosControles($idUsuario);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $controles
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
+
 
 }
 ?>
