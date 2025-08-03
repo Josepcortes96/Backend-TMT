@@ -11,12 +11,12 @@ class DietaRepository implements DietaRepositoryInterface {
         $this->pdo = $pdo;
     }
 
-            public function createDieta(string $nombre, ?string $descripcion, int $id_usuario, int $id_dato, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int{
+            public function createDieta(?string $nombre, ?string $descripcion, int $id_usuario, int $id_dato,float $calorias_dieta, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int{
                 
                     $sql = "INSERT INTO dietas (
-                                nombre, descripcion, id_usuario, id_dato, proteinas_dieta, grasas_dieta, carbohidratos_dieta, fecha_creacion
+                                nombre, descripcion, id_usuario, id_dato, calorias_dieta,proteinas_dieta, grasas_dieta, carbohidratos_dieta, fecha_creacion
                             ) VALUES (
-                                :nombre, :descripcion, :id_usuario, :id_dato, :proteinas_dieta, :grasas_dieta, :carbohidratos_dieta, :fecha_creacion
+                                :nombre, :descripcion, :id_usuario, :id_dato, :calorias_dieta, :proteinas_dieta, :grasas_dieta, :carbohidratos_dieta, :fecha_creacion
                             )";
 
                     $stmt = $this->pdo->prepare($sql);
@@ -27,6 +27,7 @@ class DietaRepository implements DietaRepositoryInterface {
                             ':descripcion' => $descripcion,
                             ':id_usuario' => $id_usuario,
                             ':id_dato' => $id_dato,
+                            ':calorias_dieta' => $calorias_dieta,
                             ':proteinas_dieta' => $proteinas_dieta,
                             ':grasas_dieta' => $grasas_dieta,
                             ':carbohidratos_dieta' => $carbohidratos_dieta,

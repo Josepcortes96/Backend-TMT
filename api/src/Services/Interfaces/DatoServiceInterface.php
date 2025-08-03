@@ -21,5 +21,8 @@ interface DatoServiceInterface
     public function getUltimosControles(int $idUsuario): array;
 
     public function getTodosControles(int $idUsuario): array;
+
+
+     public function getUltimoControlPorId(int $idUsuario): ?array;
 }
 ?>

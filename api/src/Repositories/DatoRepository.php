@@ -105,7 +105,7 @@ class DatoRepository implements DatoRepositoryInterface
           $sql = "SELECT * FROM datos 
             WHERE id_usuario = :id_usuario 
             ORDER BY id_dato DESC 
-            LIMIT 4";
+            LIMIT 3";
 
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute(['id_usuario' => $idUsuario]);
@@ -117,7 +117,7 @@ class DatoRepository implements DatoRepositoryInterface
     /** FUNCION DE REPOSITORIO PARA MOSTRAR LOS NOMBRES DE LSO CONTROLES DEL USUARIO. */
      public function getTodosControles(int $idUsuario): array
     {
-          $sql = "SELECT nombre FROM datos 
+          $sql = "SELECT id_dato, nombre FROM datos 
             WHERE id_usuario = :id_usuario 
             ORDER BY id_dato DESC 
             ";
@@ -127,6 +127,22 @@ class DatoRepository implements DatoRepositoryInterface
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+    /**FUNCION DE REPOSITORIO PARA MOSTRAR  */
+    public function getUltimoControlPorId(int $idUsuario): ?array
+{
+    $sql = "SELECT * FROM datos 
+            WHERE id_usuario = :id_usuario 
+            ORDER BY id_dato DESC 
+            LIMIT 1";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute(['id_usuario' => $idUsuario]);
+
+    return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+}
+
 
 
 

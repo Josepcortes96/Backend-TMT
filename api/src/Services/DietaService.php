@@ -24,8 +24,7 @@ class DietaService implements DietaServiceInterface
     public function crearDietaConMacros(array $datos): int
     {
         if (
-            empty($datos['nombre']) ||
-            !isset($datos['descripcion']) ||
+           
             empty($datos['id_usuario']) ||
             empty($datos['id_dato']) ||
             !isset($datos['proteinas_dieta']) ||
@@ -34,17 +33,18 @@ class DietaService implements DietaServiceInterface
         ) {
             throw new Exception("Faltan datos obligatorios para crear la dieta.");
         }
+            return $this->dietaRepository->createDieta(
+                $datos['nombre'] ?? null,
+                $datos['descripcion'] ?? null,
+                $datos['id_usuario'],
+                $datos['id_dato'],
+                $datos['calorias_dieta'] ?? null,
+                $datos['proteinas_dieta'],
+                $datos['grasas_dieta'],
+                $datos['carbohidratos_dieta'],
+                $datos['fecha_creacion'] ?? null
+            );
 
-        return $this->dietaRepository->createDieta(
-            $datos['nombre'],
-            $datos['descripcion'],
-            $datos['id_usuario'],
-            $datos['id_dato'],
-            $datos['proteinas_dieta'],
-            $datos['grasas_dieta'],
-            $datos['carbohidratos_dieta'],
-            $datos['fecha_creacion'] ?? null
-        );
     }
 
     public function actualizarMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): array

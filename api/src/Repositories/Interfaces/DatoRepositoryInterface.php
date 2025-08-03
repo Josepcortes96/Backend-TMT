@@ -12,6 +12,7 @@
         public function getAll():array;
         public function getPeso(int $id_usuario): float;
         public function getTodosControles(int $idUsuario): array;
+         public function getUltimoControlPorId(int $idUsuario): ?array;
         
     }
 ?>
