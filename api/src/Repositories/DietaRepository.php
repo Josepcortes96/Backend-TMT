@@ -63,7 +63,7 @@ class DietaRepository implements DietaRepositoryInterface {
     }
 
     public function getDieta($id_dieta):array {
-        $sql = "SELECT nombre, descripcion FROM dietas WHERE id_dieta = :id_dieta";
+        $sql = "SELECT nombre, descripcion,calorias_dieta,proteinas_dieta,grasas_dieta,carbohidratos_dieta FROM dietas WHERE id_dieta = :id_dieta";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':id_dieta', $id_dieta, PDO::PARAM_INT);
         $stmt->execute();

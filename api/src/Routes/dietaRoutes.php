@@ -2,9 +2,11 @@
 use Slim\App;
 use App\Controllers\DietaController;
 use Psr\Container\ContainerInterface;
+use App\Middlewares\JwtMiddleware;
 
 return function (App $app, ContainerInterface $container) {
     $controller = $container->get(DietaController::class);
+     $jwtMiddleware = $container->get(JwtMiddleware::class);
 
     $app->group('/api/v1/dietas', function ($group) use ($controller) {
         $group->post('', [$controller, 'crear']); // Crear dieta con macros
@@ -13,7 +15,7 @@ return function (App $app, ContainerInterface $container) {
         $group->delete('/{id}', [$controller, 'eliminar']); // Eliminar dieta
         $group->get('', [$controller, 'listar']); // Listar todas las dietas
         $group->get('/{id}', [$controller, 'obtener']); // Obtener dieta por ID
-    });
+    })->add($jwtMiddleware);;
 };
 
 ?>
