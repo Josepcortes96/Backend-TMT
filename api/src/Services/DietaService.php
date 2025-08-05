@@ -47,9 +47,9 @@ class DietaService implements DietaServiceInterface
 
     }
 
-    public function actualizarMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): array
+    public function actualizarMacros(int $id_dieta, string $nombre, string $descripcion, float $proteinas, float $grasas, float $carbohidratos): array
     {
-        return $this->dietaRepository->actualizarDieta($id_dieta, $proteinas, $grasas, $carbohidratos);
+        return $this->dietaRepository->actualizarDieta($id_dieta, $nombre , $descripcion, $proteinas, $grasas, $carbohidratos);
     }
 
     public function asociarComidas(int $id_dieta, array $comidas): void

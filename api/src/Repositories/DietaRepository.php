@@ -105,16 +105,21 @@ class DietaRepository implements DietaRepositoryInterface {
         }
     }
 
-    public function actualizarDieta($id_dieta, $proteinas_dieta, $grasas_dieta, $carbohidratos_dieta):array {
+    public function actualizarDieta($id_dieta, $nombre,$descripcion,$proteinas_dieta, $grasas_dieta, $carbohidratos_dieta):array {
         $stmt = $this->pdo->prepare("
             UPDATE dietas
-            SET proteinas_dieta = :proteinas_dieta,
+            SET
+            nombre =:nombre,
+            descripcion =:descripcion,
+            proteinas_dieta = :proteinas_dieta,
                 grasas_dieta = :grasas_dieta,
                 carbohidratos_dieta = :carbohidratos_dieta
             WHERE id_dieta = :id_dieta
         ");
         $stmt->execute([
             'id_dieta' => $id_dieta,
+            'nombre' => $nombre,
+            'descripcion' => $descripcion,
             'proteinas_dieta' => $proteinas_dieta,
             'grasas_dieta' => $grasas_dieta,
             'carbohidratos_dieta' => $carbohidratos_dieta
