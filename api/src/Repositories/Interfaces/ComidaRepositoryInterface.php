@@ -11,7 +11,6 @@
         public function agregarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool;
         public function actualizarCantidadAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool;
         public function eliminarAlimentoDeComida(int $comidaId, int $alimentoId): bool;
-        public function eliminarSuplementoDeComida(int $comidaId, int $suplementoId): bool;
         public function actualizarTotalesComida(int $comidaId): void;
         public function insertarEquivalencia(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void;
         public function insertarEquivalencia1(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void;

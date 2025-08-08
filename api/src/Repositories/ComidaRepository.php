@@ -64,6 +64,7 @@
             ]);
         }
 
+        
         public function agregarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool {
             $stmt = $this->pdo->prepare("SELECT categoria FROM alimentos WHERE id_alimento = :id_alimento");
             $stmt->execute(['id_alimento' => $alimentoId]);
@@ -105,41 +106,20 @@
             return $stmt->rowCount() > 0;
         }
 
-        public function actualizarCantidadSuplemento(int $comidaId, int $suplementoId, float $cantidad, array $nutricion): void {
-            $sql = "UPDATE comida_suplemento SET cantidad = :cantidad, calorias_totales_suplemento = :cal, proteinas_totales_suplemento = :prot, carbohidratos_totales_suplemento = :carb, grasas_totales_suplemento = :gras WHERE id_comida = :id_comida AND id_suplemento = :id_suplemento";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([
-                ':cantidad' => $cantidad,
-                ':cal' => $nutricion['calorias_totales_suplemento'],
-                ':prot' => $nutricion['proteinas_totales_suplemento'],
-                ':carb' => $nutricion['carbohidratos_totales_suplemento'],
-                ':gras' => $nutricion['grasas_totales_suplemento'],
-                ':id_comida' => $comidaId,
-                ':id_suplemento' => $suplementoId
-            ]);
-        }
+        
 
-        public function verificarSuplementoAsociado(int $comidaId, int $suplementoId): bool {
-            $stmt = $this->pdo->prepare("SELECT 1 FROM comida_suplemento WHERE id_comida = :id AND id_suplemento = :s LIMIT 1");
-            $stmt->execute([':id' => $comidaId, ':s' => $suplementoId]);
-            return $stmt->rowCount() > 0;
-        }
-
+    
         public function eliminarAlimentoDeComida(int $comidaId, int $alimentoId): bool {
             $stmt = $this->pdo->prepare("DELETE FROM comida_alimento WHERE id_comida = :id AND id_alimento = :al");
             return $stmt->execute([':id' => $comidaId, ':al' => $alimentoId]);
         }
 
-        public function eliminarSuplementoDeComida(int $comidaId, int $suplementoId): bool {
-            $stmt = $this->pdo->prepare("DELETE FROM comida_suplemento WHERE id_comida = :id AND id_suplemento = :s");
-            return $stmt->execute([':id' => $comidaId, ':s' => $suplementoId]);
-        }
 
         public function actualizarTotalesComida(int $comidaId): void {
-            $sql = "UPDATE comidas SET calorias_totales_comida = (SELECT COALESCE(SUM(calorias_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) + (SELECT COALESCE(SUM(calorias_totales_suplemento),0) FROM comida_suplemento WHERE id_comida = :id),
-                                        proteinas_totales_comida = (SELECT COALESCE(SUM(proteinas_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) + (SELECT COALESCE(SUM(proteinas_totales_suplemento),0) FROM comida_suplemento WHERE id_comida = :id),
-                                        carbohidratos_totales_comida = (SELECT COALESCE(SUM(carbohidratos_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) + (SELECT COALESCE(SUM(carbohidratos_totales_suplemento),0) FROM comida_suplemento WHERE id_comida = :id),
-                                        grasas_totales_comida = (SELECT COALESCE(SUM(grasas_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) + (SELECT COALESCE(SUM(grasas_totales_suplemento),0) FROM comida_suplemento WHERE id_comida = :id)
+            $sql = "UPDATE comidas SET calorias_totales_comida = (SELECT COALESCE(SUM(calorias_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) ,
+                                        proteinas_totales_comida = (SELECT COALESCE(SUM(proteinas_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) ,
+                                        carbohidratos_totales_comida = (SELECT COALESCE(SUM(carbohidratos_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) ,
+                                        grasas_totales_comida = (SELECT COALESCE(SUM(grasas_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id)
                     WHERE id_comida = :id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([':id' => $comidaId]);
