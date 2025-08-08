@@ -18,7 +18,12 @@ class DatoController
     public function crear(Request $request, Response $response): Response
     {
         try {
-            $data = $request->getParsedBody();
+            $data = json_decode($request->getBody()->getContents(), true);
+
+            if (!is_array($data)) {
+                throw new \InvalidArgumentException('El cuerpo de la solicitud no es un JSON válido.');
+            }
+
             $id = $this->datoService->crear($data);
 
             $response->getBody()->write(json_encode([
@@ -30,11 +35,12 @@ class DatoController
                 'success' => false,
                 'message' => $e->getMessage()
             ]));
-            return $response->withStatus(500);
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
         }
 
         return $response->withHeader('Content-Type', 'application/json');
     }
+
 
     public function actualizar(Request $request, Response $response, array $args): Response
     {
@@ -119,25 +125,102 @@ class DatoController
         return $response->withHeader('Content-Type', 'application/json');
     }
 
-    public function obtenerPorControl(Request $request, Response $response, array $args): Response
-    {
-        try {
-            $control = $args['control'];
-            $dato = $this->datoService->obtenerPorControl($control);
+  public function obtenerPorControl(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $nombre = $args['nombre'];
 
-            $response->getBody()->write(json_encode([
-                'success' => true,
-                'data' => $dato
-            ]));
-        } catch (\Throwable $e) {
+        $dato = $this->datoService->getDatoByNombre($nombre, $idUsuario);
+
+        if (!$dato) {
             $response->getBody()->write(json_encode([
                 'success' => false,
-                'message' => $e->getMessage()
+                'message' => 'Dato no encontrado'
             ]));
-            return $response->withStatus(500);
+            return $response->withStatus(404)->withHeader('Content-Type', 'application/json');
         }
 
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $dato
+        ]));
         return $response->withHeader('Content-Type', 'application/json');
+
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
     }
+}
+
+public function obtenerUltimosControles(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $controles = $this->datoService->getUltimosControles($idUsuario);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $controles
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
+
+
+
+public function obtenerUltimoControl(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $controles = $this->datoService->getUltimoControlPorId($idUsuario);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $controles
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
+
+public function obtenerControles(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $controles = $this->datoService->getTodosControles($idUsuario);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $controles
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
+
+
 }
 ?>

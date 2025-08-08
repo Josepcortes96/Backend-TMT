@@ -25,9 +25,10 @@ class DatoService implements DatoServiceInterface
         return $this->datoRepository->getDatoById($id_dato);
     }
 
-    public function obtenerPorControl(string $control): array
+    public function getDatoByNombre(string $nombre, int $idUsuario): array
+
     {
-        return $this->datoRepository->getDatoByControl($control);
+        return $this->datoRepository->getDatoByNombre($nombre, $idUsuario);
     }
 
     public function actualizar(int $id_dato, array $data): bool
@@ -49,5 +50,19 @@ class DatoService implements DatoServiceInterface
     {
         return $this->datoRepository->getPeso($id_usuario);
     }
+
+     public function getUltimosControles(int $idUsuario): array
+     {
+        return $this->datoRepository->getUltimosControles($idUsuario);
+     }
+
+
+    public function getTodosControles(int $idUsuario): array{
+        return $this->datoRepository->getTodosControles($idUsuario);
+    }
+
+     public function getUltimoControlPorId(int $idUsuario): ?array{
+        return $this->datoRepository->getUltimoControlPorId($idUsuario);
+     }
 }
 ?>

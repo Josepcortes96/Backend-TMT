@@ -11,12 +11,16 @@
 
         $app->group('/api/v1/datos', function ($group) use ($controller) {
             $group->post('', [$controller, 'crear']);
-            $group->get('', [$controller, 'obtenerTodos']);
-            $group->get('/{id}', [$controller, 'obtener']);
-            $group->get('/control/{control}', [$controller, 'obtenerPorControl']);
+
+            $group->get('/ultimos/{id_usuario}', [$controller, 'obtenerUltimosControles']);
+            $group->get('/last/{id_usuario}', [$controller, 'obtenerUltimoControl']);
+            $group->get('/usuario/{id_usuario}', [$controller, 'obtenerControles']);
+            $group->get('/usuario/{id_usuario}/control/{nombre}', [$controller, 'obtenerPorControl']);
+            $group->get('/detalle/{id}', [$controller, 'obtener']);
             $group->put('/{id}', [$controller, 'actualizar']);
             $group->delete('/{id}', [$controller, 'eliminar']);
         })->add($jwtMiddleware);
+
     };
 
 ?>

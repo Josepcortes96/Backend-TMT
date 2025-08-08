@@ -3,7 +3,7 @@
     namespace App\Repositories\Interfaces;
 
     interface DietaRepositoryInterface{
-        public function createDieta(string $nombre, ?string $descripcion, int $id_usuario, int $id_dato, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int;
+        public function createDieta(string $nombre, ?string $descripcion, int $id_usuario, int $id_dato,  float $calorias_dieta, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int;
 
         public function getDietas(): array;
 
@@ -15,7 +15,7 @@
 
         public function asociarComidaDieta(int $id_dieta, int $id_comida): void;
 
-        public function actualizarDieta(int $id_dieta, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta): array;
+        public function actualizarDieta(int $id_dieta, string $nombre, string $descripcion, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta): array;
     }
 
 ?>

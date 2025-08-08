@@ -47,21 +47,29 @@
             return $response->withHeader('Content-Type', 'application/json');
         }
 
-        public function update(Request $request, Response $response, array $args): Response {
-            $data = $request->getParsedBody();
+   public function update(Request $request, Response $response, array $args): Response {
+    $data = $request->getParsedBody();
+    $userId = (int) $args['id']; // ← ID del usuario que quieres modificar
 
-            if (!isset($data['centro_id'])) {
-                $userId = (int) $args['id'];
-                $rol = $this->userService->getUserRol($userId);
-                $data['centro_id'] = $this->userService->getCentroId($userId, $rol);
-            }
+    // ⚠️ Forzamos el rol correcto desde la base de datos del usuario a modificar (ID = $userId)
+    $rol = $this->userService->getUserRol($userId);
+    $data['rol'] = $rol;
 
-            $user = new User($data);
-            $this->userService->updateUser((int) $args['id'], $user);
+    // Solo si no viene el centro, lo recuperamos del usuario a modificar
+    if (!isset($data['centro_id'])) {
+        $data['centro_id'] = $this->userService->getCentroId($userId, $rol);
+    }
 
-            $response->getBody()->write(json_encode(['status' => 'updated']));
-            return $response->withHeader('Content-Type', 'application/json');
-        }
+    error_log("📥 Datos corregidos: " . print_r($data, true));
+
+    $user = new User($data);
+    $this->userService->updateUser($userId, $user);
+
+    $response->getBody()->write(json_encode(['status' => 'updated']));
+    return $response->withHeader('Content-Type', 'application/json');
+}
+
+
 
 
         public function delete(Request $request, Response $response, array $args): Response {

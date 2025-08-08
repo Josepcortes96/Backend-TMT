@@ -126,7 +126,7 @@ class UserRepository implements UserRepositoryInterface {
      * @return void
      */
     public function update(int $id, User $user): void {
-        $sql = "UPDATE usuarios SET username = :username, nombre = :nombre, apellidos = :apellidos, password = :password, rol = :rol, correo = :correo, estado = :estado, telefono = :telefono, direccion = :direccion, fecha_de_nacimiento = :fechaNacimiento, ciudad = :ciudad WHERE id_usuario = :id";
+        $sql = "UPDATE usuarios SET username = :username, nombre = :nombre, apellidos = :apellidos, password = :password, rol = :rol, correo = :correo, estado = :estado, telefono = :telefono, direccion = :direccion, ciudad = :ciudad WHERE id_usuario = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':username' => $user->username,
@@ -138,7 +138,7 @@ class UserRepository implements UserRepositoryInterface {
             ':estado' => $user->estado,
             ':telefono' => $user->telefono,
             ':direccion' => $user->direccion,
-            ':fechaNacimiento' => $user->fechaNacimiento,
+
             ':ciudad' => $user->ciudad,
             ':id' => $id
         ]);
@@ -294,6 +294,8 @@ class UserRepository implements UserRepositoryInterface {
      * @throws Exception
      */
     public function capturarCentroId(int $id, string $rol): ?int {
+        error_log("📌 Rol en capturarCentroId: " . $rol);
+
         $tablaUsuario = $this->getTablaUsuario($rol);
         $col = match ($rol) {
             'Cliente' => 'cliente',

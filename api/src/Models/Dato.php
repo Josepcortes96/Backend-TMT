@@ -3,7 +3,7 @@
     namespace App\Models;
 
     class Dato{
-        public int $int_dato;
+        public int $id_dato;
         public ?int $id_usuario = null;
         public ?int $edad = null;
         public ?float $altura = null;
@@ -41,10 +41,12 @@
         public ?float $muneca_estiloideo = null;
         public ?float $complex_osea = null;
         public ?float $muneca_circunferencia = null;
-        public ?float $carbohidratos_dieta = null;
-        public ?float $calorias_dieta = null;
-        public ?float $grasas_dieta = null;
-        public ?float $proteinas_dieta = null;
-        public ?string $control = null;
+        public ?float $carbohidratos_datos = null;
+        public ?float $calorias_datos = null;
+        public ?float $grasas_datos = null;
+        public ?float $proteinas_datos = null;
+         public ?float $tdee= null;
+        public ?string $nombre = null;
+        public ?string $fecha = null;
     }
 ?>
