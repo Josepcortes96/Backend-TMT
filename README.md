@@ -2,6 +2,9 @@
 
 Backend  construido utilizando **Vanilla PHP 8.3** con una estructura moderna basada en componentes como Slim Framework, PHP-DI y otras librerías  del ecosistema PHP.
 
+<img width="1809" height="919" alt="image" src="https://github.com/user-attachments/assets/5a0901b2-386e-4866-9b7a-ec4a1e2125e8" />
+
+
 ## 🚀 Tecnologías utilizadas
 
 - **PHP 8.3**
