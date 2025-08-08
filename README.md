@@ -52,6 +52,14 @@ Se utiliza autoloading basado en **PSR-4** para mapear el espacio de nombres `Ap
 - PHP 8.3 o superior
 - Composer
 
+
+## 🔐 Seguridad
+
+Todos los endpoints de este grupo están protegidos con middleware `JwtMiddleware`, por lo tanto es obligatorio enviar un token válido en el encabezado:
+
+```http
+Authorization: Bearer <token>
+
 ## 📜 Licencia
 
 
