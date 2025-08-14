@@ -1,6 +1,6 @@
 # TMT-API
 
-Backend  construido utilizando **Vanilla PHP 8.3** con una estructura moderna basada en componentes como Slim Framework, PHP-DI y otras librerías  del ecosistema PHP.
+Backend  construido  para tmtgroup utilizando **Vanilla PHP 8.3**, este backend consiste en la creación de una API para la intranet del grupo. Donde se pueden crear dietas y realizar controles de seguimiento para cada usuario.
 
 <img width="1809" height="919" alt="image" src="https://github.com/user-attachments/assets/5a0901b2-386e-4866-9b7a-ec4a1e2125e8" />
 
