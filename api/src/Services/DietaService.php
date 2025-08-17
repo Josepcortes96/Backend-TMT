@@ -52,22 +52,29 @@ class DietaService implements DietaServiceInterface
         return $this->dietaRepository->actualizarDieta($id_dieta, $nombre , $descripcion, $proteinas, $grasas, $carbohidratos);
     }
 
-    public function asociarComidas(int $id_dieta, array $comidas): void
+   public function asociarComidas(int $id_dieta, array $comidas): void
     {
         if (!$this->dietaRepository->getDietaById($id_dieta)) {
             throw new Exception("La dieta con ID $id_dieta no existe.");
         }
 
         foreach ($comidas as $comida) {
-            $id_comida = is_array($comida) ? $comida['id_comida'] ?? null : $comida;
+            if (is_array($comida)) {
+                $id_comida = $comida['id_comida'] ?? null;
+            } else {
+                $id_comida = $comida;
+            }
+
+            $id_comida = (int) $id_comida;
 
             if (!$id_comida || !$this->comidaRepository->getComidaId($id_comida)) {
                 throw new Exception("La comida con ID $id_comida no existe.");
             }
 
-            $this->dietaRepository->asociarComidaDieta($id_dieta, (int)$id_comida);
+            $this->dietaRepository->asociarComidaDieta($id_dieta, $id_comida);
         }
     }
+
 
     public function eliminarDieta(int $id_dieta): bool
     {

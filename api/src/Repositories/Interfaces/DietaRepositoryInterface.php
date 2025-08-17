@@ -3,6 +3,7 @@
     namespace App\Repositories\Interfaces;
 
     interface DietaRepositoryInterface{
+        
         public function createDieta(string $nombre, ?string $descripcion, int $id_usuario, int $id_dato,  float $calorias_dieta, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta, ?string $fecha_creacion = null): int;
 
         public function getDietaConDato(int $id_dieta): array;

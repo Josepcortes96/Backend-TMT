@@ -16,6 +16,8 @@ return function (App $app, ContainerInterface $container) {
         $group->delete('/{id}', [$controller, 'eliminar']); // Eliminar dieta
         $group->get('', [$controller, 'listar']); // Listar todas las dietas
         $group->get('/{id}', [$controller, 'obtener']); // Obtener dieta por ID
+        $group->get('/usuario/{id_usuario}', [$controller, 'obtenerPorUsuario']);
+        $group->get('/{id}/dato', [$controller, 'obtenerConDato']);
         
     })->add($jwtMiddleware);;
 };

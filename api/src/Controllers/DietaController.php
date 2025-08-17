@@ -156,35 +156,102 @@ class DietaController
 
 
     public function asignarRol(Request $request, Response $response, array $args): Response
-{
-    try {
-        $id_dieta = (int) $args['id']; // ID de la dieta desde la URL
-        $params = (array) $request->getParsedBody(); // Datos del body
+    {
+        try {
+            $id_dieta = (int) $args['id']; // ID de la dieta desde la URL
+            $params = (array) $request->getParsedBody(); // Datos del body
 
-        $id_usuario = (int) ($params['id_usuario'] ?? 0);
-        $rol = $params['rol'] ?? '';
+            $id_usuario = (int) ($params['id_usuario'] ?? 0);
+            $rol = $params['rol'] ?? '';
 
-        if (!$id_usuario || !$rol) {
-            throw new \InvalidArgumentException("Faltan datos obligatorios: id_usuario o rol");
+            if (!$id_usuario || !$rol) {
+                throw new \InvalidArgumentException("Faltan datos obligatorios: id_usuario o rol");
+            }
+
+            // Asignar la dieta al usuario según su rol
+            $resultado = $this->dietaService->asignarDietaSegunRol($id_dieta, $id_usuario, $rol);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $resultado
+            ]));
+            return $response->withHeader('Content-Type', 'application/json');
+
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
         }
-
-        // Asignar la dieta al usuario según su rol
-        $resultado = $this->dietaService->asignarDietaSegunRol($id_dieta, $id_usuario, $rol);
-
-        $response->getBody()->write(json_encode([
-            'success' => true,
-            'data' => $resultado
-        ]));
-        return $response->withHeader('Content-Type', 'application/json');
-
-    } catch (\Throwable $e) {
-        $response->getBody()->write(json_encode([
-            'success' => false,
-            'message' => $e->getMessage()
-        ]));
-        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
     }
-}
+
+    public function obtenerConDato(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_dieta = (int) $args['id'];
+
+            if (!$id_dieta) {
+                throw new \InvalidArgumentException("ID de dieta no válido.");
+            }
+
+            $dieta = $this->dietaService->obtenerDietaConDato($id_dieta);
+
+            if (!$dieta) {
+                return $response->withStatus(404)->withHeader('Content-Type', 'application/json')
+                    ->write(json_encode([
+                        'success' => false,
+                        'message' => 'Dieta no encontrada.'
+                    ]));
+            }
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $dieta
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json');
+
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+        }
+    }
+
+
+    public function obtenerPorUsuario(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_usuario = (int) $args['id_usuario'];
+
+            if (!$id_usuario) {
+                throw new \InvalidArgumentException("ID de usuario no válido.");
+            }
+
+            $dietas = $this->dietaService->obtenerDietasPorUsuario($id_usuario);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $dietas
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json');
+
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+        }
+    }
+
+
 
 }
 ?>
