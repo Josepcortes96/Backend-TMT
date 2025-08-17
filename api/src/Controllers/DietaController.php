@@ -153,5 +153,38 @@ class DietaController
 
         return $response->withHeader('Content-Type', 'application/json');
     }
+
+
+    public function asignarRol(Request $request, Response $response, array $args): Response
+{
+    try {
+        $id_dieta = (int) $args['id']; // ID de la dieta desde la URL
+        $params = (array) $request->getParsedBody(); // Datos del body
+
+        $id_usuario = (int) ($params['id_usuario'] ?? 0);
+        $rol = $params['rol'] ?? '';
+
+        if (!$id_usuario || !$rol) {
+            throw new \InvalidArgumentException("Faltan datos obligatorios: id_usuario o rol");
+        }
+
+        // Asignar la dieta al usuario según su rol
+        $resultado = $this->dietaService->asignarDietaSegunRol($id_dieta, $id_usuario, $rol);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $resultado
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
 }
 ?>

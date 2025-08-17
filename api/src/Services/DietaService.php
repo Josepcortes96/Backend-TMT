@@ -74,10 +74,6 @@ class DietaService implements DietaServiceInterface
         return $this->dietaRepository->deleteDieta($id_dieta);
     }
 
-    public function obtenerTodas(): array
-    {
-        return $this->dietaRepository->getDietas();
-    }
 
     public function obtenerPorId(int $id_dieta): ?array
     {
@@ -88,6 +84,23 @@ class DietaService implements DietaServiceInterface
     {
         return $this->dietaRepository->getDietaById($id_dieta);
     }
+
+    public function asignarDietaSegunRol(int $id_dieta, int $id_usuario, string $rol): array
+    {
+        return $this->dietaRepository->insertDietaRol($id_dieta, $id_usuario, $rol);
+    }
+
+    public function obtenerDietasPorUsuario(int $id_usuario): array
+    {
+        return $this->dietaRepository->getDietasPorUsuario($id_usuario);
+    }
+
+    public function obtenerDietaConDato(int $id_dieta): array
+    {
+        return $this->dietaRepository->getDietaConDato($id_dieta);
+    }
+
+
 }
 
 ?>

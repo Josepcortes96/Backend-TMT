@@ -48,12 +48,6 @@ class DietaRepository implements DietaRepositoryInterface {
 
     
 
-    public function getDietas():array {
-        $sql = "SELECT * FROM dietas";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 
     public function getDietaById($id_dieta):bool {
         $sql = "SELECT COUNT(*) FROM dietas WHERE id_dieta = :id_dieta";
@@ -131,5 +125,97 @@ class DietaRepository implements DietaRepositoryInterface {
             return ["error" => "No se pudo actualizar la dieta"];
         }
     }
+
+    
+
+   public function insertDietaRol(int $id_dieta, int $id_usuario, string $rol): array {
+    try {
+        if ($rol === 'Propietario') {
+            $stmt = $this->pdo->prepare("SELECT id_propietario FROM propietarios WHERE id_usuario = ?");
+            $stmt->execute([$id_usuario]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$row) {
+                return ["error" => "No se encontró el propietario con id_usuario = $id_usuario"];
+            }
+
+            $id_propietario = $row['id_propietario'];
+
+            // Verifica si ya existe
+            $check = $this->pdo->prepare("SELECT COUNT(*) FROM dieta_propietario WHERE id_dieta = ? AND id_propietario = ?");
+            $check->execute([$id_dieta, $id_propietario]);
+
+            if ((int)$check->fetchColumn() === 0) {
+                $insert = $this->pdo->prepare("INSERT INTO dieta_propietario (id_dieta, id_propietario) VALUES (?, ?)");
+                $insert->execute([$id_dieta, $id_propietario]);
+                return ["message" => "Dieta asignada al propietario correctamente"];
+            } else {
+                return ["warning" => "La dieta ya está asignada a este propietario"];
+            }
+
+        } elseif ($rol === 'Preparador') {
+            $stmt = $this->pdo->prepare("SELECT id_preparador FROM preparadores WHERE id_usuario = ?");
+            $stmt->execute([$id_usuario]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$row) {
+                return ["error" => "No se encontró el preparador con id_usuario = $id_usuario"];
+            }
+
+            $id_preparador = $row['id_preparador'];
+
+            // Verifica si ya existe
+            $check = $this->pdo->prepare("SELECT COUNT(*) FROM dieta_preparador WHERE id_dieta = ? AND id_preparador = ?");
+            $check->execute([$id_dieta, $id_preparador]);
+
+            if ((int)$check->fetchColumn() === 0) {
+                $insert = $this->pdo->prepare("INSERT INTO dieta_preparador (id_dieta, id_preparador) VALUES (?, ?)");
+                $insert->execute([$id_dieta, $id_preparador]);
+                return ["message" => "Dieta asignada al preparador correctamente"];
+            } else {
+                return ["warning" => "La dieta ya está asignada a este preparador"];
+            }
+
+        } else {
+            return ["error" => "Rol no válido. Solo se admite 'Propietario' o 'Preparador'"];
+        }
+    } catch (Exception $e) {
+        return ["error" => "Error al asociar dieta según el rol: " . $e->getMessage()];
+    }
+}
+
+
+
+   public function getDietasPorUsuario(int $id_usuario): array {
+    $sql = "SELECT id_dieta, nombre FROM dietas WHERE id_usuario = :id_usuario";
+
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute([':id_usuario' => $id_usuario]);
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+    public function getDietaConDato(int $id_dieta): array {
+        $sql = "
+            SELECT 
+                d.id_dieta,
+                d.fecha_creacion,
+                d.id_dato,
+                datos.nombre AS nombre_dato
+            FROM dietas d
+            INNER JOIN datos ON datos.id_dato = d.id_dato
+            WHERE d.id_dieta = :id_dieta
+        ";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id_dieta', $id_dieta, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC); // Una sola fila
+    }
+
+
+
 }
 ?>

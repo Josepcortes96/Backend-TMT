@@ -12,11 +12,16 @@ interface DietaServiceInterface
 
     public function eliminarDieta(int $id_dieta): bool;
 
-    public function obtenerTodas(): array;
-
     public function obtenerPorId(int $id_dieta): ?array;
 
     public function dietaExiste(int $id_dieta): bool;
+
+    public function asignarDietaSegunRol(int $id_dieta, int $id_usuario, string $rol): array;
+
+    public function obtenerDietaConDato(int $id_dieta): array;
+
+    public function obtenerDietasPorUsuario(int $id_usuario): array;
+
 }
 ?>
 
