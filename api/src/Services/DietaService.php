@@ -107,6 +107,17 @@ class DietaService implements DietaServiceInterface
         return $this->dietaRepository->getDietaConDato($id_dieta);
     }
 
+    public function obtenerInformeDieta(int $id_dieta): array
+    {
+   
+        if (!$this->dietaRepository->getDietaById($id_dieta)) {
+            throw new \Exception("La dieta con ID $id_dieta no existe.");
+        }
+        $informe = $this->dietaRepository->getInformeDieta($id_dieta);
+
+        return $informe;
+    }
+
 
 }
 

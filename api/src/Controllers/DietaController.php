@@ -253,5 +253,29 @@ class DietaController
 
 
 
+    public function obtenerInforme(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_dieta = (int) $args['id'];
+
+            $informe = $this->dietaService->obtenerInformeDieta($id_dieta);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $informe
+            ]));
+            return $response->withHeader('Content-Type', 'application/json');
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+        }
+    }
+
+
+
+
 }
 ?>

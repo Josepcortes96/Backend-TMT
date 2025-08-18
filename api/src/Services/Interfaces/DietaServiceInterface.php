@@ -22,6 +22,9 @@ interface DietaServiceInterface
 
     public function obtenerDietasPorUsuario(int $id_usuario): array;
 
+    public function obtenerInformeDieta(int $id_dieta): array;
+
+
 }
 ?>
 

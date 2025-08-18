@@ -216,6 +216,77 @@ class DietaRepository implements DietaRepositoryInterface {
     }
 
 
+    public function getInformeDieta(int $id_dieta) : array{
+         $sql = "
+            SELECT 
+                d.nombre AS nombre_dieta,
+                d.descripcion,
+                d.fecha_creacion,
+                d.calorias_dieta,
+                d.proteinas_dieta,
+                d.grasas_dieta,
+                d.carbohidratos_dieta,
+
+                u.nombre AS nombre_usuario,
+                u.apellidos AS apellido_usuario,
+
+                c.id_comida,
+                c.hora,
+                c.tipo_comida,
+                c.notas,
+
+                ca.cantidad,
+                ca.cantidad_equivalente,
+                ca.cantidad_equivalente1,
+                ca.cantidad_equivalente3,
+
+                a.nombre AS nombre_alimento,
+                ae.nombre AS nombre_alimento_equivalente,
+                ae1.nombre AS nombre_alimento_equivalente1,
+                ae3.nombre AS nombre_alimento_equivalente3,
+
+
+                up.nombre AS nombre_preparador,
+                up.apellidos AS apellido_preparador,
+                uo.nombre AS nombre_propietario,
+                uo.apellidos AS apellido_propietario
+
+            FROM dietas d
+
+
+            INNER JOIN datos da ON d.id_dato = da.id_dato
+            INNER JOIN usuarios u ON da.id_usuario = u.id_usuario
+
+
+            LEFT JOIN dieta_comida dc ON d.id_dieta = dc.id_dieta
+            LEFT JOIN comidas c ON dc.id_comida = c.id_comida
+            LEFT JOIN comida_alimento ca ON c.id_comida = ca.id_comida
+
+
+            LEFT JOIN alimentos a ON ca.id_alimento = a.id_alimento
+            LEFT JOIN alimentos ae ON ca.id_alimento_equivalente = ae.id_alimento
+            LEFT JOIN alimentos ae1 ON ca.id_alimento_equivalente1 = ae1.id_alimento
+            LEFT JOIN alimentos ae3 ON ca.id_alimento_equivalente3 = ae3.id_alimento
+
+
+            LEFT JOIN dieta_preparador dp ON d.id_dieta = dp.id_dieta
+            LEFT JOIN preparadores p ON dp.id_preparador = p.id_preparador
+            LEFT JOIN usuarios up ON p.id_usuario = up.id_usuario
+
+
+            LEFT JOIN dieta_propietario dpo ON d.id_dieta = dpo.id_dieta
+            LEFT JOIN propietarios po ON dpo.id_propietario = po.id_propietario
+            LEFT JOIN usuarios uo ON po.id_usuario = uo.id_usuario
+
+            WHERE d.id_dieta = :id_dieta;
+        ";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id_dieta', $id_dieta, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    }
 
 }
 ?>
