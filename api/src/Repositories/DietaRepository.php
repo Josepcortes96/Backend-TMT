@@ -234,6 +234,10 @@ class DietaRepository implements DietaRepositoryInterface {
                 c.hora,
                 c.tipo_comida,
                 c.notas,
+                c.calorias_totales_comida,
+                c.proteinas_totales_comida,
+                c.grasas_totales_comida,
+                c.carbohidratos_totales_comida,
 
                 ca.cantidad,
                 ca.cantidad_equivalente,
