@@ -16,28 +16,41 @@ class AlimentoController
     }
 
     public function create(Request $request, Response $response): Response
-    {
-        $data = $request->getParsedBody();
+{
+    $data = $request->getParsedBody();
+    $results = [];
 
+    // Si recibo un solo alimento, lo meto en un array
+    if (isset($data['nombre'])) {
+        $data = [$data];
+    }
+
+    foreach ($data as $alimento) {
         $success = $this->alimentoService->createAlimento(
-            $data['nombre'],
-            (float)$data['calorias'],
-            (float)$data['proteinas'],
-            (float)$data['carbohidratos'],
-            (float)$data['grasas'],
-            $data['familia'],
-            (float)$data['agua'],
-            (float)$data['fibra'],
-            $data['categoria']
+            $alimento['nombre'],
+            (float)$alimento['calorias'],
+            (float)$alimento['proteinas'],
+            (float)$alimento['carbohidratos'],
+            (float)$alimento['grasas'],
+            $alimento['familia'],
+            (float)$alimento['agua'],
+            (float)$alimento['fibra'],
+            $alimento['categoria']
         );
 
-        $response->getBody()->write(json_encode([
+        $results[] = [
+            'nombre'  => $alimento['nombre'],
             'success' => $success,
-            'message' => $success ? 'Alimento creado/actualizado correctamente' : 'Error al crear el alimento'
-        ]));
-
-        return $response->withHeader('Content-Type', 'application/json');
+            'message' => $success
+                ? 'Alimento creado/actualizado correctamente'
+                : 'Error al crear el alimento'
+        ];
     }
+
+    $response->getBody()->write(json_encode($results));
+    return $response->withHeader('Content-Type', 'application/json');
+}
+
 
     public function getAll(Request $request, Response $response): Response
     {

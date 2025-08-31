@@ -1,0 +1,6610 @@
+[
+  {
+  "nombre": "Dorada al horno",
+  "calorias": 150,
+  "proteinas": 21,
+  "carbohidratos": 0,
+  "grasas": 6,
+  "familia": "Pescado",
+  "agua": 72,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+{
+  "nombre": "Dorada a la sal",
+  "calorias": 132,
+  "proteinas": 22,
+  "carbohidratos": 0,
+  "grasas": 3,
+  "familia": "Pescado",
+  "agua": 70,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+{
+  "nombre": "Dorada a la plancha",
+  "calorias": 135,
+  "proteinas": 22,
+  "carbohidratos": 0,
+  "grasas": 3,
+  "familia": "Pescado",
+  "agua": 72,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+{
+  "nombre": "Lubina a la sal",
+  "calorias": 105,
+  "proteinas": 20.3,
+  "carbohidratos": 0,
+  "grasas": 2.0,
+  "familia": "Pescado",
+  "agua": null,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+{
+  "nombre": "Lubina a la plancha",
+  "calorias": 134,
+  "proteinas": 21,
+  "carbohidratos": 0,
+  "grasas": 3,
+  "familia": "Pescado",
+  "agua": 72,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+{
+  "nombre": "Lubina al horno",
+  "calorias": 122,
+  "proteinas": 20.3,
+  "carbohidratos": 0,
+  "grasas": 4.8,
+  "familia": "Pescado",
+  "agua": null,
+  "fibra": 0,
+  "categoria": "proteinas"
+},
+  {
+    "nombre": "Merluza a la plancha",
+    "calorias": 134,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Merluza al horno",
+    "calorias": 142,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Merluza cocida",
+    "calorias": 124,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 3,
+    "familia": "Pescado",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Bacalao a la plancha",
+    "calorias": 140,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Bacalao al horno",
+    "calorias": 151,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Bacalao rebozado",
+    "calorias": 245,
+    "proteinas": 23,
+    "carbohidratos": 10,
+    "grasas": 14,
+    "familia": "Pescado",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Lenguado  plancha",
+    "calorias": 134,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Lenguado meunier",
+    "calorias": 232,
+    "proteinas": 23,
+    "carbohidratos": 4,
+    "grasas": 15,
+    "familia": "Pescado",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Lenguado horno",
+    "calorias": 142,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Pescado",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pescadilla plancha",
+    "calorias": 133,
+    "proteinas": 26,
+    "carbohidratos": 0,
+    "grasas": 3.6,
+    "familia": "Pescado",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pescadilla cocida",
+    "calorias": 124,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 2.6,
+    "familia": "Pescado",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salmón plancha",
+    "calorias": 151,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 7,
+    "familia": "Pescado",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salmón horno",
+    "calorias": 169,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 9,
+    "familia": "Pescado",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salmón papillote",
+    "calorias": 142,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 6,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  
+  {
+    "nombre": "Atún a la plancha",
+    "calorias": 139,
+    "proteinas": 32,
+    "carbohidratos": 0,
+    "grasas": 1.6,
+    "familia": "Pescado",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Atún a la parrilla",
+    "calorias": 139,
+    "proteinas": 32,
+    "carbohidratos": 0,
+    "grasas": 1.6,
+    "familia": "Pescado",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Atún en aceite de girasol (lata)",
+    "calorias": 200,
+    "proteinas": 25,
+    "carbohidratos": 0,
+    "grasas": 10,
+    "familia": "Pescado",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Atún natural (lata en agua)",
+    "calorias": 130,
+    "proteinas": 29,
+    "carbohidratos": 0,
+    "grasas": 0.6,
+    "familia": "Pescado",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Atún en aceite de oliva",
+    "calorias": 190,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Pescado",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Caballa a la plancha",
+    "calorias": 214,
+    "proteinas": 20.7,
+    "carbohidratos": 0,
+    "grasas": 14.9,
+    "familia": "Pescado",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Caballa al horno",
+    "calorias": 232,
+    "proteinas": 20.7,
+    "carbohidratos": 0,
+    "grasas": 16.9,
+    "familia": "Pescado",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Sardinas a la plancha",
+    "calorias": 217,
+    "proteinas": 27.3,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Pescado",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Sardinas al horno",
+    "calorias": 235,
+    "proteinas": 27.3,
+    "carbohidratos": 0,
+    "grasas": 14.5,
+    "familia": "Pescado",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Sardinas asadas",
+    "calorias": 217,
+    "proteinas": 27.3,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Pescado",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Sardinas en escabeche",
+    "calorias": 260,
+    "proteinas": 17,
+    "carbohidratos": 0,
+    "grasas": 22,
+    "familia": "Pescado",
+    "agua": 55,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Boquerones a la plancha",
+    "calorias": 140,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 5.8,
+    "familia": "Pescado",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Boquerones al horno",
+    "calorias": 158,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 7.8,
+    "familia": "Pescado",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Calamar a la plancha",
+    "calorias": 110,
+    "proteinas": 17.3,
+    "carbohidratos": 3.1,
+    "grasas": 2.4,
+    "familia": "Pescado",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Calamar al horno",
+    "calorias": 128,
+    "proteinas": 17.3,
+    "carbohidratos": 3.1,
+    "grasas": 4.4,
+    "familia": "Pescado",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Calamar frito",
+    "calorias": 182,
+    "proteinas": 15.6,
+    "carbohidratos": 3.1,
+    "grasas": 11.4,
+    "familia": "Pescado",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Sepia a la plancha",
+    "calorias": 88,
+    "proteinas": 18,
+    "carbohidratos": 0.82,
+    "grasas": 1.7,
+    "familia": "Pescado",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Pulpo a la plancha (estilo gallega)",
+    "calorias": 173,
+    "proteinas": 33.3,
+    "carbohidratos": 4,
+    "grasas": 3,
+    "familia": "Marisco",
+    "agua": 54,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pulpo al horno (estilo gallega)",
+    "calorias": 191,
+    "proteinas": 33.3,
+    "carbohidratos": 4,
+    "grasas": 5,
+    "familia": "Marisco",
+    "agua": 54,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Gambas a la plancha",
+    "calorias": 115,
+    "proteinas": 23.6,
+    "carbohidratos": 0,
+    "grasas": 2.2,
+    "familia": "Marisco",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Gambas cocidas",
+    "calorias": 106,
+    "proteinas": 21.2,
+    "carbohidratos": 0,
+    "grasas": 1.2,
+    "familia": "Marisco",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cigalas a la plancha",
+    "calorias": 115,
+    "proteinas": 23.6,
+    "carbohidratos": 0,
+    "grasas": 2.2,
+    "familia": "Marisco",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cigalas al horno",
+    "calorias": 133,
+    "proteinas": 23.6,
+    "carbohidratos": 0,
+    "grasas": 4.2,
+    "familia": "Marisco",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Camarones fritos",
+    "calorias": 195,
+    "proteinas": 20.1,
+    "carbohidratos": 0.9,
+    "grasas": 11.7,
+    "familia": "Marisco",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Camarones cocidos",
+    "calorias": 105,
+    "proteinas": 20.1,
+    "carbohidratos": 0.9,
+    "grasas": 1.72,
+    "familia": "Marisco",
+    "agua": 80,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Almejas marinera",
+    "calorias": 130,
+    "proteinas": 12,
+    "carbohidratos": 4.7,
+    "grasas": 5,
+    "familia": "Marisco",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Almejas salsa verde",
+    "calorias": 110,
+    "proteinas": 12,
+    "carbohidratos": 4.7,
+    "grasas": 3,
+    "familia": "Marisco",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Almejas al vapor",
+    "calorias": 90,
+    "proteinas": 12,
+    "carbohidratos": 4.7,
+    "grasas": 1,
+    "familia": "Marisco",
+    "agua": 80,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Navajas a la plancha",
+    "calorias": 90,
+    "proteinas": 15.4,
+    "carbohidratos": 0,
+    "grasas": 1.7,
+    "familia": "Marisco",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Navajas al vapor",
+    "calorias": 82,
+    "proteinas": 15.4,
+    "carbohidratos": 0,
+    "grasas": 1.7,
+    "familia": "Marisco",
+    "agua": 80,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Berberechos al vapor",
+    "calorias": 90,
+    "proteinas": 14,
+    "carbohidratos": 4.7,
+    "grasas": 1,
+    "familia": "Marisco",
+    "agua": 80,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Rodaballo a la plancha",
+    "calorias": 110,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 2,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Rodaballo al horno",
+    "calorias": 130,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Gallo de San Pedro a la plancha",
+    "calorias": 110,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 2,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Gallo de San Pedro al horno",
+    "calorias": 130,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salmonete a la plancha",
+    "calorias": 140,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 6,
+    "familia": "Pescado",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+
+****PAN Y DERIVADOS***
+[
+{
+    "nombre": "Pan blanco barra",
+    "calorias": 266,
+    "proteinas": 8.9,
+    "carbohidratos": 49,
+    "grasas": 3.3,
+    "familia": "Pan y derivados",
+    "agua": 36,
+    "fibra": 2.7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Baguette blanca",
+    "calorias": 274,
+    "proteinas": 8.8,
+    "carbohidratos": 51.9,
+    "grasas": 3.0,
+    "familia": "Pan y derivados",
+    "agua": 36,
+    "fibra": 3.0,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan integral de trigo",
+    "calorias": 246,
+    "proteinas": 9.7,
+    "carbohidratos": 46.1,
+    "grasas": 4.2,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 6.9,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de centeno",
+    "calorias": 255,
+    "proteinas": 9,
+    "carbohidratos": 47,
+    "grasas": 3.2,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 6,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan multicereales",
+    "calorias": 251,
+    "proteinas": 10,
+    "carbohidratos": 46.4,
+    "grasas": 3.8,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 6.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de molde blanco",
+    "calorias": 266,
+    "proteinas": 7.6,
+    "carbohidratos": 50.6,
+    "grasas": 3.3,
+    "familia": "Pan y derivados",
+    "agua": 36,
+    "fibra": 2.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de molde integral",
+    "calorias": 259,
+    "proteinas": 9.1,
+    "carbohidratos": 47.1,
+    "grasas": 4.1,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 4.1,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de molde multicereales",
+    "calorias": 251,
+    "proteinas": 10,
+    "carbohidratos": 46.4,
+    "grasas": 3.8,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 6.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de molde blanco sin corteza",
+    "calorias": 266,
+    "proteinas": 7.6,
+    "carbohidratos": 50.6,
+    "grasas": 3.3,
+    "familia": "Pan y derivados",
+    "agua": 36,
+    "fibra": 2.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de pita blanco",
+    "calorias": 275,
+    "proteinas": 9.1,
+    "carbohidratos": 55.7,
+    "grasas": 1.2,
+    "familia": "Pan y derivados",
+    "agua": 45,
+    "fibra": 2.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de pita integral",
+    "calorias": 262,
+    "proteinas": 9.8,
+    "carbohidratos": 55.9,
+    "grasas": 1.7,
+    "familia": "Pan y derivados",
+    "agua": 45,
+    "fibra": 6.1,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Tortilla de trigo",
+    "calorias": 300,
+    "proteinas": 7.5,
+    "carbohidratos": 48,
+    "grasas": 8,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": 3.1,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Tortilla de maíz",
+    "calorias": 218,
+    "proteinas": 5.7,
+    "carbohidratos": 44.6,
+    "grasas": 2.8,
+    "familia": "Pan y derivados",
+    "agua": 45,
+    "fibra": 6.3,
+    "categoria": "carbohidratos"
+  },
+   {
+    "nombre": "Tortitas de arroz",
+    "calorias": 385,
+    "proteinas": 8.4,
+    "carbohidratos": 81.2,
+    "grasas": 3.2,
+    "familia": "Pan y derivados",
+    "agua": 4.7,
+    "fibra": 2.9,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Tortitas de maíz",
+    "calorias": 385,
+    "proteinas": 8,
+    "carbohidratos": 82,
+    "grasas": 2.4,
+    "familia": "Pan y derivados",
+    "agua": 4.7,
+    "fibra": 1.9,
+    "categoria": "carbohidratos"
+  },
+   {
+    "nombre": "Crackers normales (blancos/saltine)",
+    "calorias": 450,
+    "proteinas": 7.5,
+    "carbohidratos": 61,
+    "grasas": 25,
+    "familia": "Snacks",
+    "agua": 5,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Crackers integrales (whole wheat)",
+    "calorias": 440,
+    "proteinas": 8.8,
+    "carbohidratos": 68.6,
+    "grasas": 17.2,
+    "familia": "Snacks",
+    "agua": 5,
+    "fibra": 10.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan sin gluten (multicereales, Schär)",
+    "calorias": 224,
+    "proteinas": 4,
+    "carbohidratos": 43,
+    "grasas": 4,
+    "familia": "Pan y derivados",
+    "agua": 35,
+    "fibra": null,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan keto",
+    "calorias": 291,
+    "proteinas": 12.6,
+    "carbohidratos": 7.1,
+    "grasas": 25,
+    "familia": "Pan y derivados",
+    "agua": 10,
+    "fibra": 3.9,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pan de espelta integral",
+    "calorias": 273,
+    "proteinas": 10.6,
+    "carbohidratos": 45.4,
+    "grasas": 3.8,
+    "familia": "Pan y derivados",
+    "agua": 36,
+    "fibra": 6.5,
+    "categoria": "carbohidratos"
+  }
+]
+
+******CEREALES Y DERIVADOS******
+[
+ {
+    "nombre": "Arroz blanco, hervido",
+    "calorias": 130,
+    "proteinas": 2.7,
+    "carbohidratos": 28.2,
+    "grasas": 0.3,
+    "familia": "Cereales",
+    "agua": 69,
+    "fibra": 0.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Arroz integral, hervido",
+    "calorias": 112,
+    "proteinas": 2.3,
+    "carbohidratos": 23.0,
+    "grasas": 0.9,
+    "familia": "Cereales",
+    "agua": 70,
+    "fibra": 1.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Arroz basmati, hervido",
+    "calorias": 121,
+    "proteinas": 2.3,
+    "carbohidratos": 24.4,
+    "grasas": 0.4,
+    "familia": "Cereales",
+    "agua": 71,
+    "fibra": null,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Arroz jazmín, hervido",
+    "calorias": 170,
+    "proteinas": 3.8,
+    "carbohidratos": 32.1,
+    "grasas": 2.5,
+    "familia": "Cereales",
+    "agua": 66,
+    "fibra": 0.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Arroz vaporizado",
+    "calorias": 123,
+    "proteinas": 2.9,
+    "carbohidratos": 26.0,
+    "grasas": 0.4,
+    "familia": "Cereales",
+    "agua": 70,
+    "fibra": 0.9,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Arroz salvaje, hervido",
+    "calorias": 101,
+    "proteinas": 3.3,
+    "carbohidratos": 21.5,
+    "grasas": 0.3,
+    "familia": "Cereales",
+    "agua": 70,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Copos de avena",
+    "calorias": 367,
+    "proteinas": 12.5,
+    "carbohidratos": 59,
+    "grasas": 6.9,
+    "familia": "Cereales",
+    "agua": 10,
+    "fibra": 8.3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Harina de avena",
+    "calorias": 375,
+    "proteinas": 13,
+    "carbohidratos": 65,
+    "grasas": 7,
+    "familia": "Cereales",
+    "agua": 10,
+    "fibra": 7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Avena instantánea",
+    "calorias": 367,
+    "proteinas": 12,
+    "carbohidratos": 68,
+    "grasas": 6.9,
+    "familia": "Cereales",
+    "agua": 10,
+    "fibra": 8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Quinoa blanca",
+    "calorias": 380,
+    "proteinas": 13,
+    "carbohidratos": 69,
+    "grasas": 6,
+    "familia": "Cereales",
+    "agua": 12,
+    "fibra": 7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Quinoa roja",
+    "calorias": 370,
+    "proteinas": 14,
+    "carbohidratos": 64,
+    "grasas": 7.2,
+    "familia": "Cereales",
+    "agua": 12,
+    "fibra": 7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Quinoa negra",
+    "calorias": 355,
+    "proteinas": 11,
+    "carbohidratos": 64,
+    "grasas": 3.3,
+    "familia": "Cereales",
+    "agua": 12,
+    "fibra": 7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Cuscús cocido",
+    "calorias": 112,
+    "proteinas": 3.8,
+    "carbohidratos": 23.2,
+    "grasas": 0.2,
+    "familia": "Cereales",
+    "agua": 72,
+    "fibra": 1.4,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Bulgur cocido",
+    "calorias": 83,
+    "proteinas": 3.1,
+    "carbohidratos": 18.6,
+    "grasas": 0.2,
+    "familia": "Cereales",
+    "agua": 76,
+    "fibra": 4.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Mazorca de maíz cocida",
+    "calorias": 96,
+    "proteinas": 3.4,
+    "carbohidratos": 21,
+    "grasas": 1.5,
+    "familia": "Verduras",
+    "agua": 73,
+    "fibra": 2.7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Maíz inflado",
+    "calorias": 367,
+    "proteinas": 7,
+    "carbohidratos": 82,
+    "grasas": 1.5,
+    "familia": "Cereales",
+    "agua": 2,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Trigo inflado",
+    "calorias": 366,
+    "proteinas": 16,
+    "carbohidratos": 76.4,
+    "grasas": 2.1,
+    "familia": "Cereales",
+    "agua": 2,
+    "fibra": 9.4,
+    "categoria": "carbohidratos"
+  }
+]
+
+*******TUBERCULOS******
+
+[
+   {
+    "nombre": "Patata blanca hervida",
+    "calorias": 87,
+    "proteinas": 1.9,
+    "carbohidratos": 20.1,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 1.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata blanca al vapor",
+    "calorias": 86,
+    "proteinas": 2,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 1.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata blanca asada",
+    "calorias": 93,
+    "proteinas": 2.5,
+    "carbohidratos": 21.2,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 2.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata blanca al horno",
+    "calorias": 99,
+    "proteinas": 2.5,
+    "carbohidratos": 22.9,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 73,
+    "fibra": 2.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Puré de patata",
+    "calorias": 113,
+    "proteinas": 2,
+    "carbohidratos": 17,
+    "grasas": 4,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 1.3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata blanca frita",
+    "calorias": 312,
+    "proteinas": 3.4,
+    "carbohidratos": 41,
+    "grasas": 15,
+    "familia": "Tubérculos",
+    "agua": 39,
+    "fibra": 3.8,
+    "categoria": "carbohidratos"
+  },
+   {
+    "nombre": "Patata roja hervida",
+    "calorias": 87,
+    "proteinas": 2,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata roja al vapor",
+    "calorias": 86,
+    "proteinas": 2,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata roja asada",
+    "calorias": 93,
+    "proteinas": 2.5,
+    "carbohidratos": 21,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 2.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata roja al horno",
+    "calorias": 99,
+    "proteinas": 2.5,
+    "carbohidratos": 23,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 73,
+    "fibra": 2.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Puré de patata roja",
+    "calorias": 113,
+    "proteinas": 2,
+    "carbohidratos": 17,
+    "grasas": 4,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 1.3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata roja frita",
+    "calorias": 312,
+    "proteinas": 3.4,
+    "carbohidratos": 41,
+    "grasas": 15,
+    "familia": "Tubérculos",
+    "agua": 39,
+    "fibra": 3.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata nueva hervida",
+    "calorias": 80,
+    "proteinas": 2,
+    "carbohidratos": 18,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 78,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata nueva al vapor",
+    "calorias": 79,
+    "proteinas": 2,
+    "carbohidratos": 18,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 78,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata nueva asada",
+    "calorias": 86,
+    "proteinas": 2.3,
+    "carbohidratos": 19,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 76,
+    "fibra": 1.7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata nueva al horno",
+    "calorias": 92,
+    "proteinas": 2.3,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 74,
+    "fibra": 1.7,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Puré de patata nueva",
+    "calorias": 108,
+    "proteinas": 1.9,
+    "carbohidratos": 16,
+    "grasas": 4,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 1.2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Patata nueva frita",
+    "calorias": 305,
+    "proteinas": 3.2,
+    "carbohidratos": 40,
+    "grasas": 15,
+    "familia": "Tubérculos",
+    "agua": 39,
+    "fibra": 3.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Boniato hervido",
+    "calorias": 86,
+    "proteinas": 1.6,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Boniato al vapor",
+    "calorias": 85,
+    "proteinas": 1.6,
+    "carbohidratos": 20,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 77,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Boniato asado",
+    "calorias": 90,
+    "proteinas": 2,
+    "carbohidratos": 21,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 75,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Boniato al horno",
+    "calorias": 94,
+    "proteinas": 2,
+    "carbohidratos": 22,
+    "grasas": 0.1,
+    "familia": "Tubérculos",
+    "agua": 74,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Puré de boniato",
+    "calorias": 120,
+    "proteinas": 2,
+    "carbohidratos": 20,
+    "grasas": 4,
+    "familia": "Tubérculos",
+    "agua": 74,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Boniato frito",
+    "calorias": 315,
+    "proteinas": 2.2,
+    "carbohidratos": 41,
+    "grasas": 15,
+    "familia": "Tubérculos",
+    "agua": 39,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Yuca hervida",
+    "calorias": 112,
+    "proteinas": 1.4,
+    "carbohidratos": 27,
+    "grasas": 0.3,
+    "familia": "Tubérculos",
+    "agua": 70,
+    "fibra": 1.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Yuca al vapor",
+    "calorias": 110,
+    "proteinas": 1.4,
+    "carbohidratos": 27,
+    "grasas": 0.3,
+    "familia": "Tubérculos",
+    "agua": 70,
+    "fibra": 1.8,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Yuca asada",
+    "calorias": 120,
+    "proteinas": 1.5,
+    "carbohidratos": 28,
+    "grasas": 0.3,
+    "familia": "Tubérculos",
+    "agua": 68,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Yuca al horno",
+    "calorias": 125,
+    "proteinas": 1.5,
+    "carbohidratos": 29,
+    "grasas": 0.3,
+    "familia": "Tubérculos",
+    "agua": 67,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Puré de yuca",
+    "calorias": 140,
+    "proteinas": 1.5,
+    "carbohidratos": 24,
+    "grasas": 4,
+    "familia": "Tubérculos",
+    "agua": 70,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Yuca frita",
+    "calorias": 330,
+    "proteinas": 1.6,
+    "carbohidratos": 41,
+    "grasas": 15,
+    "familia": "Tubérculos",
+    "agua": 38,
+    "fibra": 2.5,
+    "categoria": "carbohidratos"
+  },
+]
+
+  ******VERDURAS Y HORTALIZAS ******
+[
+  {
+    "nombre": "Lechuga romana",
+    "calorias": 17,
+    "proteinas": 1.2,
+    "carbohidratos": 3.3,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Lechuga iceberg",
+    "calorias": 14,
+    "proteinas": 0.9,
+    "carbohidratos": 3,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 96,
+    "fibra": 1.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Lechuga trocadero",
+    "calorias": 15,
+    "proteinas": 1.2,
+    "carbohidratos": 2.9,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 1.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Espinacas",
+    "calorias": 23,
+    "proteinas": 2.9,
+    "carbohidratos": 3.6,
+    "grasas": 0.4,
+    "familia": "Verduras y hortalizas",
+    "agua": 91,
+    "fibra": 2.2,
+    "categoria":  "fibra"
+  },
+  {
+    "nombre": "Acelgas",
+    "calorias": 19,
+    "proteinas": 1.8,
+    "carbohidratos": 3.7,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 1.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Canónigos",
+    "calorias": 21,
+    "proteinas": 2,
+    "carbohidratos": 3.6,
+    "grasas": 0.4,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 1.5,
+    "categoria":  "fibra"
+  },
+  {
+    "nombre": "Rúcula",
+    "calorias": 25,
+    "proteinas": 2.6,
+    "carbohidratos": 3.7,
+    "grasas": 0.7,
+    "familia": "Verduras y hortalizas",
+    "agua": 91,
+    "fibra": 1.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Berros",
+    "calorias": 11,
+    "proteinas": 2.3,
+    "carbohidratos": 1.3,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 0.5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Col kale",
+    "calorias": 49,
+    "proteinas": 4.3,
+    "carbohidratos": 9,
+    "grasas": 0.9,
+    "familia": "Verduras y hortalizas",
+    "agua": 84,
+    "fibra": 3.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Col blanca (repollo)",
+    "calorias": 25,
+    "proteinas": 1.3,
+    "carbohidratos": 5.8,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 2.5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Brócoli",
+    "calorias": 34,
+    "proteinas": 2.8,
+    "carbohidratos": 7,
+    "grasas": 0.4,
+    "familia": "Verduras y hortalizas",
+    "agua": 89,
+    "fibra": 2.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Coliflor",
+    "calorias": 25,
+    "proteinas": 1.9,
+    "carbohidratos": 5,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Coles de Bruselas",
+    "calorias": 43,
+    "proteinas": 3.4,
+    "carbohidratos": 9,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 86,
+    "fibra": 3.8,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Nabo",
+    "calorias": 28,
+    "proteinas": 0.9,
+    "carbohidratos": 6.4,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Rábano",
+    "calorias": 16,
+    "proteinas": 0.7,
+    "carbohidratos": 3.4,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 1.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Zanahoria",
+    "calorias": 41,
+    "proteinas": 0.9,
+    "carbohidratos": 9.6,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 88,
+    "fibra": 2.8,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Apio",
+    "calorias": 16,
+    "proteinas": 0.7,
+    "carbohidratos": 3,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 1.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Hinojo",
+    "calorias": 31,
+    "proteinas": 1.2,
+    "carbohidratos": 7.3,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 90,
+    "fibra": 3.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Remolacha",
+    "calorias": 43,
+    "proteinas": 1.6,
+    "carbohidratos": 10,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 87,
+    "fibra": 2.8,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Judía verde plana",
+    "calorias": 31,
+    "proteinas": 1.8,
+    "carbohidratos": 7,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 90,
+    "fibra": 3.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Judía verde redonda",
+    "calorias": 31,
+    "proteinas": 1.9,
+    "carbohidratos": 7,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 90,
+    "fibra": 3.4,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Pimiento rojo",
+    "calorias": 31,
+    "proteinas": 1,
+    "carbohidratos": 6,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 2.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Pimiento verde",
+    "calorias": 20,
+    "proteinas": 0.9,
+    "carbohidratos": 4.6,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 93,
+    "fibra": 1.7,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Pimiento amarillo",
+    "calorias": 27,
+    "proteinas": 1,
+    "carbohidratos": 6,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 92,
+    "fibra": 0.9,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Calabacín",
+    "calorias": 17,
+    "proteinas": 1.2,
+    "carbohidratos": 3.1,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 94,
+    "fibra": 1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Tomate",
+    "calorias": 18,
+    "proteinas": 0.9,
+    "carbohidratos": 3.9,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 1.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Pepino",
+    "calorias": 15,
+    "proteinas": 0.7,
+    "carbohidratos": 3.6,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 95,
+    "fibra": 0.5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Calabaza",
+    "calorias": 26,
+    "proteinas": 1,
+    "carbohidratos": 6.5,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 91,
+    "fibra": 0.5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Cebolla",
+    "calorias": 40,
+    "proteinas": 1.1,
+    "carbohidratos": 9.3,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 89,
+    "fibra": 1.7,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Cebolla tierna",
+    "calorias": 32,
+    "proteinas": 1.8,
+    "carbohidratos": 7.3,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 89,
+    "fibra": 2.6,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Calsot",
+    "calorias": 34,
+    "proteinas": 1.5,
+    "carbohidratos": 8,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 89,
+    "fibra": 2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Chalota",
+    "calorias": 72,
+    "proteinas": 2.5,
+    "carbohidratos": 16.8,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 79,
+    "fibra": 3.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Ajo",
+    "calorias": 149,
+    "proteinas": 6.4,
+    "carbohidratos": 33,
+    "grasas": 0.5,
+    "familia": "Verduras y hortalizas",
+    "agua": 58,
+    "fibra": 2.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Ajo tierno",
+    "calorias": 31,
+    "proteinas": 1.9,
+    "carbohidratos": 7,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 89,
+    "fibra": 1.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Puerro",
+    "calorias": 61,
+    "proteinas": 1.5,
+    "carbohidratos": 14.2,
+    "grasas": 0.3,
+    "familia": "Verduras y hortalizas",
+    "agua": 83,
+    "fibra": 1.8,
+    "categoria": "fibra"
+  },
+  
+  {
+    "nombre": "Escarola",
+    "calorias": 17,
+    "proteinas": 1.3,
+    "carbohidratos": 3.4,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 93,
+    "fibra": 3.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Endivia",
+    "calorias": 17,
+    "proteinas": 1.3,
+    "carbohidratos": 3.4,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 93,
+    "fibra": 3.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Alcachofa hervida",
+    "calorias": 47,
+    "proteinas": 3.3,
+    "carbohidratos": 10.5,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 84,
+    "fibra": 5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Alcachofa a la parrilla",
+    "calorias": 53,
+    "proteinas": 3.5,
+    "carbohidratos": 11,
+    "grasas": 0.5,
+    "familia": "Verduras y hortalizas",
+    "agua": 82,
+    "fibra": 5,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Espárrago triguero a la plancha",
+    "calorias": 29,
+    "proteinas": 2.9,
+    "carbohidratos": 5,
+    "grasas": 0.5,
+    "familia": "Verduras y hortalizas",
+    "agua": 91,
+    "fibra": 2.2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Espárrago triguero a la brasa",
+    "calorias": 31,
+    "proteinas": 3,
+    "carbohidratos": 5,
+    "grasas": 0.6,
+    "familia": "Verduras y hortalizas",
+    "agua": 90,
+    "fibra": 2.2,
+    "categoria": "fibra"
+  },
+  
+  {
+    "nombre": "Espárrago blanco cocido",
+    "calorias": 20,
+    "proteinas": 2.2,
+    "carbohidratos": 3.9,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 94,
+    "fibra": 2,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Espárrago triguero cocido",
+    "calorias": 22,
+    "proteinas": 2.4,
+    "carbohidratos": 4,
+    "grasas": 0.2,
+    "familia": "Verduras y hortalizas",
+    "agua": 93,
+    "fibra": 2.1,
+    "categoria": "fibra"
+  },
+  {
+    "nombre": "Cardo cocido",
+    "calorias": 20,
+    "proteinas": 1.2,
+    "carbohidratos": 4.3,
+    "grasas": 0.1,
+    "familia": "Verduras y hortalizas",
+    "agua": 94,
+    "fibra": 1.6,
+    "categoria": "fibra"
+  }
+]
+
+*****EMBUTIDOS****
+[
+   {
+    "nombre": "Jamón serrano",
+    "calorias": 241,
+    "proteinas": 30,
+    "carbohidratos": 0.5,
+    "grasas": 12,
+    "familia": "Embutidos y fiambres",
+    "agua": 52,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Jamón ibérico",
+    "calorias": 375,
+    "proteinas": 43,
+    "carbohidratos": 0,
+    "grasas": 22,
+    "familia": "Embutidos y fiambres",
+    "agua": 35,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Lomo embuchado",
+    "calorias": 380,
+    "proteinas": 50,
+    "carbohidratos": 1,
+    "grasas": 20,
+    "familia": "Embutidos y fiambres",
+    "agua": 28,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Chorizo (dulce o picante)",
+    "calorias": 455,
+    "proteinas": 24,
+    "carbohidratos": 1.5,
+    "grasas": 38,
+    "familia": "Embutidos y fiambres",
+    "agua": 33,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salchichón",
+    "calorias": 420,
+    "proteinas": 24,
+    "carbohidratos": 1.5,
+    "grasas": 37,
+    "familia": "Embutidos y fiambres",
+    "agua": 35,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Fuet / Longaniza",
+    "calorias": 455,
+    "proteinas": 26,
+    "carbohidratos": 2,
+    "grasas": 38,
+    "familia": "Embutidos y fiambres",
+    "agua": 33,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cecina de vaca",
+    "calorias": 250,
+    "proteinas": 40,
+    "carbohidratos": 1,
+    "grasas": 12,
+    "familia": "Embutidos y fiambres",
+    "agua": 45,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Jamón cocido / York",
+    "calorias": 126,
+    "proteinas": 20,
+    "carbohidratos": 1.5,
+    "grasas": 4,
+    "familia": "Embutidos y fiambres",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pechuga de pavo (fiambre)",
+    "calorias": 105,
+    "proteinas": 22,
+    "carbohidratos": 1,
+    "grasas": 2,
+    "familia": "Embutidos y fiambres",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Mortadela",
+    "calorias": 311,
+    "proteinas": 15,
+    "carbohidratos": 2.5,
+    "grasas": 28,
+    "familia": "Embutidos y fiambres",
+    "agua": 53,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salchichas tipo Frankfurt / Viena",
+    "calorias": 270,
+    "proteinas": 12,
+    "carbohidratos": 1.5,
+    "grasas": 25,
+    "familia": "Embutidos y fiambres",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Butifarra blanca cocida",
+    "calorias": 305,
+    "proteinas": 14,
+    "carbohidratos": 1,
+    "grasas": 28,
+    "familia": "Embutidos y fiambres",
+    "agua": 55,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Morcilla",
+    "calorias": 379,
+    "proteinas": 14,
+    "carbohidratos": 6,
+    "grasas": 35,
+    "familia": "Embutidos y fiambres",
+    "agua": 46,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+    {
+    "nombre": "Jamón cocido / York light",
+    "calorias": 90,
+    "proteinas": 18,
+    "carbohidratos": 1,
+    "grasas": 2,
+    "familia": "Embutidos y fiambres",
+    "agua": 76,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pechuga de pavo (fiambre) light",
+    "calorias": 75,
+    "proteinas": 16,
+    "carbohidratos": 1,
+    "grasas": 1,
+    "familia": "Embutidos y fiambres",
+    "agua": 78,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Bacon / Panceta ahumada",
+    "calorias": 393,
+    "proteinas": 37,
+    "carbohidratos": 1.4,
+    "grasas": 28,
+    "familia": "Embutidos y fiambres",
+    "agua": 39,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Speck",
+    "calorias": 301,
+    "proteinas": 29,
+    "carbohidratos": 0,
+    "grasas": 20,
+    "familia": "Embutidos y fiambres",
+    "agua": 47,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pastrami",
+    "calorias": 147,
+    "proteinas": 21,
+    "carbohidratos": 1,
+    "grasas": 6,
+    "familia": "Embutidos y fiambres",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Salami",
+    "calorias": 423,
+    "proteinas": 22,
+    "carbohidratos": 2,
+    "grasas": 37,
+    "familia": "Embutidos y fiambres",
+    "agua": 35,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pepperoni",
+    "calorias": 494,
+    "proteinas": 23,
+    "carbohidratos": 2,
+    "grasas": 44,
+    "familia": "Embutidos y fiambres",
+    "agua": 29,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+
+*****Quesos*****
+
+[
+     {
+    "nombre": "Queso fresco (tipo Burgos)",
+    "calorias": 145,
+    "proteinas": 12,
+    "carbohidratos": 3,
+    "grasas": 8,
+    "familia": "Quesos",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Requesón / Ricotta",
+    "calorias": 174,
+    "proteinas": 11,
+    "carbohidratos": 3,
+    "grasas": 13,
+    "familia": "Quesos",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Mascarpone",
+    "calorias": 429,
+    "proteinas": 4,
+    "carbohidratos": 4,
+    "grasas": 44,
+    "familia": "Quesos",
+    "agua": 47,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Mozzarella fresca (bola)",
+    "calorias": 280,
+    "proteinas": 18,
+    "carbohidratos": 3,
+    "grasas": 17,
+    "familia": "Quesos",
+    "agua": 55,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Batido(queso-batido)",
+    "calorias": 45,
+    "proteinas": 8,
+    "carbohidratos": 3.5,
+    "grasas": 0.2,
+    "familia": "Quesos",
+    "agua": 85,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Brie",
+    "calorias": 334,
+    "proteinas": 21,
+    "carbohidratos": 0.5,
+    "grasas": 28,
+    "familia": "Quesos",
+    "agua": 48,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Camembert",
+    "calorias": 300,
+    "proteinas": 20,
+    "carbohidratos": 0.5,
+    "grasas": 24,
+    "familia": "Quesos",
+    "agua": 51,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso crema (Philadelphia)",
+    "calorias": 342,
+    "proteinas": 6,
+    "carbohidratos": 5,
+    "grasas": 34,
+    "familia": "Quesos",
+    "agua": 55,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Gorgonzola",
+    "calorias": 353,
+    "proteinas": 21,
+    "carbohidratos": 2,
+    "grasas": 29,
+    "familia": "Quesos",
+    "agua": 43,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cottage",
+    "calorias": 98,
+    "proteinas": 11,
+    "carbohidratos": 3,
+    "grasas": 4,
+    "familia": "Quesos",
+    "agua": 79,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  
+  {
+    "nombre": "Burrata",
+    "calorias": 300,
+    "proteinas": 12,
+    "carbohidratos": 2,
+    "grasas": 25,
+    "familia": "Quesos",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Manchego curado/viejo",
+    "calorias": 433,
+    "proteinas": 29,
+    "carbohidratos": 0,
+    "grasas": 35,
+    "familia": "Quesos",
+    "agua": 36,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Idiazábal",
+    "calorias": 440,
+    "proteinas": 26,
+    "carbohidratos": 1,
+    "grasas": 36,
+    "familia": "Quesos",
+    "agua": 35,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Mahón curado",
+    "calorias": 400,
+    "proteinas": 27,
+    "carbohidratos": 1,
+    "grasas": 33,
+    "familia": "Quesos",
+    "agua": 37,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Roncal",
+    "calorias": 430,
+    "proteinas": 27,
+    "carbohidratos": 1,
+    "grasas": 36,
+    "familia": "Quesos",
+    "agua": 36,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Parmigiano Reggiano",
+    "calorias": 431,
+    "proteinas": 38,
+    "carbohidratos": 4,
+    "grasas": 29,
+    "familia": "Quesos",
+    "agua": 30,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Grana Padano",
+    "calorias": 398,
+    "proteinas": 33,
+    "carbohidratos": 0,
+    "grasas": 28,
+    "familia": "Quesos",
+    "agua": 34,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Pecorino",
+    "calorias": 387,
+    "proteinas": 28,
+    "carbohidratos": 0,
+    "grasas": 32,
+    "familia": "Quesos",
+    "agua": 35,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Roquefort",
+    "calorias": 369,
+    "proteinas": 21,
+    "carbohidratos": 2,
+    "grasas": 31,
+    "familia": "Quesos",
+    "agua": 42,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Cabrales",
+    "calorias": 390,
+    "proteinas": 21,
+    "carbohidratos": 2,
+    "grasas": 32,
+    "familia": "Quesos",
+    "agua": 40,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Gorgonzola",
+    "calorias": 353,
+    "proteinas": 21,
+    "carbohidratos": 2,
+    "grasas": 29,
+    "familia": "Quesos",
+    "agua": 43,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Stilton",
+    "calorias": 393,
+    "proteinas": 23,
+    "carbohidratos": 0.5,
+    "grasas": 35,
+    "familia": "Quesos",
+    "agua": 39,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Bleu d’Auvergne",
+    "calorias": 358,
+    "proteinas": 21,
+    "carbohidratos": 2,
+    "grasas": 29,
+    "familia": "Quesos",
+    "agua": 44,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Cheddar curado",
+    "calorias": 403,
+    "proteinas": 25,
+    "carbohidratos": 1,
+    "grasas": 33,
+    "familia": "Quesos",
+    "agua": 37,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Emmental",
+    "calorias": 380,
+    "proteinas": 29,
+    "carbohidratos": 1,
+    "grasas": 28,
+    "familia": "Quesos",
+    "agua": 40,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Queso Gruyère",
+    "calorias": 413,
+    "proteinas": 30,
+    "carbohidratos": 0.5,
+    "grasas": 32,
+    "familia": "Quesos",
+    "agua": 36,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+**** Leches ****
+
+[
+
+       {
+    "nombre": "Leche Entera UHT",
+    "calorias": 61,
+    "proteinas": 3.2,
+    "carbohidratos": 4.8,
+    "grasas": 3.6,
+    "familia": "Leches",
+    "agua": 88,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche semidesnatada UHT",
+    "calorias": 46,
+    "proteinas": 3.2,
+    "carbohidratos": 4.8,
+    "grasas": 1.6,
+    "familia": "Leches",
+    "agua": 90,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche desnatada UHT",
+    "calorias": 36,
+    "proteinas": 3.4,
+    "carbohidratos": 5,
+    "grasas": 0.2,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche sin lactosa entera",
+    "calorias": 61,
+    "proteinas": 3.2,
+    "carbohidratos": 4.8,
+    "grasas": 3.6,
+    "familia": "Leches",
+    "agua": 88,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche sin lactosa semidesnatada",
+    "calorias": 46,
+    "proteinas": 3.2,
+    "carbohidratos": 4.8,
+    "grasas": 1.6,
+    "familia": "Leches",
+    "agua": 90,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche sin lactosa desnatada",
+    "calorias": 36,
+    "proteinas": 3.4,
+    "carbohidratos": 5,
+    "grasas": 0.2,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche fresca pasteurizada",
+    "calorias": 63,
+    "proteinas": 3.3,
+    "carbohidratos": 4.8,
+    "grasas": 3.7,
+    "familia": "Leches",
+    "agua": 88,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche en polvo entera",
+    "calorias": 496,
+    "proteinas": 26,
+    "carbohidratos": 39,
+    "grasas": 27,
+    "familia": "Leches",
+    "agua": 3,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche condensada azucarada",
+    "calorias": 321,
+    "proteinas": 8,
+    "carbohidratos": 55,
+    "grasas": 8.7,
+    "familia": "Leches",
+    "agua": 28,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche evaporada",
+    "calorias": 134,
+    "proteinas": 7,
+    "carbohidratos": 10,
+    "grasas": 7.6,
+    "familia": "Leches",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche cabra entera",
+    "calorias": 69,
+    "proteinas": 3.6,
+    "carbohidratos": 4.5,
+    "grasas": 4.1,
+    "familia": "Leches",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche cabra semidesnatada",
+    "calorias": 52,
+    "proteinas": 3.6,
+    "carbohidratos": 4.5,
+    "grasas": 2,
+    "familia": "Leches",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche cabra desnatada",
+    "calorias": 38,
+    "proteinas": 3.7,
+    "carbohidratos": 4.7,
+    "grasas": 0.3,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche oveja",
+    "calorias": 95,
+    "proteinas": 5.5,
+    "carbohidratos": 5,
+    "grasas": 6,
+    "familia": "Leches",
+    "agua": 82,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+     {
+    "nombre": "Leche soja",
+    "calorias": 54,
+    "proteinas": 3.6,
+    "carbohidratos": 6,
+    "grasas": 2,
+    "familia": "Leches",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": " Leche soja sin azúcares",
+    "calorias": 33,
+    "proteinas": 3.5,
+    "carbohidratos": 0.6,
+    "grasas": 1.8,
+    "familia": "Leches",
+    "agua": 90,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": " Leche almendra",
+    "calorias": 39,
+    "proteinas": 0.7,
+    "carbohidratos": 6,
+    "grasas": 1.4,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche almendra sin azúcares",
+    "calorias": 17,
+    "proteinas": 0.6,
+    "carbohidratos": 0.8,
+    "grasas": 1.2,
+    "familia": "Leches",
+    "agua": 96,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche avena",
+    "calorias": 57,
+    "proteinas": 1,
+    "carbohidratos": 10,
+    "grasas": 1.5,
+    "familia": "Leches",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche avena sin azúcares",
+    "calorias": 43,
+    "proteinas": 1,
+    "carbohidratos": 7,
+    "grasas": 1.5,
+    "familia": "Leches",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche arroz",
+    "calorias": 60,
+    "proteinas": 0.3,
+    "carbohidratos": 12,
+    "grasas": 1,
+    "familia": "Leches",
+    "agua": 86,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche arroz sin azúcares",
+    "calorias": 47,
+    "proteinas": 0.3,
+    "carbohidratos": 9,
+    "grasas": 1,
+    "familia": "Leches",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche coco",
+    "calorias": 27,
+    "proteinas": 0.2,
+    "carbohidratos": 1.5,
+    "grasas": 2.5,
+    "familia": "Leches",
+    "agua": 94,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche  coco sin azúcares",
+    "calorias": 20,
+    "proteinas": 0.2,
+    "carbohidratos": 1.5,
+    "grasas": 1.9,
+    "familia": "Leches",
+    "agua": 95,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche  anacardo",
+    "calorias": 29,
+    "proteinas": 0.9,
+    "carbohidratos": 2.5,
+    "grasas": 1.5,
+    "familia": "Leches",
+    "agua": 94,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche  anacardo sin azúcares",
+    "calorias": 23,
+    "proteinas": 0.9,
+    "carbohidratos": 2,
+    "grasas": 1.1,
+    "familia": "Leches",
+    "agua": 95,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Leche  avellana",
+    "calorias": 41,
+    "proteinas": 0.4,
+    "carbohidratos": 5,
+    "grasas": 2.5,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": " Leche  avellana sin azúcares",
+    "calorias": 29,
+    "proteinas": 0.4,
+    "carbohidratos": 3,
+    "grasas": 1.8,
+    "familia": "Leches",
+    "agua": 94,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": " Leche  Quinoa",
+    "calorias": 52,
+    "proteinas": 0.9,
+    "carbohidratos": 8,
+    "grasas": 2,
+    "familia": "Leches",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": " Leche Quinoa sin azúcares",
+    "calorias": 40,
+    "proteinas": 0.8,
+    "carbohidratos": 6,
+    "grasas": 1.5,
+    "familia": "Leches",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+ 
+]
+
+***YOGURES****
+
+[
+    {
+    "nombre": "Yogur natural entero",
+    "calorias": 61,
+    "proteinas": 3.5,
+    "carbohidratos": 4.7,
+    "grasas": 3,
+    "familia": "Yogures",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur natural semidesnatado",
+    "calorias": 49,
+    "proteinas": 4,
+    "carbohidratos": 4.7,
+    "grasas": 1.5,
+    "familia": "Yogures",
+    "agua": 88,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur natural desnatado",
+    "calorias": 41,
+    "proteinas": 4.1,
+    "carbohidratos": 5,
+    "grasas": 0.1,
+    "familia": "Yogures",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur sin lactosa",
+    "calorias": 60,
+    "proteinas": 3.5,
+    "carbohidratos": 4.7,
+    "grasas": 3,
+    "familia": "Yogures",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur de sabores con azúcar añadido",
+    "calorias": 95,
+    "proteinas": 3.3,
+    "carbohidratos": 14,
+    "grasas": 2.7,
+    "familia": "Yogures",
+    "agua": 79,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur con frutas troceadas",
+    "calorias": 105,
+    "proteinas": 3.2,
+    "carbohidratos": 16,
+    "grasas": 2.5,
+    "familia": "Yogures",
+    "agua": 77,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur con confitura en el fondo",
+    "calorias": 120,
+    "proteinas": 3.5,
+    "carbohidratos": 18,
+    "grasas": 4,
+    "familia": "Yogures",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur con cereales o toppings",
+    "calorias": 130,
+    "proteinas": 4,
+    "carbohidratos": 20,
+    "grasas": 3.5,
+    "familia": "Yogures",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur griego natural",
+    "calorias": 115,
+    "proteinas": 5,
+    "carbohidratos": 3.8,
+    "grasas": 9,
+    "familia": "Yogures",
+    "agua": 80,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur griego desnatado",
+    "calorias": 59,
+    "proteinas": 6,
+    "carbohidratos": 4,
+    "grasas": 0.3,
+    "familia": "Yogures",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur griego con frutas o miel",
+    "calorias": 130,
+    "proteinas": 5,
+    "carbohidratos": 13,
+    "grasas": 8,
+    "familia": "Yogures",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur líquido natural",
+    "calorias": 63,
+    "proteinas": 3.4,
+    "carbohidratos": 5,
+    "grasas": 2.8,
+    "familia": "Yogures",
+    "agua": 86,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur líquido de sabores",
+    "calorias": 80,
+    "proteinas": 3.2,
+    "carbohidratos": 12,
+    "grasas": 2,
+    "familia": "Yogures",
+    "agua": 82,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Kéfir líquido",
+    "calorias": 55,
+    "proteinas": 3.6,
+    "carbohidratos": 4,
+    "grasas": 3,
+    "familia": "Yogures",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Kéfir tipo yogur",
+    "calorias": 65,
+    "proteinas": 3.8,
+    "carbohidratos": 4,
+    "grasas": 3.5,
+    "familia": "Yogures",
+    "agua": 86,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Kéfir desnatado",
+    "calorias": 38,
+    "proteinas": 4,
+    "carbohidratos": 5,
+    "grasas": 0.2,
+    "familia": "Yogures",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Skyr natural",
+    "calorias": 62,
+    "proteinas": 11,
+    "carbohidratos": 4,
+    "grasas": 0.2,
+    "familia": "Yogures",
+    "agua": 84,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Skyr desnatado",
+    "calorias": 57,
+    "proteinas": 10.5,
+    "carbohidratos": 4,
+    "grasas": 0.1,
+    "familia": "Yogures",
+    "agua": 85,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Skyr con sabores",
+    "calorias": 95,
+    "proteinas": 9,
+    "carbohidratos": 12,
+    "grasas": 0.3,
+    "familia": "Yogures",
+    "agua": 78,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Alpro High Protein Yogurt (plant-based)",
+    "calorias": 71,
+    "proteinas": 6.2,
+    "carbohidratos": 2.5,
+    "grasas": 3.6,
+    "familia": "Yogures",
+    "agua": null,
+    "fibra": null,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur Natural Proteico (Mercadona, Hacendado)",
+    "calorias": 52,
+    "proteinas": 7.5,
+    "carbohidratos": 4.7,
+    "grasas": 0.5,
+    "familia": "Yogures",
+    "agua": null,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  
+  {
+    "nombre": "Yogur de soja",
+    "calorias": 55,
+    "proteinas": 4,
+    "carbohidratos": 3,
+    "grasas": 2.3,
+    "familia": "Yogures",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur de almendra",
+    "calorias": 50,
+    "proteinas": 1,
+    "carbohidratos": 6,
+    "grasas": 2.5,
+    "familia": "Yogures",
+    "agua": 89,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur de coco",
+    "calorias": 118,
+    "proteinas": 1.5,
+    "carbohidratos": 6,
+    "grasas": 9.5,
+    "familia": "Yogures",
+    "agua": 82,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Yogur de avena",
+    "calorias": 65,
+    "proteinas": 1.5,
+    "carbohidratos": 8,
+    "grasas": 2.5,
+    "familia": "Yogures",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+****CARNES BLANCAS******
+
+[
+    {
+    "nombre": "Pollo pechuga a la plancha",
+    "calorias": 110,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 1.5,
+    "familia": "Carnes blancas",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga al horno",
+    "calorias": 120,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 2.5,
+    "familia": "Carnes blancas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga airfryer",
+    "calorias": 115,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 2,
+    "familia": "Carnes blancas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga papillote",
+    "calorias": 105,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 1,
+    "familia": "Carnes blancas",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga  parrilla",
+    "calorias": 118,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 2.2,
+    "familia": "Carnes blancas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga salteada",
+    "calorias": 125,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 3,
+    "familia": "Carnes blancas",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo pechuga hervida",
+    "calorias": 100,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 1,
+    "familia": "Carnes blancas",
+    "agua": 76,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Pollo muslo c/piel  al horno ",
+    "calorias": 210,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes blancas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo c/piel  guisado ",
+    "calorias": 220,
+    "proteinas": 22,
+    "carbohidratos": 1,
+    "grasas": 13,
+    "familia": "Carnes blancas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo c/piel  plancha",
+    "calorias": 205,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 11.5,
+    "familia": "Carnes blancas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo c/piel en airfryer ",
+    "calorias": 208,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 11.8,
+    "familia": "Carnes blancas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo s/piel al horno",
+    "calorias": 165,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 7,
+    "familia": "Carnes blancas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo s/piel guisado",
+    "calorias": 175,
+    "proteinas": 23,
+    "carbohidratos": 1,
+    "grasas": 7.5,
+    "familia": "Carnes blancas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo s/piel plancha ",
+    "calorias": 160,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 6.5,
+    "familia": "Carnes blancas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo muslo s/piel  airfryer ",
+    "calorias": 163,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 6.8,
+    "familia": "Carnes blancas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo c/piel al horno ",
+    "calorias": 220,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 14,
+    "familia": "Carnes blancas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo c/piel airfryer ",
+    "calorias": 218,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 13.8,
+    "familia": "Carnes blancas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo c/piel plancha ",
+    "calorias": 215,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 13.5,
+    "familia": "Carnes blancas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo s/piel al horno ",
+    "calorias": 175,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Carnes blancas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo s/piel airfryer ",
+    "calorias": 173,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 7.8,
+    "familia": "Carnes blancas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pollo contramuslo s/piel  plancha ",
+    "calorias": 170,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 7.5,
+    "familia": "Carnes blancas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Alitas de pollo al horno/airfryer",
+    "calorias": 254,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 17,
+    "familia": "Carnes blancas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Alitas de pollo a la parrilla",
+    "calorias": 260,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 18,
+    "familia": "Carnes blancas",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Alitas de pollo guisadas",
+    "calorias": 270,
+    "proteinas": 25,
+    "carbohidratos": 2,
+    "grasas": 18,
+    "familia": "Carnes blancas",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga a la plancha",
+    "calorias": 105,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 1,
+    "familia": "Carnes blancas",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga al horno",
+    "calorias": 115,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 1.5,
+    "familia": "Carnes blancas",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga en airfryer",
+    "calorias": 110,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 1.2,
+    "familia": "Carnes blancas",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga en papillote",
+    "calorias": 102,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 0.8,
+    "familia": "Carnes blancas",
+    "agua": 76,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga hervida",
+    "calorias": 98,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 0.7,
+    "familia": "Carnes blancas",
+    "agua": 77,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo pechuga salteada",
+    "calorias": 120,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 2,
+    "familia": "Carnes blancas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo c/piel horno ",
+    "calorias": 190,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 11,
+    "familia": "Carnes blancas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo c/piel  plancha ",
+    "calorias": 185,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 10.5,
+    "familia": "Carnes blancas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo c/piel airfryer ",
+    "calorias": 188,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 10.8,
+    "familia": "Carnes blancas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo s/piel al horno ",
+    "calorias": 150,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 6,
+    "familia": "Carnes blancas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo s/piel plancha ",
+    "calorias": 145,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 5.5,
+    "familia": "Carnes blancas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pavo contramuslo s/piel airfryer ",
+    "calorias": 147,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 5.7,
+    "familia": "Carnes blancas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+
+   {
+    "nombre": "Pato magret parrilla sin piel",
+    "calorias": 142,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 4.5,
+    "familia": "Carnes blancas",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Pato magret plancha sin piel",
+    "calorias": 140,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 4.3,
+    "familia": "Carnes blancas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  
+  {
+    "nombre": "Conejo a la brasa",
+    "calorias": 145,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 6,
+    "familia": "Carnes blancas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Conejo a la parrilla",
+    "calorias": 150,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 6.5,
+    "familia": "Carnes blancas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Conejo al horno",
+    "calorias": 155,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 7,
+    "familia": "Carnes blancas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Conejo guisado",
+    "calorias": 170,
+    "proteinas": 21,
+    "carbohidratos": 1,
+    "grasas": 9,
+    "familia": "Carnes blancas",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Conejo al ajillo",
+    "calorias": 210,
+    "proteinas": 21,
+    "carbohidratos": 1,
+    "grasas": 13,
+    "familia": "Carnes blancas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+
+
+****CARNE ROJA******
+
+[
+      {
+    "nombre": "Cerdo solomillo plancha",
+    "calorias": 120,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 3.5,
+    "familia": "Carnes rojas",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo solomillo parrilla",
+    "calorias": 125,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Carnes rojas",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo solomillo horno",
+    "calorias": 130,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Carnes rojas",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo solomillo airfryer",
+    "calorias": 128,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 4,
+    "familia": "Carnes rojas",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lomo plancha",
+    "calorias": 135,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Carnes rojas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lomo parrilla",
+    "calorias": 140,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 5.2,
+    "familia": "Carnes rojas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lomo horno",
+    "calorias": 145,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 5.5,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lomo airfryer",
+    "calorias": 143,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 5.3,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo secreto ibérico plancha",
+    "calorias": 210,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo secreto ibérico parrilla",
+    "calorias": 220,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 13,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo secreto ibérico horno",
+    "calorias": 225,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 13.5,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo secreto ibérico airfryer",
+    "calorias": 218,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo pluma ibérica plancha",
+    "calorias": 195,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 11,
+    "familia": "Carnes rojas",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo pluma ibérica parrilla",
+    "calorias": 200,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 11.5,
+    "familia": "Carnes rojas",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo pluma ibérica horno",
+    "calorias": 205,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo pluma ibérica airfryer",
+    "calorias": 202,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 11.8,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lagarto ibérico plancha",
+    "calorias": 145,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 5,
+    "familia": "Carnes rojas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lagarto ibérico parrilla",
+    "calorias": 150,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 5.2,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lagarto ibérico horno",
+    "calorias": 155,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 5.5,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo lagarto ibérico airfryer",
+    "calorias": 152,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 5.3,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo abanico plancha",
+    "calorias": 230,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 15,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo abanico  parrilla",
+    "calorias": 240,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 16,
+    "familia": "Carnes rojas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo abanico horno",
+    "calorias": 245,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 16.5,
+    "familia": "Carnes rojas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo abanico  airfryer",
+    "calorias": 238,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 15.8,
+    "familia": "Carnes rojas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+
+    {
+    "nombre": "Cerdo cabeza de lomo plancha",
+    "calorias": 190,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 11,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo cabeza de lomo parrilla",
+    "calorias": 200,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo cabeza de lomo horno",
+    "calorias": 205,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo cabeza de lomo guisado",
+    "calorias": 210,
+    "proteinas": 21,
+    "carbohidratos": 1,
+    "grasas": 13,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo chuleta de lomo plancha",
+    "calorias": 205,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo chuleta de lomo parrilla",
+    "calorias": 210,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 13,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo chuleta de lomo horno",
+    "calorias": 215,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 13.5,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo presa ibérica plancha",
+    "calorias": 250,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 16,
+    "familia": "Carnes rojas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo presa ibérica parrilla",
+    "calorias": 260,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 17,
+    "familia": "Carnes rojas",
+    "agua": 63,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo presa ibérica horno",
+    "calorias": 265,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 17.5,
+    "familia": "Carnes rojas",
+    "agua": 63,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo panceta plancha",
+    "calorias": 320,
+    "proteinas": 15,
+    "carbohidratos": 0,
+    "grasas": 30,
+    "familia": "Carnes rojas",
+    "agua": 50,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo panceta parrilla",
+    "calorias": 330,
+    "proteinas": 15,
+    "carbohidratos": 0,
+    "grasas": 31,
+    "familia": "Carnes rojas",
+    "agua": 49,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo panceta horno",
+    "calorias": 335,
+    "proteinas": 15,
+    "carbohidratos": 0,
+    "grasas": 32,
+    "familia": "Carnes rojas",
+    "agua": 49,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo costillas parrilla",
+    "calorias": 290,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 20,
+    "familia": "Carnes rojas",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo costillas horno",
+    "calorias": 300,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 21,
+    "familia": "Carnes rojas",
+    "agua": 57,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo costillas guisadas",
+    "calorias": 310,
+    "proteinas": 19,
+    "carbohidratos": 1,
+    "grasas": 21.5,
+    "familia": "Carnes rojas",
+    "agua": 56,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo manitas guisadas",
+    "calorias": 260,
+    "proteinas": 19,
+    "carbohidratos": 0,
+    "grasas": 19,
+    "familia": "Carnes rojas",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo papada plancha",
+    "calorias": 340,
+    "proteinas": 13,
+    "carbohidratos": 0,
+    "grasas": 32,
+    "familia": "Carnes rojas",
+    "agua": 48,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo papada guisada",
+    "calorias": 350,
+    "proteinas": 12,
+    "carbohidratos": 1,
+    "grasas": 33,
+    "familia": "Carnes rojas",
+    "agua": 47,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo tocino curado",
+    "calorias": 650,
+    "proteinas": 8,
+    "carbohidratos": 0,
+    "grasas": 70,
+    "familia": "Carnes rojas",
+    "agua": 20,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo quijada brasa",
+    "calorias": 240,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 16,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cerdo quijada horno",
+    "calorias": 245,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 16.5,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+
+  {
+    "nombre": "Ternera solomillo plancha",
+    "calorias": 177,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 7.8,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera solomillo parrilla",
+    "calorias": 180,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera lomo alto/bajo",
+    "calorias": 200,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera picaña plancha",
+    "calorias": 220,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes rojas",
+    "agua": 63,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera picaña parrilla",
+    "calorias": 225,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 12.5,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera redondo horno",
+    "calorias": 170,
+    "proteinas": 26,
+    "carbohidratos": 0,
+    "grasas": 6,
+    "familia": "Carnes rojas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera lomo bajo",
+    "calorias": 200,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera entraña parrilla",
+    "calorias": 240,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 15,
+    "familia": "Carnes rojas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera jarrete estofado",
+    "calorias": 190,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 10,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera falda desmechada",
+    "calorias": 210,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 12,
+    "familia": "Carnes rojas",
+    "agua": 64,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera vacío parrilla",
+    "calorias": 230,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 14,
+    "familia": "Carnes rojas",
+    "agua": 61,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera vacío plancha",
+    "calorias": 225,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 13.5,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera carrillera estofada",
+    "calorias": 215,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 13,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera bistec plancha",
+    "calorias": 190,
+    "proteinas": 26,
+    "carbohidratos": 0,
+    "grasas": 8,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera bistec parrilla",
+    "calorias": 195,
+    "proteinas": 26,
+    "carbohidratos": 0,
+    "grasas": 8.5,
+    "familia": "Carnes rojas",
+    "agua": 66,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera chuletón parrilla",
+    "calorias": 250,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 17,
+    "familia": "Carnes rojas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Ternera hígado plancha",
+    "calorias": 165,
+    "proteinas": 26,
+    "carbohidratos": 4,
+    "grasas": 5,
+    "familia": "Carnes rojas",
+    "agua": 68,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera hígado parrilla",
+    "calorias": 170,
+    "proteinas": 26,
+    "carbohidratos": 4,
+    "grasas": 5.3,
+    "familia": "Carnes rojas",
+    "agua": 67,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Ternera hígado encebollado",
+    "calorias": 185,
+    "proteinas": 24,
+    "carbohidratos": 6,
+    "grasas": 7,
+    "familia": "Carnes rojas",
+    "agua": 65,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Cabrito pierna horno",
+    "calorias": 240,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 16,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cabrito pierna brasa",
+    "calorias": 235,
+    "proteinas": 24,
+    "carbohidratos": 0,
+    "grasas": 15.5,
+    "familia": "Carnes rojas",
+    "agua": 62,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cabrito paletilla asada/guisada",
+    "calorias": 245,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 17,
+    "familia": "Carnes rojas",
+    "agua": 61,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cabrito costillar brasa",
+    "calorias": 260,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 19,
+    "familia": "Carnes rojas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cordero pierna horno",
+    "calorias": 270,
+    "proteinas": 23,
+    "carbohidratos": 0,
+    "grasas": 20,
+    "familia": "Carnes rojas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cordero paletilla asada/guisada",
+    "calorias": 280,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 21,
+    "familia": "Carnes rojas",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cordero chuletillas brasa",
+    "calorias": 300,
+    "proteinas": 22,
+    "carbohidratos": 0,
+    "grasas": 23,
+    "familia": "Carnes rojas",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cordero falda guisada/asada",
+    "calorias": 310,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 24,
+    "familia": "Carnes rojas",
+    "agua": 57,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Cordero cuello guisado",
+    "calorias": 290,
+    "proteinas": 21,
+    "carbohidratos": 0,
+    "grasas": 22,
+    "familia": "Carnes rojas",
+    "agua": 58,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+
+    {
+    "nombre": "Caballo bistec plancha",
+    "calorias": 140,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 3.5,
+    "familia": "Carnes rojas",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Caballo bistec parrilla",
+    "calorias": 145,
+    "proteinas": 27,
+    "carbohidratos": 0,
+    "grasas": 3.8,
+    "familia": "Carnes rojas",
+    "agua": 69,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Caballo solomillo plancha/parrilla",
+    "calorias": 135,
+    "proteinas": 28,
+    "carbohidratos": 0,
+    "grasas": 3,
+    "familia": "Carnes rojas",
+    "agua": 71,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Carne picada mixta (ternera+cerdo)",
+    "calorias": 250,
+    "proteinas": 18,
+    "carbohidratos": 0,
+    "grasas": 20,
+    "familia": "Carnes rojas",
+    "agua": 60,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Carne picada ternera",
+    "calorias": 220,
+    "proteinas": 20,
+    "carbohidratos": 0,
+    "grasas": 15,
+    "familia": "Carnes rojas",
+    "agua": 63,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Carne picada cerdo",
+    "calorias": 270,
+    "proteinas": 17,
+    "carbohidratos": 0,
+    "grasas": 22,
+    "familia": "Carnes rojas",
+    "agua": 59,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+
+
+*****PASTA Y DERIVADOS****
+[
+ {
+    "nombre": "Pasta blanca",
+    "calorias": 371,
+    "proteinas": 12,
+    "carbohidratos": 74,
+    "grasas": 1.5,
+    "familia": "Pasta y derivados",
+    "agua": 10,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pasta integral",
+    "calorias": 348,
+    "proteinas": 13,
+    "carbohidratos": 70,
+    "grasas": 2,
+    "familia": "Pasta y derivados",
+    "agua": 10,
+    "fibra": 6.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pasta sin gluten",
+    "calorias": 360,
+    "proteinas": 7,
+    "carbohidratos": 79,
+    "grasas": 1.2,
+    "familia": "Pasta y derivados",
+    "agua": 10,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Gnocchi",
+    "calorias": 130,
+    "proteinas": 3,
+    "carbohidratos": 28,
+    "grasas": 0.3,
+    "familia": "Pasta y derivados",
+    "agua": 68,
+    "fibra": 1.5,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Pasta fresca",
+    "calorias": 288,
+    "proteinas": 10,
+    "carbohidratos": 54,
+    "grasas": 3,
+    "familia": "Pasta y derivados",
+    "agua": 30,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Fideos de arroz",
+    "calorias": 364,
+    "proteinas": 6,
+    "carbohidratos": 80,
+    "grasas": 0.8,
+    "familia": "Pasta y derivados",
+    "agua": 10,
+    "fibra": 1,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Fideos udon",
+    "calorias": 127,
+    "proteinas": 3,
+    "carbohidratos": 27,
+    "grasas": 0.2,
+    "familia": "Pasta y derivados",
+    "agua": 69,
+    "fibra": 1,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Fideos soba",
+    "calorias": 336,
+    "proteinas": 13,
+    "carbohidratos": 72,
+    "grasas": 1.5,
+    "familia": "Pasta y derivados",
+    "agua": 10,
+    "fibra": 3,
+    "categoria": "carbohidratos"
+  },
+   {
+    "nombre": "Raviolis rellenos de carne (ternera)",
+    "calorias": 270,
+    "proteinas": 11,
+    "carbohidratos": 36,
+    "grasas": 9,
+    "familia": "Pasta y derivados",
+    "agua": 40,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Raviolis rellenos de queso",
+    "calorias": 290,
+    "proteinas": 12,
+    "carbohidratos": 35,
+    "grasas": 11,
+    "familia": "Pasta y derivados",
+    "agua": 38,
+    "fibra": 2,
+    "categoria": "carbohidratos"
+  },
+  {
+    "nombre": "Raviolis rellenos de espinacas",
+    "calorias": 250,
+    "proteinas": 10,
+    "carbohidratos": 35,
+    "grasas": 7,
+    "familia": "Pasta y derivados",
+    "agua": 42,
+    "fibra": 2.5,
+    "categoria": "carbohidratos"
+  }
+]
+
+
+*****FRUTAS******
+
+[
+  {
+    "nombre": "Manzana verde",
+    "calorias": 52,
+    "proteinas": 0.3,
+    "carbohidratos": 14,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 2.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Manzana roja",
+    "calorias": 52,
+    "proteinas": 0.3,
+    "carbohidratos": 14,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 2.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Manzana golden",
+    "calorias": 57,
+    "proteinas": 0.3,
+    "carbohidratos": 15,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 85,
+    "fibra": 2.1,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Manzana reineta",
+    "calorias": 61,
+    "proteinas": 0.3,
+    "carbohidratos": 15,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 84,
+    "fibra": 2.0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Pera conference",
+    "calorias": 57,
+    "proteinas": 0.4,
+    "carbohidratos": 15,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 84,
+    "fibra": 3.0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Pera ercolina",
+    "calorias": 55,
+    "proteinas": 0.4,
+    "carbohidratos": 14.5,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 84,
+    "fibra": 3.0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Pera blanquilla",
+    "calorias": 54,
+    "proteinas": 0.4,
+    "carbohidratos": 14,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 85,
+    "fibra": 2.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Membrillo",
+    "calorias": 57,
+    "proteinas": 0.4,
+    "carbohidratos": 15.3,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 83,
+    "fibra": 1.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Naranja",
+    "calorias": 47,
+    "proteinas": 0.9,
+    "carbohidratos": 12,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 87,
+    "fibra": 2.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Mandarina",
+    "calorias": 53,
+    "proteinas": 0.8,
+    "carbohidratos": 13,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 1.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Limón",
+    "calorias": 29,
+    "proteinas": 1.1,
+    "carbohidratos": 9,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 89,
+    "fibra": 2.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Pomelo",
+    "calorias": 42,
+    "proteinas": 0.8,
+    "carbohidratos": 11,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 1.6,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Lima",
+    "calorias": 30,
+    "proteinas": 0.7,
+    "carbohidratos": 10.5,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 2.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Melocotón",
+    "calorias": 39,
+    "proteinas": 0.9,
+    "carbohidratos": 10,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 89,
+    "fibra": 1.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Nectarina",
+    "calorias": 44,
+    "proteinas": 1.1,
+    "carbohidratos": 11,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 1.7,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Paraguayo",
+    "calorias": 43,
+    "proteinas": 0.9,
+    "carbohidratos": 11,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Albaricoque",
+    "calorias": 48,
+    "proteinas": 1.4,
+    "carbohidratos": 11,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Ciruela",
+    "calorias": 46,
+    "proteinas": 0.7,
+    "carbohidratos": 11,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 87,
+    "fibra": 1.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Cereza",
+    "calorias": 63,
+    "proteinas": 1.1,
+    "carbohidratos": 16,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 82,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Sandía",
+    "calorias": 30,
+    "proteinas": 0.6,
+    "carbohidratos": 8,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 92,
+    "fibra": 0.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Melón cantalupo",
+    "calorias": 34,
+    "proteinas": 0.8,
+    "carbohidratos": 8,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 90,
+    "fibra": 0.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Melón galia",
+    "calorias": 35,
+    "proteinas": 0.8,
+    "carbohidratos": 9,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 89,
+    "fibra": 1,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Melón piel de sapo",
+    "calorias": 28,
+    "proteinas": 0.8,
+    "carbohidratos": 7,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 91,
+    "fibra": 0.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Melón honeydew",
+    "calorias": 36,
+    "proteinas": 0.8,
+    "carbohidratos": 9,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 89,
+    "fibra": 0.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Higo",
+    "calorias": 74,
+    "proteinas": 0.8,
+    "carbohidratos": 19,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 79,
+    "fibra": 2.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Breva",
+    "calorias": 65,
+    "proteinas": 0.8,
+    "carbohidratos": 17,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 80,
+    "fibra": 2.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Plátano",
+    "calorias": 89,
+    "proteinas": 1.1,
+    "carbohidratos": 23,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 75,
+    "fibra": 2.6,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Mango",
+    "calorias": 60,
+    "proteinas": 0.8,
+    "carbohidratos": 15,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 83,
+    "fibra": 1.6,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Papaya",
+    "calorias": 43,
+    "proteinas": 0.5,
+    "carbohidratos": 11,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 1.7,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Piña",
+    "calorias": 50,
+    "proteinas": 0.5,
+    "carbohidratos": 13,
+    "grasas": 0.1,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 1.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Aguacate",
+    "calorias": 160,
+    "proteinas": 2,
+    "carbohidratos": 9,
+    "grasas": 15,
+    "familia": "Frutas",
+    "agua": 73,
+    "fibra": 7,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Kiwi verde",
+    "calorias": 61,
+    "proteinas": 1.1,
+    "carbohidratos": 15,
+    "grasas": 0.5,
+    "familia": "Frutas",
+    "agua": 83,
+    "fibra": 3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Kiwi amarillo",
+    "calorias": 63,
+    "proteinas": 1.2,
+    "carbohidratos": 15,
+    "grasas": 0.6,
+    "familia": "Frutas",
+    "agua": 82,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Maracuyá",
+    "calorias": 97,
+    "proteinas": 2.2,
+    "carbohidratos": 23,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 73,
+    "fibra": 10,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Guayaba",
+    "calorias": 68,
+    "proteinas": 2.6,
+    "carbohidratos": 14,
+    "grasas": 1,
+    "familia": "Frutas",
+    "agua": 80,
+    "fibra": 5.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Chirimoya",
+    "calorias": 75,
+    "proteinas": 1.6,
+    "carbohidratos": 18,
+    "grasas": 0.6,
+    "familia": "Frutas",
+    "agua": 78,
+    "fibra": 3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Litchi",
+    "calorias": 66,
+    "proteinas": 0.8,
+    "carbohidratos": 17,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 82,
+    "fibra": 1.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Uvas blancas",
+    "calorias": 69,
+    "proteinas": 0.7,
+    "carbohidratos": 18,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 80,
+    "fibra": 0.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Uvas negras",
+    "calorias": 70,
+    "proteinas": 0.7,
+    "carbohidratos": 18,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 80,
+    "fibra": 0.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Uvas rojas",
+    "calorias": 71,
+    "proteinas": 0.7,
+    "carbohidratos": 18,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 80,
+    "fibra": 0.9,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Grosellas",
+    "calorias": 56,
+    "proteinas": 1.4,
+    "carbohidratos": 14,
+    "grasas": 0.2,
+    "familia": "Frutas",
+    "agua": 82,
+    "fibra": 4.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Arándanos",
+    "calorias": 57,
+    "proteinas": 0.7,
+    "carbohidratos": 14,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 84,
+    "fibra": 2.4,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Moras",
+    "calorias": 43,
+    "proteinas": 1.4,
+    "carbohidratos": 10,
+    "grasas": 0.5,
+    "familia": "Frutas",
+    "agua": 88,
+    "fibra": 5.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Frambuesas",
+    "calorias": 52,
+    "proteinas": 1.2,
+    "carbohidratos": 12,
+    "grasas": 0.7,
+    "familia": "Frutas",
+    "agua": 86,
+    "fibra": 6.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Fresas",
+    "calorias": 32,
+    "proteinas": 0.7,
+    "carbohidratos": 8,
+    "grasas": 0.3,
+    "familia": "Frutas",
+    "agua": 91,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Dátiles secos",
+    "calorias": 282,
+    "proteinas": 2.5,
+    "carbohidratos": 75,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 21,
+    "fibra": 8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Higos secos",
+    "calorias": 249,
+    "proteinas": 3.3,
+    "carbohidratos": 64,
+    "grasas": 0.9,
+    "familia": "Frutas",
+    "agua": 30,
+    "fibra": 9.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Uvas pasas",
+    "calorias": 299,
+    "proteinas": 3.1,
+    "carbohidratos": 79,
+    "grasas": 0.5,
+    "familia": "Frutas",
+    "agua": 15,
+    "fibra": 3.7,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Ciruelas pasas",
+    "calorias": 240,
+    "proteinas": 2.2,
+    "carbohidratos": 63,
+    "grasas": 0.4,
+    "familia": "Frutas",
+    "agua": 31,
+    "fibra": 7,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Orejones de albaricoque",
+    "calorias": 241,
+    "proteinas": 3.4,
+    "carbohidratos": 63,
+    "grasas": 0.5,
+    "familia": "Frutas",
+    "agua": 30,
+    "fibra": 7.3,
+    "categoria": "Otros"
+  }
+]
+
+
+****FRUTOS SECOS Y DERIVADOS********
+
+
+[
+  {
+    "nombre": "Almendras",
+    "calorias": 579,
+    "proteinas": 21,
+    "carbohidratos": 22,
+    "grasas": 50,
+    "familia": "Frutos secos y derivados",
+    "agua": 4,
+    "fibra": 12,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Avellanas",
+    "calorias": 628,
+    "proteinas": 15,
+    "carbohidratos": 17,
+    "grasas": 61,
+    "familia": "Frutos secos y derivados",
+    "agua": 5,
+    "fibra": 10,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Nueces comunes",
+    "calorias": 654,
+    "proteinas": 15,
+    "carbohidratos": 14,
+    "grasas": 65,
+    "familia": "Frutos secos y derivados",
+    "agua": 4,
+    "fibra": 7,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Nueces pecanas",
+    "calorias": 691,
+    "proteinas": 9,
+    "carbohidratos": 14,
+    "grasas": 72,
+    "familia": "Frutos secos y derivados",
+    "agua": 3,
+    "fibra": 10,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Nueces de macadamia",
+    "calorias": 718,
+    "proteinas": 8,
+    "carbohidratos": 14,
+    "grasas": 76,
+    "familia": "Frutos secos y derivados",
+    "agua": 2,
+    "fibra": 9,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Nueces de Brasil",
+    "calorias": 656,
+    "proteinas": 14,
+    "carbohidratos": 12,
+    "grasas": 67,
+    "familia": "Frutos secos y derivados",
+    "agua": 3,
+    "fibra": 7,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Pistachos",
+    "calorias": 560,
+    "proteinas": 20,
+    "carbohidratos": 28,
+    "grasas": 45,
+    "familia": "Frutos secos y derivados",
+    "agua": 5,
+    "fibra": 10,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Anacardos",
+    "calorias": 553,
+    "proteinas": 18,
+    "carbohidratos": 30,
+    "grasas": 44,
+    "familia": "Frutos secos y derivados",
+    "agua": 5,
+    "fibra": 3,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Piñones",
+    "calorias": 673,
+    "proteinas": 14,
+    "carbohidratos": 13,
+    "grasas": 68,
+    "familia": "Frutos secos y derivados",
+    "agua": 2,
+    "fibra": 3.7,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Cacahuete",
+    "calorias": 567,
+    "proteinas": 25,
+    "carbohidratos": 16,
+    "grasas": 49,
+    "familia": "Frutos secos y derivados",
+    "agua": 5,
+    "fibra": 8.5,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Almendra mantequilla",
+    "calorias": 614,
+    "proteinas": 21,
+    "carbohidratos": 19,
+    "grasas": 56,
+    "familia": "Frutos secos y derivados",
+    "agua": 2,
+    "fibra": 10,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Cacahuete mantequilla",
+    "calorias": 588,
+    "proteinas": 25,
+    "carbohidratos": 20,
+    "grasas": 50,
+    "familia": "Frutos secos y derivados",
+    "agua": 2,
+    "fibra": 6,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Anacardo mantequilla",
+    "calorias": 553,
+    "proteinas": 18,
+    "carbohidratos": 30,
+    "grasas": 44,
+    "familia": "Frutos secos y derivados",
+    "agua": 3,
+    "fibra": 3,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Tahini (pasta de sésamo)",
+    "calorias": 595,
+    "proteinas": 17,
+    "carbohidratos": 21,
+    "grasas": 54,
+    "familia": "Frutos secos y derivados",
+    "agua": 3,
+    "fibra": 9,
+    "categoria": "grasas"
+  },
+   {
+    "nombre": "Semillas de sésamo",
+    "calorias": 573,
+    "proteinas": 18,
+    "carbohidratos": 23,
+    "grasas": 50,
+    "familia": "Frutos secos y derivados",
+    "agua": 4,
+    "fibra": 12,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Semillas de lino",
+    "calorias": 534,
+    "proteinas": 18,
+    "carbohidratos": 29,
+    "grasas": 42,
+    "familia": "Frutos secos y derivados",
+    "agua": 7,
+    "fibra": 27,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Semillas de chía",
+    "calorias": 486,
+    "proteinas": 16,
+    "carbohidratos": 42,
+    "grasas": 31,
+    "familia": "Frutos secos y derivados",
+    "agua": 6,
+    "fibra": 34,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Semillas de girasol",
+    "calorias": 584,
+    "proteinas": 21,
+    "carbohidratos": 20,
+    "grasas": 51,
+    "familia": "Frutos secos y derivados",
+    "agua": 5,
+    "fibra": 9,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Semillas de calabaza",
+    "calorias": 559,
+    "proteinas": 30,
+    "carbohidratos": 11,
+    "grasas": 49,
+    "familia": "Frutos secos y derivados",
+    "agua": 6,
+    "fibra": 6,
+    "categoria": "grasas"
+  }
+]
+
+
+****ACEITES*****
+[
+  {
+    "nombre": "Aceite de oliva virgen extra",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de oliva virgen/suave",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de girasol",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de maíz",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de sésamo",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de coco",
+    "calorias": 892,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de palma",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de cacahuete",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de nuez",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Aceite de linaza",
+    "calorias": 884,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Mantequilla",
+    "calorias": 717,
+    "proteinas": 0.9,
+    "carbohidratos": 0.1,
+    "grasas": 81,
+    "familia": "Aceites y similares",
+    "agua": 16,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Margarina",
+    "calorias": 717,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 80,
+    "familia": "Aceites y similares",
+    "agua": 16,
+    "fibra": 0,
+    "categoria": "grasas"
+  },
+  {
+    "nombre": "Manteca de cerdo",
+    "calorias": 900,
+    "proteinas": 0,
+    "carbohidratos": 0,
+    "grasas": 100,
+    "familia": "Aceites y similares",
+    "agua": 0,
+    "fibra": 0,
+    "categoria": "grasas"
+  }
+]
+
+*****SALSAS*****
+
+[
+  {
+    "nombre": "Salsa barbacoa (BBQ)",
+    "calorias": 120,
+    "proteinas": 1,
+    "carbohidratos": 28,
+    "grasas": 0.5,
+    "familia": "Salsas",
+    "agua": 65,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa agridulce china",
+    "calorias": 130,
+    "proteinas": 0.5,
+    "carbohidratos": 33,
+    "grasas": 0.2,
+    "familia": "Salsas",
+    "agua": 64,
+    "fibra": 0.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa yakitori",
+    "calorias": 150,
+    "proteinas": 2,
+    "carbohidratos": 35,
+    "grasas": 0.5,
+    "familia": "Salsas",
+    "agua": 60,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Mostaza y miel",
+    "calorias": 180,
+    "proteinas": 2,
+    "carbohidratos": 32,
+    "grasas": 6,
+    "familia": "Salsas",
+    "agua": 58,
+    "fibra": 1,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa Worcestershire (Perrins)",
+    "calorias": 78,
+    "proteinas": 0,
+    "carbohidratos": 19,
+    "grasas": 0,
+    "familia": "Salsas",
+    "agua": 79,
+    "fibra": 0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa de soja",
+    "calorias": 53,
+    "proteinas": 8,
+    "carbohidratos": 5,
+    "grasas": 0,
+    "familia": "Salsas",
+    "agua": 72,
+    "fibra": 0.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Pesto",
+    "calorias": 460,
+    "proteinas": 4,
+    "carbohidratos": 5,
+    "grasas": 47,
+    "familia": "Salsas",
+    "agua": 42,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Romesco",
+    "calorias": 270,
+    "proteinas": 5,
+    "carbohidratos": 10,
+    "grasas": 24,
+    "familia": "Salsas",
+    "agua": 55,
+    "fibra": 3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Chimichurri",
+    "calorias": 220,
+    "proteinas": 1,
+    "carbohidratos": 3,
+    "grasas": 23,
+    "familia": "Salsas",
+    "agua": 70,
+    "fibra": 1,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa verde",
+    "calorias": 190,
+    "proteinas": 1,
+    "carbohidratos": 2,
+    "grasas": 19,
+    "familia": "Salsas",
+    "agua": 72,
+    "fibra": 0.8,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Teriyaki",
+    "calorias": 90,
+    "proteinas": 5,
+    "carbohidratos": 17,
+    "grasas": 0.1,
+    "familia": "Salsas",
+    "agua": 70,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa de ostra",
+    "calorias": 51,
+    "proteinas": 1,
+    "carbohidratos": 11,
+    "grasas": 0,
+    "familia": "Salsas",
+    "agua": 82,
+    "fibra": 0.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa Espinaler",
+    "calorias": 30,
+    "proteinas": 0.5,
+    "carbohidratos": 6,
+    "grasas": 0.2,
+    "familia": "Salsas",
+    "agua": 92,
+    "fibra": 0.2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa de pescado (fish sauce)",
+    "calorias": 35,
+    "proteinas": 6,
+    "carbohidratos": 4,
+    "grasas": 0,
+    "familia": "Salsas",
+    "agua": 88,
+    "fibra": 0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa de yogur",
+    "calorias": 130,
+    "proteinas": 4,
+    "carbohidratos": 8,
+    "grasas": 9,
+    "familia": "Salsas",
+    "agua": 78,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Vinagreta",
+    "calorias": 220,
+    "proteinas": 0.5,
+    "carbohidratos": 3,
+    "grasas": 22,
+    "familia": "Salsas",
+    "agua": 72,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Tabasco",
+    "calorias": 12,
+    "proteinas": 0.9,
+    "carbohidratos": 1.6,
+    "grasas": 0.7,
+    "familia": "Salsas",
+    "agua": 94,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Ketchup",
+    "calorias": 112,
+    "proteinas": 1.3,
+    "carbohidratos": 26,
+    "grasas": 0.1,
+    "familia": "Salsas",
+    "agua": 71,
+    "fibra": 0.3,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa de tomate frito / sofrito",
+    "calorias": 80,
+    "proteinas": 1.5,
+    "carbohidratos": 10,
+    "grasas": 4,
+    "familia": "Salsas",
+    "agua": 82,
+    "fibra": 1,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa napolitana",
+    "calorias": 65,
+    "proteinas": 1.8,
+    "carbohidratos": 9,
+    "grasas": 2,
+    "familia": "Salsas",
+    "agua": 84,
+    "fibra": 1.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa boloñesa",
+    "calorias": 150,
+    "proteinas": 7,
+    "carbohidratos": 12,
+    "grasas": 8,
+    "familia": "Salsas",
+    "agua": 75,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa marinara",
+    "calorias": 70,
+    "proteinas": 1.5,
+    "carbohidratos": 10,
+    "grasas": 2,
+    "familia": "Salsas",
+    "agua": 84,
+    "fibra": 2,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa puttanesca",
+    "calorias": 120,
+    "proteinas": 2,
+    "carbohidratos": 9,
+    "grasas": 8,
+    "familia": "Salsas",
+    "agua": 78,
+    "fibra": 1.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Mayonesa",
+    "calorias": 680,
+    "proteinas": 1,
+    "carbohidratos": 1,
+    "grasas": 75,
+    "familia": "Salsas",
+    "agua": 20,
+    "fibra": 0,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Alioli",
+    "calorias": 720,
+    "proteinas": 1.5,
+    "carbohidratos": 2,
+    "grasas": 78,
+    "familia": "Salsas",
+    "agua": 17,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa tártara",
+    "calorias": 610,
+    "proteinas": 1.5,
+    "carbohidratos": 3,
+    "grasas": 65,
+    "familia": "Salsas",
+    "agua": 24,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  },
+  {
+    "nombre": "Salsa rosa / cóctel",
+    "calorias": 380,
+    "proteinas": 2,
+    "carbohidratos": 8,
+    "grasas": 36,
+    "familia": "Salsas",
+    "agua": 52,
+    "fibra": 0.5,
+    "categoria": "Otros"
+  }
+]
+
+****BATIDOS WHEY*****
+
+[
+  {
+    "nombre": "AMIX Whey Pure Fusion",
+    "calorias": 390,
+    "proteinas": 75,
+    "carbohidratos": 10,
+    "grasas": 6,
+    "familia": "Batido whey",
+    "agua": 4,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "AMIX Iso HD 90 CFM Protein",
+    "calorias": 370,
+    "proteinas": 90,
+    "carbohidratos": 3,
+    "grasas": 1,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "AMIX ZeroPro Protein",
+    "calorias": 360,
+    "proteinas": 91,
+    "carbohidratos": 1.5,
+    "grasas": 0.3,
+    "familia": "Batido whey",
+    "agua": 6,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "American Rocket Whey",
+    "calorias": 390,
+    "proteinas": 78,
+    "carbohidratos": 8,
+    "grasas": 5,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "American Rocket 100% Isolate",
+    "calorias": 370,
+    "proteinas": 90,
+    "carbohidratos": 2,
+    "grasas": 1,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "MyProtein Impact Whey Protein",
+    "calorias": 400,
+    "proteinas": 82,
+    "carbohidratos": 4,
+    "grasas": 6,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "MyProtein Impact Whey Isolate",
+    "calorias": 370,
+    "proteinas": 90,
+    "carbohidratos": 2,
+    "grasas": 1,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "HSN Evowhey 2.0",
+    "calorias": 385,
+    "proteinas": 78,
+    "carbohidratos": 7,
+    "grasas": 5,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "HSN Evowhey Isolate 2.0",
+    "calorias": 365,
+    "proteinas": 90,
+    "carbohidratos": 2,
+    "grasas": 1,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "BIG Whey Protein",
+    "calorias": 385,
+    "proteinas": 80,
+    "carbohidratos": 6,
+    "grasas": 5,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "BIG Iso Whey Protein",
+    "calorias": 365,
+    "proteinas": 90,
+    "carbohidratos": 2,
+    "grasas": 1,
+    "familia": "Batido whey",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+***BATIDOS CASEINA*****
+
+
+[
+  {
+    "nombre": "AMIX Micellar Casein",
+    "calorias": 360,
+    "proteinas": 82,
+    "carbohidratos": 5,
+    "grasas": 2,
+    "familia": "Batido caseína",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Optimum Nutrition Gold Standard 100% Casein",
+    "calorias": 350,
+    "proteinas": 80,
+    "carbohidratos": 6,
+    "grasas": 1,
+    "familia": "Batido caseína",
+    "agua": 6,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "MyProtein Micellar Casein",
+    "calorias": 370,
+    "proteinas": 85,
+    "carbohidratos": 4,
+    "grasas": 1.5,
+    "familia": "Batido caseína",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "HSN EvoCasein 2.0",
+    "calorias": 365,
+    "proteinas": 84,
+    "carbohidratos": 3.5,
+    "grasas": 1.5,
+    "familia": "Batido caseína",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "BIG Micellar Casein",
+    "calorias": 360,
+    "proteinas": 83,
+    "carbohidratos": 4,
+    "grasas": 2,
+    "familia": "Batido caseína",
+    "agua": 5,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+*****BATIDOS GAINERS*****
+
+
+[
+  {
+    "nombre": "AMIX Anabolic Masster",
+    "calorias": 390,
+    "proteinas": 25,
+    "carbohidratos": 60,
+    "grasas": 4,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "AMIX CarboJet Mass",
+    "calorias": 385,
+    "proteinas": 20,
+    "carbohidratos": 65,
+    "grasas": 3,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "AMIX Rice Mash 1.5",
+    "calorias": 380,
+    "proteinas": 7,
+    "carbohidratos": 82,
+    "grasas": 1,
+    "familia": "Batido gainer",
+    "agua": 6,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "Optimum Nutrition Serious Mass",
+    "calorias": 380,
+    "proteinas": 15,
+    "carbohidratos": 75,
+    "grasas": 2,
+    "familia": "Batido gainer",
+    "agua": 6,
+    "fibra": 1,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "Optimum Nutrition Pro Gainer",
+    "calorias": 370,
+    "proteinas": 30,
+    "carbohidratos": 55,
+    "grasas": 4,
+    "familia": "Batido gainer",
+    "agua": 6,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "MyProtein Impact Weight Gainer",
+    "calorias": 380,
+    "proteinas": 30,
+    "carbohidratos": 50,
+    "grasas": 5,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "MyProtein Extreme Gainer Blend",
+    "calorias": 390,
+    "proteinas": 30,
+    "carbohidratos": 60,
+    "grasas": 4,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "HSN EvoMass 2.0",
+    "calorias": 380,
+    "proteinas": 29,
+    "carbohidratos": 55,
+    "grasas": 4,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "BIG True Gainer",
+    "calorias": 385,
+    "proteinas": 28,
+    "carbohidratos": 58,
+    "grasas": 4,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  },
+  {
+    "nombre": "American Rocket Titan Mass",
+    "calorias": 390,
+    "proteinas": 20,
+    "carbohidratos": 70,
+    "grasas": 3,
+    "familia": "Batido gainer",
+    "agua": 5,
+    "fibra": 2,
+    "categoria": "carbohidratos + proteinas"
+  }
+]
+
+****SNACKS****
+
+[
+  {
+    "nombre": "Protella Protein Rolls Black Cookie",
+    "calorias": 503,
+    "proteinas": 12,
+    "carbohidratos": 49,
+    "grasas": 35.3,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": null,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Protella Barra Rellena de Cacahuete",
+    "calorias": 530,
+    "proteinas": 15.8,
+    "carbohidratos": 38.8,
+    "grasas": 40,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": null,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "AMIX Exclusive Protein Bar",
+    "calorias": 426,
+    "proteinas": 26.9,
+    "carbohidratos": 44.5,
+    "grasas": 15.7,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": null,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "AMIX Low-Carb 33% Protein Bar",
+    "calorias": 407,
+    "proteinas": 33.6,
+    "carbohidratos": 30.7,
+    "grasas": 14.5,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": 7.1,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Myprotein Impact Protein Bar",
+    "calorias": 357,
+    "proteinas": 31,
+    "carbohidratos": 32,
+    "grasas": 13,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": 11,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Myprotein Layered Protein Bar",
+    "calorias": 394,
+    "proteinas": 30,
+    "carbohidratos": 29,
+    "grasas": 14,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": 14,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Myprotein Performance Protein Bar",
+    "calorias": 328,
+    "proteinas": 38,
+    "carbohidratos": 29,
+    "grasas": 7.9,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": 13,
+    "categoria": "proteinas"
+  },
+    {
+    "nombre": "Mr. Popper’s Dunky Zero (AMIX)",
+    "calorias": 393,
+    "proteinas": 12.6,
+    "carbohidratos": 33.4,
+    "grasas": 17.9,
+    "familia": "Snacks proteicos",
+    "agua": null,
+    "fibra": 3.5,
+    "categoria": "proteinas"
+  }
+]
+
+****HUEVOS*****
+
+
+[
+  {
+    "nombre": "Huevo duro",
+    "calorias": 155,
+    "proteinas": 13,
+    "carbohidratos": 1,
+    "grasas": 11,
+    "familia": "Huevos y derivados",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo a la plancha",
+    "calorias": 160,
+    "proteinas": 13,
+    "carbohidratos": 1,
+    "grasas": 12,
+    "familia": "Huevos y derivados",
+    "agua": 74,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo frito",
+    "calorias": 196,
+    "proteinas": 13,
+    "carbohidratos": 1,
+    "grasas": 15,
+    "familia": "Huevos y derivados",
+    "agua": 73,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Tortilla francesa",
+    "calorias": 154,
+    "proteinas": 11,
+    "carbohidratos": 1,
+    "grasas": 11,
+    "familia": "Huevos y derivados",
+    "agua": 75,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo poché",
+    "calorias": 143,
+    "proteinas": 13,
+    "carbohidratos": 1,
+    "grasas": 10,
+    "familia": "Huevos y derivados",
+    "agua": 76,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo benedict",
+    "calorias": 220,
+    "proteinas": 10,
+    "carbohidratos": 9,
+    "grasas": 17,
+    "familia": "Huevos y derivados",
+    "agua": 70,
+    "fibra": 0.5,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Tortilla de patatas",
+    "calorias": 200,
+    "proteinas": 9,
+    "carbohidratos": 15,
+    "grasas": 14,
+    "familia": "Huevos y derivados",
+    "agua": 68,
+    "fibra": 1.5,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Tortilla de jamón",
+    "calorias": 190,
+    "proteinas": 15,
+    "carbohidratos": 1,
+    "grasas": 13,
+    "familia": "Huevos y derivados",
+    "agua": 70,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Revuelto de setas",
+    "calorias": 160,
+    "proteinas": 11,
+    "carbohidratos": 4,
+    "grasas": 11,
+    "familia": "Huevos y derivados",
+    "agua": 73,
+    "fibra": 1,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Revuelto de jamón",
+    "calorias": 180,
+    "proteinas": 14,
+    "carbohidratos": 1,
+    "grasas": 12,
+    "familia": "Huevos y derivados",
+    "agua": 72,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Revuelto de ajos tiernos",
+    "calorias": 165,
+    "proteinas": 11,
+    "carbohidratos": 5,
+    "grasas": 11,
+    "familia": "Huevos y derivados",
+    "agua": 73,
+    "fibra": 1,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Tortilla de calabacín",
+    "calorias": 170,
+    "proteinas": 10,
+    "carbohidratos": 6,
+    "grasas": 11,
+    "familia": "Huevos y derivados",
+    "agua": 72,
+    "fibra": 1,
+    "categoria": "proteinas"
+  },
+   {
+    "nombre": "Clara de huevo pasteurizada",
+    "calorias": 52,
+    "proteinas": 11,
+    "carbohidratos": 0.7,
+    "grasas": 0.2,
+    "familia": "Huevos y derivados",
+    "agua": 87,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo líquido pasteurizado entero",
+    "calorias": 140,
+    "proteinas": 12,
+    "carbohidratos": 1,
+    "grasas": 9.5,
+    "familia": "Huevos y derivados",
+    "agua": 76,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Huevo en polvo (ovoproducto)",
+    "calorias": 590,
+    "proteinas": 48,
+    "carbohidratos": 4,
+    "grasas": 43,
+    "familia": "Huevos y derivados",
+    "agua": 4,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Claras revueltas",
+    "calorias": 55,
+    "proteinas": 11,
+    "carbohidratos": 1,
+    "grasas": 0.5,
+    "familia": "Huevos y derivados",
+    "agua": 86,
+    "fibra": 0,
+    "categoria": "proteinas"
+  },
+  {
+    "nombre": "Tortilla de claras",
+    "calorias": 60,
+    "proteinas": 11,
+    "carbohidratos": 1,
+    "grasas": 0.5,
+    "familia": "Huevos y derivados",
+    "agua": 86,
+    "fibra": 0,
+    "categoria": "proteinas"
+  }
+]
+
+****CALDOS Y CREMAS******
+
+[
+  {
+    "nombre": "Caldo de huesos",
+    "calorias": 35,
+    "proteinas": 7,
+    "carbohidratos": 1,
+    "grasas": 0.5,
+    "familia": "Caldos y cremas",
+    "agua": 91,
+    "fibra": 0,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Caldo de pollo",
+    "calorias": 20,
+    "proteinas": 2,
+    "carbohidratos": 1,
+    "grasas": 0.8,
+    "familia": "Caldos y cremas",
+    "agua": 95,
+    "fibra": 0,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Caldo de pescado",
+    "calorias": 25,
+    "proteinas": 3,
+    "carbohidratos": 1,
+    "grasas": 0.5,
+    "familia": "Caldos y cremas",
+    "agua": 95,
+    "fibra": 0,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Fumet",
+    "calorias": 30,
+    "proteinas": 3,
+    "carbohidratos": 1,
+    "grasas": 0.8,
+    "familia": "Caldos y cremas",
+    "agua": 94,
+    "fibra": 0,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Caldo de gallina",
+    "calorias": 22,
+    "proteinas": 2.5,
+    "carbohidratos": 1,
+    "grasas": 1,
+    "familia": "Caldos y cremas",
+    "agua": 94,
+    "fibra": 0,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Escudella",
+    "calorias": 60,
+    "proteinas": 4,
+    "carbohidratos": 5,
+    "grasas": 2.5,
+    "familia": "Caldos y cremas",
+    "agua": 87,
+    "fibra": 1,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Crema de verduras",
+    "calorias": 45,
+    "proteinas": 2,
+    "carbohidratos": 6,
+    "grasas": 1.5,
+    "familia": "Caldos y cremas",
+    "agua": 88,
+    "fibra": 1.5,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Crema de calabacín",
+    "calorias": 40,
+    "proteinas": 2,
+    "carbohidratos": 5,
+    "grasas": 1,
+    "familia": "Caldos y cremas",
+    "agua": 90,
+    "fibra": 1.5,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Crema de setas",
+    "calorias": 55,
+    "proteinas": 2.5,
+    "carbohidratos": 6,
+    "grasas": 2,
+    "familia": "Caldos y cremas",
+    "agua": 88,
+    "fibra": 1,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Vichyssoise",
+    "calorias": 70,
+    "proteinas": 2,
+    "carbohidratos": 7,
+    "grasas": 4,
+    "familia": "Caldos y cremas",
+    "agua": 86,
+    "fibra": 1,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Gazpacho",
+    "calorias": 45,
+    "proteinas": 1,
+    "carbohidratos": 4,
+    "grasas": 3,
+    "familia": "Caldos y cremas",
+    "agua": 90,
+    "fibra": 1,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Salmorejo",
+    "calorias": 110,
+    "proteinas": 3,
+    "carbohidratos": 7,
+    "grasas": 8,
+    "familia": "Caldos y cremas",
+    "agua": 79,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Gazpacho de fresa",
+    "calorias": 55,
+    "proteinas": 1,
+    "carbohidratos": 9,
+    "grasas": 2,
+    "familia": "Caldos y cremas",
+    "agua": 88,
+    "fibra": 1,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Gazpacho de melón",
+    "calorias": 50,
+    "proteinas": 1,
+    "carbohidratos": 8,
+    "grasas": 2,
+    "familia": "Caldos y cremas",
+    "agua": 89,
+    "fibra": 0.8,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Gazpacho de sandía",
+    "calorias": 48,
+    "proteinas": 1,
+    "carbohidratos": 7,
+    "grasas": 2,
+    "familia": "Caldos y cremas",
+    "agua": 89,
+    "fibra": 1,
+    "categoria": "otros"
+  }
+]
+
+****SETAS*****
+
+[
+  {
+    "nombre": "Champiñón salteado",
+    "calorias": 35,
+    "proteinas": 3.5,
+    "carbohidratos": 5,
+    "grasas": 0.5,
+    "familia": "Setas",
+    "agua": 89,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Champiñón al horno",
+    "calorias": 32,
+    "proteinas": 3.5,
+    "carbohidratos": 4.8,
+    "grasas": 0.4,
+    "familia": "Setas",
+    "agua": 90,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Seta de ostra salteada",
+    "calorias": 41,
+    "proteinas": 3,
+    "carbohidratos": 6,
+    "grasas": 0.7,
+    "familia": "Setas",
+    "agua": 88,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Shiitake salteada",
+    "calorias": 45,
+    "proteinas": 3,
+    "carbohidratos": 7,
+    "grasas": 0.7,
+    "familia": "Setas",
+    "agua": 86,
+    "fibra": 2.5,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Portobello salteado",
+    "calorias": 35,
+    "proteinas": 3.5,
+    "carbohidratos": 5,
+    "grasas": 0.5,
+    "familia": "Setas",
+    "agua": 89,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Boletus salteado",
+    "calorias": 47,
+    "proteinas": 3.7,
+    "carbohidratos": 7,
+    "grasas": 0.8,
+    "familia": "Setas",
+    "agua": 85,
+    "fibra": 3,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Rebozuelo salteado",
+    "calorias": 38,
+    "proteinas": 3,
+    "carbohidratos": 6,
+    "grasas": 0.6,
+    "familia": "Setas",
+    "agua": 88,
+    "fibra": 2.5,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Seta de ostra plancha",
+    "calorias": 38,
+    "proteinas": 3,
+    "carbohidratos": 5.5,
+    "grasas": 0.6,
+    "familia": "Setas",
+    "agua": 89,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Shiitake plancha",
+    "calorias": 42,
+    "proteinas": 3,
+    "carbohidratos": 6.5,
+    "grasas": 0.6,
+    "familia": "Setas",
+    "agua": 87,
+    "fibra": 2.5,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Portobello plancha",
+    "calorias": 33,
+    "proteinas": 3.5,
+    "carbohidratos": 4.8,
+    "grasas": 0.4,
+    "familia": "Setas",
+    "agua": 90,
+    "fibra": 2,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Boletus plancha",
+    "calorias": 44,
+    "proteinas": 3.6,
+    "carbohidratos": 6.5,
+    "grasas": 0.7,
+    "familia": "Setas",
+    "agua": 86,
+    "fibra": 3,
+    "categoria": "otros"
+  },
+  {
+    "nombre": "Rebozuelo plancha",
+    "calorias": 36,
+    "proteinas": 3,
+    "carbohidratos": 5.8,
+    "grasas": 0.5,
+    "familia": "Setas",
+    "agua": 88,
+    "fibra": 2.5,
+    "categoria": "otros"
+  }
+]
