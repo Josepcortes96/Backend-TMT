@@ -239,10 +239,14 @@ class DietaRepository implements DietaRepositoryInterface {
                 c.grasas_totales_comida,
                 c.carbohidratos_totales_comida,
 
+                ca.categoria,
                 ca.cantidad,
                 ca.cantidad_equivalente,
                 ca.cantidad_equivalente1,
                 ca.cantidad_equivalente3,
+                ca.id_alimento,
+                ca.id_alimento_equivalente,
+                ca.id_alimento_equivalente1,
 
                 a.nombre AS nombre_alimento,
                 ae.nombre AS nombre_alimento_equivalente,

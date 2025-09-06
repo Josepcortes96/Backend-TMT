@@ -78,7 +78,7 @@
 
         public function getAlimentosFamilia(string $familia): ?array
         {
-            $sql = "SELECT * FROM alimentos WHERE familia = :familia";
+            $sql = "SELECT nombre FROM alimentos WHERE familia = :familia";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([':familia' => $familia]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

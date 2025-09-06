@@ -49,9 +49,34 @@
          * @return void.
          */
         
-        public function asociarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): void {
-            $sql = "INSERT INTO comida_alimento (id_comida, id_alimento, cantidad, calorias_totales_alimento, proteinas_totales_alimento, carbohidratos_totales_alimento, grasas_totales_alimento)
-                    VALUES (:id_comida, :id_alimento, :cantidad, :cal, :prot, :carb, :gras)";
+        public function asociarAlimento(
+            int $comidaId,
+            int $alimentoId,
+            float $cantidad,
+            array $nutricion,
+            string $categoria 
+        ): void {
+            $sql = "INSERT INTO comida_alimento (
+                        id_comida, 
+                        id_alimento, 
+                        cantidad, 
+                        calorias_totales_alimento, 
+                        proteinas_totales_alimento, 
+                        carbohidratos_totales_alimento, 
+                        grasas_totales_alimento,
+                        categoria
+                    )
+                    VALUES (
+                        :id_comida, 
+                        :id_alimento, 
+                        :cantidad, 
+                        :cal, 
+                        :prot, 
+                        :carb, 
+                        :gras,
+                        :categoria
+                    )";
+
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
                 ':id_comida' => $comidaId,
@@ -61,30 +86,12 @@
                 ':prot' => $nutricion['proteinas_totales_alimento'],
                 ':carb' => $nutricion['carbohidratos_totales_alimento'],
                 ':gras' => $nutricion['grasas_totales_alimento'],
+                ':categoria' => $categoria
             ]);
         }
+
 
         
-        public function agregarAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool {
-            $stmt = $this->pdo->prepare("SELECT categoria FROM alimentos WHERE id_alimento = :id_alimento");
-            $stmt->execute(['id_alimento' => $alimentoId]);
-            $cat = $stmt->fetch(PDO::FETCH_ASSOC)['categoria'] ?? null;
-            if (!$cat) return false;
-
-            $sql = "INSERT INTO comida_alimento (id_comida, id_alimento, cantidad, calorias_totales_alimento, proteinas_totales_alimento, carbohidratos_totales_alimento, grasas_totales_alimento, categoria)
-                    VALUES (:id_comida, :id_alimento, :cantidad, :cal, :prot, :carb, :gras, :categoria)";
-            $stmt = $this->pdo->prepare($sql);
-            return $stmt->execute([
-                ':id_comida' => $comidaId,
-                ':id_alimento' => $alimentoId,
-                ':cantidad' => $cantidad,
-                ':cal' => $nutricion['calorias_totales_alimento'],
-                ':prot' => $nutricion['proteinas_totales_alimento'],
-                ':carb' => $nutricion['carbohidratos_totales_alimento'],
-                ':gras' => $nutricion['grasas_totales_alimento'],
-                ':categoria' => $cat
-            ]);
-        }
 
         public function actualizarCantidadAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool {
             $sql = "UPDATE comida_alimento SET cantidad = :cantidad, calorias_totales_alimento = :cal, proteinas_totales_alimento = :prot, carbohidratos_totales_alimento = :carb, grasas_totales_alimento = :gras WHERE id_comida = :id_comida AND id_alimento = :id_alimento";
@@ -139,5 +146,14 @@
             $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente3 = :eq, cantidad_equivalente3 = :cant WHERE id_comida = :id AND id_alimento = :al");
             $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
         }
+
+        public function eliminarComidas(array $comidaIds): bool {
+            if (empty($comidaIds)) return false;
+            $placeholders = implode(',', array_fill(0, count($comidaIds), '?'));
+            $sql = "DELETE FROM comidas WHERE id_comida IN ($placeholders)";
+            $stmt = $this->pdo->prepare($sql);
+            return $stmt->execute($comidaIds);
+        }
+
     }
 ?>

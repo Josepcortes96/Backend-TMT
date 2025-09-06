@@ -56,6 +56,25 @@ class ComidaController
 
         return $response->withHeader('Content-Type', 'application/json');
     }
+
+    public function eliminarVarias($request, $response, $args) {
+    $data = $request->getParsedBody();
+    $ids = $data['comidas'] ?? [];
+
+    $ok = $this->comidaService->eliminarComidas($ids);
+
+    $payload = [
+        'success' => $ok,
+        'message' => $ok
+            ? 'Comidas eliminadas correctamente'
+            : 'No se pudieron eliminar las comidas'
+    ];
+
+    $response->getBody()->write(json_encode($payload));
+    return $response->withHeader('Content-Type', 'application/json');
+}
+
+
 }
 
 ?>
