@@ -12,7 +12,7 @@ $container = require __DIR__ . '/../src/Config/dependencies.php';
 AppFactory::setContainer($container);
 $app = AppFactory::create();
 
-// ✅ CORS Middleware – ANTES de todo lo demás
+
 $app->add(function (
     ServerRequestInterface $request,
     RequestHandlerInterface $handler
@@ -25,7 +25,7 @@ $app->add(function (
         ->withHeader('Access-Control-Allow-Credentials', 'true');
 });
 
-// ✅ OPTIONS handler para CORS preflight
+
 $app->options('/{routes:.+}', function ($request, $response) {
     return $response;
 });
