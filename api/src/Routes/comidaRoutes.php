@@ -9,7 +9,7 @@
     $app->group('/api/v1/comidas', function ($group) use ($controller) {
         $group->post('', [$controller, 'crear']); // Crear comidas con alimentos
         $group->post('/agregar-alimento', [$controller, 'agregar']);
-          $group->delete('', [$controller, 'eliminarVarias']); // borrar VARIAS comidas
+        $group->delete('', [$controller, 'eliminarVarias']); // borrar VARIAS comidas
 
     });
 };

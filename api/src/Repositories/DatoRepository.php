@@ -15,6 +15,16 @@ class DatoRepository implements DatoRepositoryInterface
         $this->pdo = $pdo;
     }
 
+    /**
+     * Inserta un nuevo registro en la tabla datos.
+     *
+     * @param array $data Clave => valor con los campos y valores a insertar.
+     *
+     * @return int ID autogenerado del dato insertado.
+     *
+     * @throws Exception Si falla la inserción.
+     */
+
     public function createDato(array $data): int
     {
         $campos = array_keys($data);
@@ -32,6 +42,13 @@ class DatoRepository implements DatoRepositoryInterface
         return (int) $this->pdo->lastInsertId();
     }
 
+    /**
+     * Obtiene un registro de datos por su ID.
+     *
+     * @param int $id_dato Identificador único del dato.
+     *
+     * @return array Registro completo del dato.
+     */
     public function getDatoById(int $id_dato): array
     {
         $stmt = $this->pdo->prepare("SELECT * FROM datos WHERE id_dato = :id");
@@ -39,6 +56,15 @@ class DatoRepository implements DatoRepositoryInterface
         $dato = $stmt->fetch(PDO::FETCH_ASSOC);
         return $dato;
     }
+
+    /**
+     * Busca un dato por su nombre asociado a un usuario específico.
+     *
+     * @param string $nombre     Nombre del dato.
+     * @param int    $idUsuario  Identificador del usuario propietario del dato.
+     *
+     * @return array Registro encontrado o array vacío si no existe.
+     */
 
     public function getDatoByNombre(string $nombre, int $idUsuario): array
     {
@@ -56,6 +82,15 @@ class DatoRepository implements DatoRepositoryInterface
 
     }
 
+    /**
+     * Actualiza un dato existente con los valores proporcionados.
+     *
+     * @param int   $id_dato ID del dato a actualizar.
+     * @param array $data    Clave => valor con los campos a modificar.
+     *
+     * @return bool True si la actualización fue exitosa, False en caso contrario.
+     */
+
     public function actualizarDato(int $id_dato, array $data): bool
     {
         $fields = array_map(fn($campo) => "$campo = :$campo", array_keys($data));
@@ -67,17 +102,40 @@ class DatoRepository implements DatoRepositoryInterface
         return $stmt->execute($data);
     }
 
+    /**
+     * Elimina un dato de la base de datos por su ID.
+     *
+     * @param int $id_dato Identificador único del dato.
+     *
+     * @return bool True si la eliminación fue exitosa.
+     */
     public function deleteDato(int $id_dato): bool
     {
         $stmt = $this->pdo->prepare("DELETE FROM datos WHERE id_dato = :id");
         return $stmt->execute([':id' => $id_dato]);
     }
 
+    /**
+     * Obtiene todos los registros de la tabla datos.
+     *
+     * @return array[] Lista de registros en formato asociativo.
+     */
+
     public function getAll(): array
     {
         $stmt = $this->pdo->query("SELECT * FROM datos");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    /**
+     * Obtiene el peso actual registrado de un usuario.
+     *
+     * @param int $id_usuario Identificador del usuario.
+     *
+     * @return float Peso del usuario.
+     *
+     * @throws Exception Si no se encuentra un dato con peso para el usuario.
+     */
 
     public function getPeso(int $id_usuario): float{
         $query = "
@@ -99,7 +157,15 @@ class DatoRepository implements DatoRepositoryInterface
         return (float) $result['peso'];
     }
 
-    /*FUNCION PARA RECIBIR LOS ULTIMSO 4 CONTROLES DEL USUARIO*/
+    
+    /**
+     * Obtiene los últimos 3 controles registrados de un usuario.
+     *
+     * @param int $idUsuario Identificador del usuario.
+     *
+     * @return array[] Lista de registros con sus campos.
+     */
+
     public function getUltimosControles(int $idUsuario): array
     {
           $sql = "SELECT * FROM datos 
@@ -113,8 +179,19 @@ class DatoRepository implements DatoRepositoryInterface
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+        
+    /**
+     * Obtiene todos los controles de un usuario mostrando solo ID y nombre.
+     *
+     * @param int $idUsuario Identificador del usuario.
+     *
+     * @return array[] Lista de controles en formato:
+     * [
+     *   @type int    $id_dato
+     *   @type string $nombre
+     * ]
+     */
 
-    /** FUNCION DE REPOSITORIO PARA MOSTRAR LOS NOMBRES DE LSO CONTROLES DEL USUARIO. */
      public function getTodosControles(int $idUsuario): array
     {
           $sql = "SELECT id_dato, nombre FROM datos 
@@ -129,19 +206,26 @@ class DatoRepository implements DatoRepositoryInterface
     }
 
 
-    /**FUNCION DE REPOSITORIO PARA MOSTRAR  */
+        /**
+     * Obtiene el último control registrado de un usuario.
+     *
+     * @param int $idUsuario Identificador del usuario.
+     *
+     * @return array|null Registro completo del último control o null si no existe.
+     */
+
     public function getUltimoControlPorId(int $idUsuario): ?array
-{
-    $sql = "SELECT * FROM datos 
-            WHERE id_usuario = :id_usuario 
-            ORDER BY id_dato DESC 
-            LIMIT 1";
+    {
+        $sql = "SELECT * FROM datos 
+                WHERE id_usuario = :id_usuario 
+                ORDER BY id_dato DESC 
+                LIMIT 1";
 
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->execute(['id_usuario' => $idUsuario]);
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['id_usuario' => $idUsuario]);
 
-    return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
-}
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+    }
 
 
 

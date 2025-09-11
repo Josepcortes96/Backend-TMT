@@ -13,6 +13,17 @@
             $this->pdo = $pdo;
         }
 
+        /**
+         * Verifica las credenciales de un usuario comparando username y contraseña.
+         *
+         * @param string $username Nombre de usuario proporcionado en el login.
+         * @param string $password Contraseña en texto plano que se validará contra el hash almacenado.
+         *
+         * @return int Devuelve el ID único del usuario si las credenciales son correctas.
+         *
+         * @throws Exception Si el usuario no existe o la contraseña no coincide.
+         */
+
         public function verificarCredenciales(string $username, string $password): int {
             $stmt = $this->pdo->prepare("SELECT id_usuario, password FROM usuarios WHERE username = :username");
             $stmt->execute([':username' => $username]);
@@ -26,7 +37,20 @@
             return (int) $user['id_usuario'];
         }
         
-          public function registrarLogin(int $id_usuario, string $ip, string $userAgent, string $jwtHash): void {
+        /**
+         * Registra un evento de login en la base de datos utilizando un procedimiento almacenado.
+         *
+         * @param int    $id_usuario Identificador único del usuario que inicia sesión.
+         * @param string $ip         Dirección IP desde la que se realizó el login.
+         * @param string $userAgent  Información del navegador/cliente desde el que se accede.
+         * @param string $jwtHash    Hash del token JWT generado para la sesión.
+         *
+         * @return void No devuelve valor; solo registra la información.
+         *
+         * @throws PDOException Si ocurre un error al ejecutar el procedimiento almacenado.
+         */
+
+        public function registrarLogin(int $id_usuario, string $ip, string $userAgent, string $jwtHash): void {
             $stmt = $this->pdo->prepare("CALL sp_log_user_login(:id_usuario, :ip, :userAgent, :jwtHash)");
             $stmt->execute([
                 ':id_usuario' => $id_usuario,
@@ -35,6 +59,26 @@
                 ':jwtHash' => $jwtHash
             ]);
         }
+
+        /**
+         * Obtiene el rol y el centro asociado a un usuario según su perfil (Cliente, Preparador, Propietario, Administrador).
+         *
+         * - Cliente → centro de la tabla centro_cliente
+         * - Preparador → centro de la tabla centro_preparador
+         * - Propietario → centro de la tabla centro_propietario
+         * - Administrador → no requiere centro (devuelve NULL en id_centro)
+         *
+         * @param int $id_usuario Identificador único del usuario.
+         *
+         * @return array {
+         *     @type string $nombre    Nombre del usuario.
+         *     @type string $rol       Rol del usuario (Cliente, Preparador, Propietario, Administrador).
+         *     @type int|null $id_centro ID del centro asociado o NULL si no aplica.
+         * }
+         *
+         * @throws Exception Si no se encuentra información del usuario o no tiene centro asignado
+         *                   (excepto en el caso de Administrador).
+         */
 
         public function obtenerRolYCentro(int $id_usuario): array {
             $stmt = $this->pdo->prepare("
@@ -63,7 +107,7 @@
             $stmt->execute([':id_usuario' => $id_usuario]);
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if (!$data || !$data['id_centro']) {
+          if (!$data || (!$data['id_centro'] && $data['rol'] !== 'Administrador')) {
                 throw new Exception("No se pudo obtener rol o centro del usuario.");
             }
 

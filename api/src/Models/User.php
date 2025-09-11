@@ -15,7 +15,7 @@ class User {
     public string $telefono;
     public string $direccion;
     public string $ciudad;
-    public string $fechaNacimiento; // ← esta propiedad debe inicializarse
+    public string $fechaNacimiento; 
     public int $centroId;
 
     public function __construct(array $data) {
@@ -30,7 +30,7 @@ class User {
         $this->direccion = $data['direccion'] ?? '';
         $this->ciudad = $data['ciudad'] ?? '';
 
-        // ✅ Asignación segura de fechaNacimiento
+   
         if (!empty($data['fecha_de_nacimiento'])) {
             $fecha = DateTime::createFromFormat('Y-m-d', $data['fecha_de_nacimiento']);
             if ($fecha) {
@@ -39,7 +39,6 @@ class User {
                 throw new Exception("Formato de fecha no válido");
             }
         } else {
-            // Inicializa con valor vacío o null si la propiedad puede faltar
             $this->fechaNacimiento = '';
         }
 

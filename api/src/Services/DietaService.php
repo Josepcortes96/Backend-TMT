@@ -21,6 +21,18 @@ class DietaService implements DietaServiceInterface
         $this->comidaRepository = $comidaRepository;
     }
 
+
+    /**
+     * Crea una nueva dieta con macros nutricionales.
+     *
+     * @param array $datos Datos de la dieta (nombre, descripcion, id_usuario, id_dato,
+     *                     calorias_dieta, proteinas_dieta, grasas_dieta, carbohidratos_dieta, fecha_creacion).
+     *
+     * @return int ID de la dieta creada.
+     *
+     * @throws Exception Si faltan datos obligatorios para la creación.
+     */
+
     public function crearDietaConMacros(array $datos): int
     {
         if (
@@ -46,6 +58,19 @@ class DietaService implements DietaServiceInterface
             );
 
     }
+
+    /**
+     * Actualiza los macros principales de una dieta existente.
+     *
+     * @param int    $id_dieta    ID de la dieta.
+     * @param string $nombre      Nombre de la dieta.
+     * @param string $descripcion Descripción de la dieta.
+     * @param float  $proteinas   Proteínas totales.
+     * @param float  $grasas      Grasas totales.
+     * @param float  $carbohidratos Carbohidratos totales.
+     *
+     * @return array Mensaje de éxito o error.
+     */
 
     public function actualizarMacros(int $id_dieta, string $nombre, string $descripcion, float $proteinas, float $grasas, float $carbohidratos): array
     {
@@ -75,40 +100,90 @@ class DietaService implements DietaServiceInterface
         }
     }
 
-
-    public function eliminarDieta(int $id_dieta): bool
-    {
+     /**
+     * Elimina una dieta por su ID.
+     *
+     * @param int $id_dieta ID de la dieta.
+     *
+     * @return bool True si se eliminó correctamente, False en caso contrario.
+     */
+    public function eliminarDieta(int $id_dieta): bool{
         return $this->dietaRepository->deleteDieta($id_dieta);
     }
 
+     /**
+     * Elimina una dieta por su ID.
+     *
+     * @param int $id_dieta ID de la dieta.
+     *
+     * @return bool True si se eliminó correctamente, False en caso contrario.
+     */
 
-    public function obtenerPorId(int $id_dieta): ?array
-    {
+    public function obtenerPorId(int $id_dieta): ?array{
         return $this->dietaRepository->getDieta($id_dieta);
     }
 
-    public function dietaExiste(int $id_dieta): bool
-    {
+     /**
+     * Verifica si una dieta existe en la base de datos.
+     *
+     * @param int $id_dieta ID de la dieta.
+     *
+     * @return bool True si existe, False en caso contrario.
+     */
+
+    public function dietaExiste(int $id_dieta): bool{
         return $this->dietaRepository->getDietaById($id_dieta);
     }
 
-    public function asignarDietaSegunRol(int $id_dieta, int $id_usuario, string $rol): array
-    {
+    /**
+     * Asigna una dieta a un usuario según su rol (Propietario o Preparador).
+     *
+     * @param int    $id_dieta  ID de la dieta.
+     * @param int    $id_usuario ID del usuario.
+     * @param string $rol       Rol del usuario.
+     *
+     * @return array Mensaje de éxito, advertencia o error.
+     */
+
+    public function asignarDietaSegunRol(int $id_dieta, int $id_usuario, string $rol): array{
         return $this->dietaRepository->insertDietaRol($id_dieta, $id_usuario, $rol);
     }
 
-    public function obtenerDietasPorUsuario(int $id_usuario): array
-    {
+    /**
+     * Obtiene todas las dietas creadas por un usuario.
+     *
+     * @param int $id_usuario ID del usuario.
+     *
+     * @return array[] Lista de dietas.
+     */
+
+    public function obtenerDietasPorUsuario(int $id_usuario): array{
         return $this->dietaRepository->getDietasPorUsuario($id_usuario);
     }
 
-    public function obtenerDietaConDato(int $id_dieta): array
-    {
+    /**
+     * Obtiene una dieta junto con su dato asociado.
+     *
+     * @param int $id_dieta ID de la dieta.
+     *
+     * @return array Datos de la dieta con información del dato.
+     */
+
+    public function obtenerDietaConDato(int $id_dieta): array{
         return $this->dietaRepository->getDietaConDato($id_dieta);
     }
 
-    public function obtenerInformeDieta(int $id_dieta): array
-    {
+    /**
+     * Genera un informe completo de una dieta, incluyendo usuario, comidas, alimentos y roles asociados.
+     *
+     * @param int $id_dieta ID de la dieta.
+     *
+     * @return array[] Informe detallado de la dieta.
+     *
+     * @throws Exception Si la dieta no existe.
+     */
+
+    public function obtenerInformeDieta(int $id_dieta): array{
    
         if (!$this->dietaRepository->getDietaById($id_dieta)) {
             throw new \Exception("La dieta con ID $id_dieta no existe.");

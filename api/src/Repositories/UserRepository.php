@@ -33,7 +33,7 @@ class UserRepository implements UserRepositoryInterface {
      * Crea un nuevo usuario y sus relaciones.
      * @param User $user
      * @return int El ID del usuario creado
-     * @throws Exception
+     * @throws Exception 
      */
     public function create(User $user): int {
         try {
@@ -78,7 +78,7 @@ class UserRepository implements UserRepositoryInterface {
      * Obtiene un usuario por su ID.
      * @param int $id
      * @return array
-     * @throws Exception
+     * @throws Exception 
      */
     public function getUser(int $id): array {
         $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE id_usuario = :id");
@@ -294,7 +294,7 @@ class UserRepository implements UserRepositoryInterface {
      * @throws Exception
      */
     public function capturarCentroId(int $id, string $rol): ?int {
-        error_log("📌 Rol en capturarCentroId: " . $rol);
+        error_log(" Rol en capturarCentroId: " . $rol);
 
         $tablaUsuario = $this->getTablaUsuario($rol);
         $col = match ($rol) {

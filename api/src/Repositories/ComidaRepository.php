@@ -91,7 +91,20 @@
         }
 
 
-        
+        /**
+         * Actualiza la cantidad y los valores nutricionales de un alimento dentro de una comida.
+         *
+         * @param int   $comidaId   Identificador de la comida.
+         * @param int   $alimentoId Identificador del alimento dentro de la comida.
+         * @param float $cantidad   Nueva cantidad del alimento.
+         * @param array $nutricion  Valores nutricionales con claves:
+         *                          - calorias_totales_alimento
+         *                          - proteinas_totales_alimento
+         *                          - carbohidratos_totales_alimento
+         *                          - grasas_totales_alimento
+         *
+         * @return bool True si la actualización fue exitosa, False en caso contrario.
+         */
 
         public function actualizarCantidadAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool {
             $sql = "UPDATE comida_alimento SET cantidad = :cantidad, calorias_totales_alimento = :cal, proteinas_totales_alimento = :prot, carbohidratos_totales_alimento = :carb, grasas_totales_alimento = :gras WHERE id_comida = :id_comida AND id_alimento = :id_alimento";
@@ -107,6 +120,15 @@
             ]);
         }
 
+        /**
+         * Verifica si un alimento ya está asociado a una comida.
+         *
+         * @param int $comidaId   Identificador de la comida.
+         * @param int $alimentoId Identificador del alimento.
+         *
+         * @return bool True si la asociación existe, False en caso contrario.
+         */
+
         public function verificarAlimentoAsociado(int $comidaId, int $alimentoId): bool {
             $stmt = $this->pdo->prepare("SELECT 1 FROM comida_alimento WHERE id_comida = :id AND id_alimento = :al LIMIT 1");
             $stmt->execute([':id' => $comidaId, ':al' => $alimentoId]);
@@ -114,14 +136,27 @@
         }
 
         
-
+        /**
+         * Elimina un alimento de una comida específica.
+         *
+         * @param int $comidaId   Identificador de la comida.
+         * @param int $alimentoId Identificador del alimento a eliminar.
+         *
+         * @return bool True si la eliminación fue exitosa, False si falló.
+         */
     
         public function eliminarAlimentoDeComida(int $comidaId, int $alimentoId): bool {
             $stmt = $this->pdo->prepare("DELETE FROM comida_alimento WHERE id_comida = :id AND id_alimento = :al");
             return $stmt->execute([':id' => $comidaId, ':al' => $alimentoId]);
         }
 
-
+        /**
+         * Recalcula los totales nutricionales de una comida a partir de sus alimentos asociados.
+         *
+         * @param int $comidaId Identificador de la comida.
+         *
+         * @return void
+         */
         public function actualizarTotalesComida(int $comidaId): void {
             $sql = "UPDATE comidas SET calorias_totales_comida = (SELECT COALESCE(SUM(calorias_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) ,
                                         proteinas_totales_comida = (SELECT COALESCE(SUM(proteinas_totales_alimento),0) FROM comida_alimento WHERE id_comida = :id) ,
@@ -132,20 +167,61 @@
             $stmt->execute([':id' => $comidaId]);
         }
 
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (primer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
         public function insertarEquivalencia(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
             $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente = :eq, cantidad_equivalente = :cant WHERE id_comida = :id AND id_alimento = :al");
             $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
         }
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (segundo campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
 
         public function insertarEquivalencia1(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
             $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente1 = :eq, cantidad_equivalente1 = :cant WHERE id_comida = :id AND id_alimento = :al");
             $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
         }
 
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
         public function insertarEquivalencia3(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
             $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente3 = :eq, cantidad_equivalente3 = :cant WHERE id_comida = :id AND id_alimento = :al");
             $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
         }
+
+        /**
+         * Elimina varias comidas de la base de datos según sus IDs.
+         *
+         * @param int[] $comidaIds Lista de identificadores de comidas.
+         *
+         * @return bool True si la eliminación fue exitosa, False en caso contrario.
+         */
 
         public function eliminarComidas(array $comidaIds): bool {
             if (empty($comidaIds)) return false;
