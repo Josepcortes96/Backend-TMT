@@ -20,7 +20,10 @@
         public function capturarDietaId(int $id, string $rol): ?int;
         public function relacionDietaUsuario(int $userId, ?int $dietaId, string $rol): void;
         public function validarCentro(int $centroId): bool;
-         public function getUsersByCentro(int $centroId): array;
+        public function getUsersByCentro(int $centroId): array;
+        public function getUsersClientes(): array;
+        public function getUsersPreparadores(): array;
+        public function getUsersPropietarios():array;
          
     }
 

@@ -15,6 +15,9 @@
 
         $app->group('/api/v1/usuarios', function ($group) {
             $group->get('', [UserController::class, 'getAll']);
+            $group->get('/clientes', [UserController::class, 'getClientes']);
+            $group->get('/preparadores', [UserController::class, 'getPreparadores']);
+            $group->get('/propietarios', [UserController::class, 'getPropietarios']);
             $group->get('/centro', [UserController::class, 'getByCentro']);
             $group->post('', [UserController::class, 'create']);
             $group->get('/{id}', [UserController::class, 'getOne']);

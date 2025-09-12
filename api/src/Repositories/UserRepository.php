@@ -388,5 +388,72 @@ class UserRepository implements UserRepositoryInterface {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * Obtiene todos clientes
+     * @return array
+     */
+
+    public function getUsersClientes(): array{
+        $stmt = $this->pdo->prepare("
+            SELECT u.*, c.nombre AS centro
+            FROM usuarios u
+            LEFT JOIN clientes cli ON u.id_usuario = cli.id_usuario
+            LEFT JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
+            LEFT JOIN centros c ON cc.id_centro = c.id_centro
+            WHERE u.rol= 'Cliente'
+            
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    /**
+     * Obtiene todos los preparadores
+     * @return array
+     */
+
+      public function getUsersPreparadores(): array{
+        $stmt = $this->pdo->prepare("
+       SELECT u.*, c.nombre AS centro
+        FROM usuarios u
+        LEFT JOIN preparadores pr ON u.id_usuario = pr.id_usuario
+        LEFT JOIN centro_preparador cp ON pr.id_preparador = cp.id_preparador
+        LEFT JOIN centros c ON cp.id_centro = c.id_centro
+        WHERE u.rol = 'Preparador';
+
+            
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    /**
+     * Obtiene todos propietarios
+     * @return array
+     */
+
+      public function getUsersPropietarios(): array{
+        $stmt = $this->pdo->prepare("
+           SELECT u.*, c.nombre AS centro
+            FROM usuarios u
+            LEFT JOIN propietarios pr ON u.id_usuario = pr.id_usuario
+            LEFT JOIN centro_propietario cp ON pr.id_propietario = cp.id_propietario
+            LEFT JOIN centros c ON cp.id_centro = c.id_centro
+            WHERE u.rol ='Propietario'
+            
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+
+
+
 
 }

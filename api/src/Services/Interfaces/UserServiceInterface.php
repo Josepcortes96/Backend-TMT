@@ -14,6 +14,9 @@
         public function getCentroId(int $id, string $rol): int;
          public function getUsersByCentro(int $centroId): array;
         public function getUserName(string $nombre): array;
+        public function getUsersClientes(): array;
+        public function getUsersPreparadores(): array;
+        public function getUsersPropietarios(): array;  
          
 
     }

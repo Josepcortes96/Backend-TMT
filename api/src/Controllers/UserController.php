@@ -107,5 +107,23 @@
             }
         }
 
+           public function getClientes(Request $request, Response $response): Response {
+            $users = $this->userService->getUsersClientes();
+            $response->getBody()->write(json_encode($users));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
+           public function getPreparadores(Request $request, Response $response): Response {
+            $users = $this->userService->getUsersPreparadores();
+            $response->getBody()->write(json_encode($users));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
+           public function getPropietarios(Request $request, Response $response): Response {
+            $users = $this->userService->getUsersPropietarios();
+            $response->getBody()->write(json_encode($users));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
 
     }

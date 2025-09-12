@@ -85,4 +85,19 @@
         }
 
 
+            public function getUsersClientes(): array {
+            return $this->userRepository->getUsersClientes();
+        }
+
+        public function getUsersPropietarios(): array {
+            return $this->userRepository->getUsersPropietarios();
+        }
+
+        public function getUsersPreparadores(): array {
+            return $this->userRepository->getUsersPreparadores();
+        }
+
+
+
+
     }
