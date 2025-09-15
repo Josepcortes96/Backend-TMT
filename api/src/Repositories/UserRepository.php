@@ -58,7 +58,7 @@ class UserRepository implements UserRepositoryInterface {
                 ':direccion' => $user->direccion,
                 ':fechaNacimiento' => $user->fechaNacimiento,
                 ':ciudad' => $user->ciudad,
-                ':numero_usuario' => $numero_usuario -> numero_usuario
+                ':numero_usuario' => $user -> numero_usuario
             ]);
 
             $userId = (int) $this->pdo->lastInsertId();

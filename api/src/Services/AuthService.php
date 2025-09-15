@@ -16,10 +16,10 @@
             $this->secretKey = $_ENV['JWT_SECRET'] ?? throw new \Exception("JWT_SECRET no está definido en .env");
         }
 
-       public function login(string $username, string $password): string {
+       public function login(string $correo, string $password): string {
             $this->validarFormatoPassword($password); 
 
-            $userId = $this->authRepository->verificarCredenciales($username, $password);
+            $userId = $this->authRepository->verificarCredenciales($correo, $password);
 
             // Obtener rol y centro
             $info = $this->authRepository->obtenerRolYCentro($userId);

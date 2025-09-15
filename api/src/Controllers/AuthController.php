@@ -17,7 +17,7 @@
             $data = $request->getParsedBody();
 
             try {
-                $token = $this->authService->login($data['username'], $data['password']);
+                $token = $this->authService->login($data['correo'], $data['password']);
                 $response->getBody()->write(json_encode(['token' => $token]));
             } catch (\Exception $e) {
                 $response->getBody()->write(json_encode(['error' => $e->getMessage()]));

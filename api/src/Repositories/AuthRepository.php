@@ -24,9 +24,9 @@
          * @throws Exception Si el usuario no existe o la contraseña no coincide.
          */
 
-        public function verificarCredenciales(string $username, string $password): int {
-            $stmt = $this->pdo->prepare("SELECT id_usuario, password FROM usuarios WHERE username = :username");
-            $stmt->execute([':username' => $username]);
+        public function verificarCredenciales(string $correo, string $password): int {
+            $stmt = $this->pdo->prepare("SELECT id_usuario, password FROM usuarios WHERE correo = :correo");
+            $stmt->execute([':correo' => $correo]);
 
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
