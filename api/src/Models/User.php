@@ -16,6 +16,7 @@ class User {
     public string $direccion;
     public string $ciudad;
     public string $fechaNacimiento; 
+    public string $numero_usuario;
     public int $centroId;
 
     public function __construct(array $data) {
@@ -29,6 +30,7 @@ class User {
         $this->telefono = $data['telefono'] ?? '';
         $this->direccion = $data['direccion'] ?? '';
         $this->ciudad = $data['ciudad'] ?? '';
+        $this ->numero_usuario = $data['numero_usuario'] ?? '';
 
    
         if (!empty($data['fecha_de_nacimiento'])) {

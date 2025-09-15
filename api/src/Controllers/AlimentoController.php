@@ -20,7 +20,7 @@ class AlimentoController
     $data = $request->getParsedBody();
     $results = [];
 
-    // Si recibo un solo alimento, lo meto en un array
+
     if (isset($data['nombre'])) {
         $data = [$data];
     }

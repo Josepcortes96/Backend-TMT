@@ -43,7 +43,7 @@ class UserRepository implements UserRepositoryInterface {
                 throw new Exception("Centro no válido");
             }
 
-            $sql = "INSERT INTO usuarios (username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad) VALUES (:username, :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad)";
+            $sql = "INSERT INTO usuarios (username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario) VALUES (:username, :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad, :numero_usuario)";
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute([
@@ -57,7 +57,8 @@ class UserRepository implements UserRepositoryInterface {
                 ':telefono' => $user->telefono,
                 ':direccion' => $user->direccion,
                 ':fechaNacimiento' => $user->fechaNacimiento,
-                ':ciudad' => $user->ciudad
+                ':ciudad' => $user->ciudad,
+                ':numero_usuario' => $numero_usuario -> numero_usuario
             ]);
 
             $userId = (int) $this->pdo->lastInsertId();
@@ -81,7 +82,9 @@ class UserRepository implements UserRepositoryInterface {
      * @throws Exception 
      */
     public function getUser(int $id): array {
-        $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE id_usuario = :id");
+        $stmt = $this->pdo->prepare("SELECT username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario
+            FROM usuarios 
+            WHERE id_usuario = :id");
         $stmt->execute([':id' => $id]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -111,7 +114,6 @@ class UserRepository implements UserRepositoryInterface {
         $stmt = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE nombre = :nombre");
         $stmt->execute([':nombre' => $nombre]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
         if (!$user) {
             throw new \Exception("Usuario con nombre $nombre no encontrado.");
         }
