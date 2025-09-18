@@ -363,9 +363,26 @@ class DietaRepository implements DietaRepositoryInterface {
                     ca.cantidad_equivalente,
                     ca.cantidad_equivalente1,
                     ca.cantidad_equivalente3,
+                    ca.cantidad_equivalente4,
+                    ca.cantidad_equivalente5,
+                    ca.cantidad_equivalente6,
+                    ca.cantidad_equivalente7,
+                    ca.cantidad_equivalente8,
+                    ca.cantidad_equivalente9,
+                    ca.cantidad_equivalente10,
+
                     ca.id_alimento,
                     ca.id_alimento_equivalente,
                     ca.id_alimento_equivalente1,
+                    ca.id_alimento_equivalente3,
+                    ca.id_alimento_equivalente4,
+                    ca.id_alimento_equivalente5,
+                    ca.id_alimento_equivalente6,
+                    ca.id_alimento_equivalente7,
+                    ca.id_alimento_equivalente8,
+                    ca.id_alimento_equivalente9,
+                    ca.id_alimento_equivalente10,
+
 
                     a.nombre AS nombre_alimento,
                     ae.nombre AS nombre_alimento_equivalente,
@@ -394,6 +411,14 @@ class DietaRepository implements DietaRepositoryInterface {
                 LEFT JOIN alimentos ae ON ca.id_alimento_equivalente = ae.id_alimento
                 LEFT JOIN alimentos ae1 ON ca.id_alimento_equivalente1 = ae1.id_alimento
                 LEFT JOIN alimentos ae3 ON ca.id_alimento_equivalente3 = ae3.id_alimento
+                LEFT JOIN alimentos ae4 ON ca.id_alimento_equivalente4 = ae4.i_alimento
+                LEFT JOIN alimentos ae5 ON ca.id_alimento_equivalente5 = ae5.id_alimento
+                LEFT JOIN alimentos ae6 ON ca.id_alimento_equivalente6 = ae6.id_alimento
+                LEFT JOIN alimentos ae7 ON ca.id_alimento_equivalente7 = ae7.id_alimento
+                LEFT JOIN alimentos ae8 ON ca.id_alimento_equivalente8 = ae8.id_alimento
+                LEFT JOIN alimentos ae9 ON ca.id_alimento_equivalente9 = ae9.id_alimento
+                LEFT JOIN alimentos ae10 ON ca.id_alimento_equivalente10 = ae10.id_alimento
+
 
 
                 LEFT JOIN dieta_preparador dp ON d.id_dieta = dp.id_dieta
