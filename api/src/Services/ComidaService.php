@@ -66,6 +66,74 @@ use App\Repositories\Interfaces\ComidaRepositoryInterface;
                                     $eq['cantidad_equivalente3']
                                 );
                             }
+
+                             if (isset($eq['id_alimento_equivalente4'])) {
+                                $this->repo->insertarEquivalencia4(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente4'],
+                                    $eq['cantidad_equivalente4']
+                                );
+                            }
+
+                             if (isset($eq['id_alimento_equivalente5'])) {
+                                $this->repo->insertarEquivalencia5(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente5'],
+                                    $eq['cantidad_equivalente5']
+                                );
+                            }
+
+
+                             if (isset($eq['id_alimento_equivalente6'])) {
+                                $this->repo->insertarEquivalencia6(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente6'],
+                                    $eq['cantidad_equivalente6']
+                                );
+                            }
+
+
+                             if (isset($eq['id_alimento_equivalente7'])) {
+                                $this->repo->insertarEquivalencia7(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente7'],
+                                    $eq['cantidad_equivalente7']
+                                );
+                            }
+
+
+                             if (isset($eq['id_alimento_equivalente8'])) {
+                                $this->repo->insertarEquivalencia8(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente8'],
+                                    $eq['cantidad_equivalente8']
+                                );
+                            }
+
+
+                             if (isset($eq['id_alimento_equivalente9'])) {
+                                $this->repo->insertarEquivalencia9(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente9'],
+                                    $eq['cantidad_equivalente9']
+                                );
+                            }
+
+                             if (isset($eq['id_alimento_equivalente10'])) {
+                                $this->repo->insertarEquivalencia10(
+                                    $idComida,
+                                    $al['id_alimento'],
+                                    $eq['id_alimento_equivalente10'],
+                                    $eq['cantidad_equivalente10']
+                                );
+                            }
+                             
                         }
                     }
                 }

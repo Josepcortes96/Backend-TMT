@@ -216,6 +216,127 @@
         }
 
         /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia4(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente4 = :eq, cantidad_equivalente4 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia5(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente5 = :eq, cantidad_equivalente5 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia6(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente6 = :eq, cantidad_equivalente6 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia7(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente7 = :eq, cantidad_equivalente7 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia8(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente8 = :eq, cantidad_equivalente8 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia9(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente9 = :eq, cantidad_equivalente9 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+        /**
+         * Inserta o actualiza un alimento equivalente en una comida (tercer campo de equivalencia).
+         *
+         * @param int   $comidaId      Identificador de la comida.
+         * @param int   $alimentoId    Identificador del alimento original.
+         * @param int   $id_equivalente Identificador del alimento equivalente.
+         * @param float $cantidad      Cantidad del alimento equivalente.
+         *
+         * @return void
+         */
+
+        public function insertarEquivalencia10(int $comidaId, int $alimentoId, int $id_equivalente, float $cantidad): void {
+            $stmt = $this->pdo->prepare("UPDATE comida_alimento SET id_alimento_equivalente10 = :eq, cantidad_equivalente10 = :cant WHERE id_comida = :id AND id_alimento = :al");
+            $stmt->execute([':eq' => $id_equivalente, ':cant' => round($cantidad, 2), ':id' => $comidaId, ':al' => $alimentoId]);
+        }
+
+
+    
+
+        /**
          * Elimina varias comidas de la base de datos según sus IDs.
          *
          * @param int[] $comidaIds Lista de identificadores de comidas.

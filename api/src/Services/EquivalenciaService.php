@@ -46,6 +46,11 @@ class EquivalenciaService implements EquivalenciaServiceInterface
                 $valorBase = $alimentoBase['grasas'] ?? 0;
                 $valorEq = $alimentoEquivalente['grasas'] ?? 0;
                 break;
+            case 'fruta':
+            case 'verdura':
+                $valorBase = $alimentoBase['calorias'] ?? 0;
+                $valorEq = $alimentoEquivalente['calorias'] ?? 0;
+                break;
             default:
                 return ['error' => 'Categoría no válida'];
         }
@@ -66,5 +71,5 @@ class EquivalenciaService implements EquivalenciaServiceInterface
                 'cantidad_equivalente' => round($cantidadEquivalente, 2)
             ]
         ];
-    }
+    }   
 }
