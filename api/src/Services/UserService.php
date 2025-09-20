@@ -102,6 +102,11 @@
         }
 
 
+          public function getCumpleañosByCentro(int $centroId):array{
+            return $this->userRepository->getCumpleañosByCentro($centroId);
+        }
+
+
 
 
     }
