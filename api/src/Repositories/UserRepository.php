@@ -581,7 +581,7 @@ class UserRepository implements UserRepositoryInterface {
             u.fecha_creacion, 
             COUNT(*) OVER() AS total_clientes 
           FROM usuarios u INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario 
-          WHERE u.fecha_creacion >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND u.rol = 'Cliente' AND cu.id_centro = :id_centro 
+          WHERE u.fecha_creacion >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND u.rol = 'Cliente' AND cu.id_centro = :centro_id
           ORDER BY u.fecha_creacion DESC;
             
         ");
