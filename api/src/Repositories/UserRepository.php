@@ -43,11 +43,11 @@ class UserRepository implements UserRepositoryInterface {
                 throw new Exception("Centro no válido");
             }
 
-            $sql = "INSERT INTO usuarios (username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario) VALUES (:username, :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad, :numero_usuario)";
+            $sql = "INSERT INTO usuarios ( nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario) VALUES ( :nombre, :apellidos, :password, :rol, NOW(), :correo, :estado, :telefono, :direccion, :fechaNacimiento, :ciudad, :numero_usuario)";
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute([
-                ':username' => $user->username,
+
                 ':nombre' => $user->nombre,
                 ':apellidos' => $user->apellidos,
                 ':password' => $user->password,
@@ -82,7 +82,7 @@ class UserRepository implements UserRepositoryInterface {
      * @throws Exception 
      */
     public function getUser(int $id): array {
-        $stmt = $this->pdo->prepare("SELECT username, nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario
+        $stmt = $this->pdo->prepare("SELECT  nombre, apellidos, password, rol, fecha_creacion, correo, estado, telefono, direccion, fecha_de_nacimiento, ciudad, numero_usuario
             FROM usuarios 
             WHERE id_usuario = :id");
         $stmt->execute([':id' => $id]);
@@ -128,10 +128,10 @@ class UserRepository implements UserRepositoryInterface {
      * @return void
      */
     public function update(int $id, User $user): void {
-        $sql = "UPDATE usuarios SET username = :username, nombre = :nombre, apellidos = :apellidos, password = :password, rol = :rol, correo = :correo, estado = :estado, telefono = :telefono, direccion = :direccion, ciudad = :ciudad WHERE id_usuario = :id";
+        $sql = "UPDATE usuarios SET  nombre = :nombre, apellidos = :apellidos, password = :password, rol = :rol, correo = :correo, estado = :estado, telefono = :telefono, direccion = :direccion, ciudad = :ciudad WHERE id_usuario = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
-            ':username' => $user->username,
+
             ':nombre' => $user->nombre,
             ':apellidos' => $user->apellidos,
             ':password' => password_hash($user->password, PASSWORD_BCRYPT),
@@ -378,12 +378,14 @@ class UserRepository implements UserRepositoryInterface {
      */
     public function getUsersByCentro(int $centroId): array {
         $stmt = $this->pdo->prepare("
-            SELECT u.*, c.nombre AS nombre_centro
-            FROM usuarios u
-            INNER JOIN clientes cli ON u.id_usuario = cli.id_usuario
-            INNER JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
-            INNER JOIN centros c ON cc.id_centro = c.id_centro
-            WHERE c.id_centro = :centro_id
+         SELECT u.*, 
+            c.nombre AS nombre_centro
+        FROM usuarios u
+        INNER JOIN clientes cli ON u.id_usuario = cli.id_usuario
+        INNER JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
+        INNER JOIN centros c ON cc.id_centro = c.id_centro
+        WHERE c.id_centro = :centro_id
+        ORDER BY u.numero_usuario DESC;
         ");
         $stmt->execute([':centro_id' => $centroId]);
 
@@ -403,6 +405,8 @@ class UserRepository implements UserRepositoryInterface {
             LEFT JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
             LEFT JOIN centros c ON cc.id_centro = c.id_centro
             WHERE u.rol= 'Cliente'
+            ORDER BY u.fecha_creacion DESC;
+
             
         ");
         $stmt->execute();
@@ -423,7 +427,8 @@ class UserRepository implements UserRepositoryInterface {
         LEFT JOIN preparadores pr ON u.id_usuario = pr.id_usuario
         LEFT JOIN centro_preparador cp ON pr.id_preparador = cp.id_preparador
         LEFT JOIN centros c ON cp.id_centro = c.id_centro
-        WHERE u.rol = 'Preparador';
+        WHERE u.rol = 'Preparador'
+        ORDER BY u.fecha_creacion DESC;
 
             
         ");
@@ -446,6 +451,7 @@ class UserRepository implements UserRepositoryInterface {
             LEFT JOIN centro_propietario cp ON pr.id_propietario = cp.id_propietario
             LEFT JOIN centros c ON cp.id_centro = c.id_centro
             WHERE u.rol ='Propietario'
+            ORDER BY u.fecha_creacion DESC;
             
         ");
         $stmt->execute();
@@ -454,6 +460,96 @@ class UserRepository implements UserRepositoryInterface {
 
     }
 
+
+    /**
+     * Obtiene los cumpleaños del proximo mes en registro de administradord
+     * @return array 
+     */
+
+
+    public function getCumpleañosUsers(): array{
+        $stmt = $this->pdo->prepare("
+          SELECT u.nombre,
+            u.apellido,
+            u.fecha_de_nacimiento,
+            CASE 
+                WHEN DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d')
+                THEN STR_TO_DATE(CONCAT(YEAR(CURDATE()), '-', DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d')), '%Y-%m-%d')
+                ELSE STR_TO_DATE(CONCAT(YEAR(CURDATE()) + 1, '-', DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d')), '%Y-%m-%d')
+            END AS proximo_cumple
+        FROM usuarios u
+        WHERE (
+            (
+                DATE_FORMAT(CURDATE(), '%m-%d') <= DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                AND DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') 
+                    BETWEEN DATE_FORMAT(CURDATE(), '%m-%d') 
+                        AND DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+            )
+            OR
+            (
+                DATE_FORMAT(CURDATE(), '%m-%d') > DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                AND (
+                    DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d')
+                    OR DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') <= DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                    )
+            )
+            )
+        ORDER BY proximo_cumple ASC;
+            
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+
+
+    /**
+     * Obtiene los cumpleaños del proximo mes en registro de administradord
+     * @return array 
+     */
+
+
+        public function getCumpleañosByCentro(int $centroId): array {
+        $stmt = $this->pdo->prepare("
+            SELECT u.nombre,
+                u.apellidos,
+                u.fecha_de_nacimiento,
+                c.nombre AS nombre_centro,
+                CASE 
+                    WHEN DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d')
+                    THEN STR_TO_DATE(CONCAT(YEAR(CURDATE()), '-', DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d')), '%Y-%m-%d')
+                    ELSE STR_TO_DATE(CONCAT(YEAR(CURDATE()) + 1, '-', DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d')), '%Y-%m-%d')
+                END AS proximo_cumple
+            FROM usuarios u
+            INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario
+            INNER JOIN centros c ON cu.id_centro = c.id_centro
+            WHERE c.id_centro = :centro_id
+            AND (
+                (
+                    DATE_FORMAT(CURDATE(), '%m-%d') <= DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                    AND DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') 
+                        BETWEEN DATE_FORMAT(CURDATE(), '%m-%d') 
+                            AND DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%m-%d')
+                )
+                OR
+                (
+                    DATE_FORMAT(CURDATE(), '%m-%d') > DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                    AND (
+                        DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d')
+                        OR DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') <= DATE_FORMAT(DATE_ADD(CURDATE(), INTERVAL 30 DAY), '%m-%d')
+                        )
+                )
+                )
+            ORDER BY proximo_cumple ASC;
+
+
+        ");
+        $stmt->execute([':centro_id' => $centroId]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 
 

@@ -97,6 +97,10 @@
             return $this->userRepository->getUsersPreparadores();
         }
 
+        public function getCumpleañosUsers():array{
+            return $this->userRepository->getCumpleañosUsers();
+        }
+
 
 
 
