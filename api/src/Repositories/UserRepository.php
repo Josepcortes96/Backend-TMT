@@ -470,7 +470,7 @@ class UserRepository implements UserRepositoryInterface {
     public function getCumpleañosUsers(): array{
         $stmt = $this->pdo->prepare("
           SELECT u.nombre,
-            u.apellido,
+            u.apellidos,
             u.fecha_de_nacimiento,
             CASE 
                 WHEN DATE_FORMAT(u.fecha_de_nacimiento, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d')
