@@ -157,4 +157,69 @@
         }
 
 
+         public function getUltimosClientes(Request $request, Response $response): Response {
+            $users = $this->userService->getUltimosClientes();
+            $response->getBody()->write(json_encode($users));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
+
+        public function getUltimosClientesCentro(Request $request, Response $response): Response {
+            $user = $request->getAttribute('user');
+
+            if (!$user || !isset($user['centro_id'])) {
+                $response->getBody()->write(json_encode(['error' => 'Centro no identificado.']));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
+            }
+
+            $centroId = (int) $user['centro_id'];
+
+            try {
+                $usuarios = $this->userService->getUltimosClientesCentro($centroId);
+                $response->getBody()->write(json_encode($usuarios));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            } catch (\Exception $e) {
+                $response->getBody()->write(json_encode([
+                    'error' => 'Error al obtener los usuarios del centro.',
+                    'details' => $e->getMessage()
+                ]));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+            }
+        }
+
+
+        public function getActivos(Request $request, Response $response): Response {
+            $users = $this->userService->getActivos();
+            $response->getBody()->write(json_encode($users));
+            return $response->withHeader('Content-Type', 'application/json');
+        }
+
+
+         public function getActivosCentro(Request $request, Response $response): Response {
+            $user = $request->getAttribute('user');
+
+            if (!$user || !isset($user['centro_id'])) {
+                $response->getBody()->write(json_encode(['error' => 'Centro no identificado.']));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
+            }
+
+            $centroId = (int) $user['centro_id'];
+
+            try {
+                $usuarios = $this->userService->getActivosCentro($centroId);
+                $response->getBody()->write(json_encode($usuarios));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            } catch (\Exception $e) {
+                $response->getBody()->write(json_encode([
+                    'error' => 'Error al obtener los usuarios del centro.',
+                    'details' => $e->getMessage()
+                ]));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+            }
+        }
+
+
+
+
+
     }

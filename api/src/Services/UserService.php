@@ -106,7 +106,21 @@
             return $this->userRepository->getCumpleañosByCentro($centroId);
         }
 
+        public function getUltimosClientes():array{
+            return $this->userRepository->getUltimosClientes();
+        }
+
+        public function getUltimosClientesCentro(int $centroId):array{
+            return $this->userRepository->getUltimosClientesCentro($centroId);
+        }
+
+        public function getActivos():array{
+            return $this->userRepository->getActivos();
+        }
 
 
+        public function getActivosCentro(int $centroId): array{
+            return $this->userRepository->getActivosCentro($centroId);
+        }
 
     }

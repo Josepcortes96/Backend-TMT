@@ -19,8 +19,12 @@
             $group->get('/preparadores', [UserController::class, 'getPreparadores']);
             $group->get('/propietarios', [UserController::class, 'getPropietarios']);
             $group->get('/cumpleaños', [UserController::class, 'getCumpleañosUsers']);
+            $group->get('/activos', [UserController::class, 'getActivos']);
             $group->get('/centro', [UserController::class, 'getByCentro']);
+            $group->get('/centro/activos', [UserController::class, 'getActivosCentro']);
+            $group->get('/centro/ultimos', [UserController::class, 'getUltimosClientesCentro']);
             $group->get('/centro/cumpleaños', [UserController::class, 'getCumpleañosByCentro']);
+            $group->get('/ultimos', [UserController::class, 'getUltimosClientes']);
             $group->post('', [UserController::class, 'create']);
             $group->get('/{id}', [UserController::class, 'getOne']);
             $group->get('/nombre/{nombre}', [UserController::class, 'getByName']);

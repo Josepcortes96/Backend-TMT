@@ -554,4 +554,81 @@ class UserRepository implements UserRepositoryInterface {
 
 
 
+
+      public function getUltimosClientes(): array{
+        $stmt = $this->pdo->prepare("
+          SELECT 
+            u.nombre, 
+            u.apellidos, 
+            u.fecha_creacion, 
+            COUNT(*) OVER() AS total_clientes 
+          FROM usuarios u INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario 
+          WHERE u.fecha_creacion >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND u.rol = 'Cliente'  
+          ORDER BY u.fecha_creacion DESC;
+            
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function getUltimosClientesCentro(int $centroId): array{
+        $stmt = $this->pdo->prepare("
+          SELECT 
+            u.nombre, 
+            u.apellidos, 
+            u.fecha_creacion, 
+            COUNT(*) OVER() AS total_clientes 
+          FROM usuarios u INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario 
+          WHERE u.fecha_creacion >= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND u.rol = 'Cliente' AND cu.id_centro = :id_centro 
+          ORDER BY u.fecha_creacion DESC;
+            
+        ");
+        $stmt->execute([':centro_id' => $centroId]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
+    public function getActivos(): array{
+        $stmt = $this->pdo->prepare("
+        SELECT 
+        COUNT(CASE WHEN u.estado = 'activo' THEN 1 END) AS usuarios_activos, 
+        COUNT(CASE WHEN u.estado = 'inactivo' THEN 1 END) AS usuarios_inactivos FROM usuarios u;
+        ");
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
+     public function getActivosCentro(int $centroId): array{
+        $stmt = $this->pdo->prepare("
+        SELECT 
+            COUNT(CASE WHEN u.estado = 'activo' THEN 1 END) AS usuarios_activos,
+            COUNT(CASE WHEN u.estado = 'inactivo' THEN 1 END) AS usuarios_inactivos
+        FROM usuarios u
+        INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario
+        WHERE cu.id_centro = :centro_id;
+            
+        ");
+        $stmt->execute([':centro_id' => $centroId]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
 }

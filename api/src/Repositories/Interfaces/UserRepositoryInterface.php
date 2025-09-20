@@ -26,6 +26,10 @@
         public function getUsersPropietarios():array;
         public function getCumpleañosUsers(): array;
         public function getCumpleañosByCentro(int $centroId): array;
+        public function getUltimosClientes(): array;
+        public function getUltimosClientesCentro(int $centroId): array;
+        public function getActivos(): array;
+        public function getActivosCentro(int $centroId): array;
          
     }
 
