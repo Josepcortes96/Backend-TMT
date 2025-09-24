@@ -47,6 +47,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 (require __DIR__ . '/../src/Routes/equivalenciaRoutes.php')($app, $container);
 (require __DIR__ . '/../src/Routes/dietaRoutes.php')($app, $container);
 (require __DIR__ . '/../src/Routes/datoRoutes.php')($app, $container);
+(require __DIR__ . '/../src/Routes/plantillaRoutes.php')($app, $container);
 
 $app->run();
 ?>
