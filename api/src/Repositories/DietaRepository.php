@@ -388,6 +388,14 @@ class DietaRepository implements DietaRepositoryInterface {
                     ae.nombre AS nombre_alimento_equivalente,
                     ae1.nombre AS nombre_alimento_equivalente1,
                     ae3.nombre AS nombre_alimento_equivalente3,
+                    ae4.nombre AS nombre_alimento_equivalente4,
+                    ae5.nombre AS nombre_alimento_equivalente5,
+                    ae6.nombre AS nombre_alimento_equivalente6,
+                    ae7.nombre AS nombre_alimento_equivalente7,
+                    ae8.nombre AS nombre_alimento_equivalente8,
+                    ae9.nombre AS nombre_alimento_equivalente9,
+
+
 
 
                     up.nombre AS nombre_preparador,
