@@ -8,6 +8,7 @@ interface PlantillaServiceInterface
     public function asociarComidas(int $id_plantilla, array $comidas): void; 
     public function eliminarPlantilla(int $id_plantilla): bool;
     public function obtenerPlantillasPorCentro(int $id_centro): array;
+    public function obtenerInformePlantilla(int $id_plantilla): array;
 }
 ?>
 

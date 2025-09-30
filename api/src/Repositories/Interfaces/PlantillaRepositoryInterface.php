@@ -9,6 +9,7 @@
         public function deletePlantilla(int $id_plantilla):bool;
         public function asociarComidaPlantilla(int $id_plantilla, int $id_comida):void;
         public function getPlantillaPorCentro(int $id_centro): array;
+        public function getInformePlantilla(int $id_plantilla) : array;
     }
 
 ?>

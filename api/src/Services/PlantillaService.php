@@ -60,6 +60,15 @@ class PlantillaService implements PlantillaServiceInterface
     public function obtenerPlantillasPorCentro(int $id_centro): array {
         return $this->plantillaRepository->getPlantillaPorCentro($id_centro);
     }
+
+
+    public function obtenerInformePlantilla(int $id_plantilla): array{
+       
+        $informe = $this->plantillaRepository->getInformePlantilla($id_plantilla);
+
+        return $informe;
+    }
+
 }
 
 ?>

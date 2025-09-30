@@ -100,4 +100,25 @@ class PlantillaController
             return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
         }
     }
+
+    public function obtenerInforme(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_plantilla = (int) $args['id'];
+
+            $informe = $this->plantillaService->obtenerInformePlantilla($id_plantilla);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $informe
+            ]));
+            return $response->withHeader('Content-Type', 'application/json');
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+        }
+    }
 }

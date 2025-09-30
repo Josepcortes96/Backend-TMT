@@ -152,6 +152,88 @@ class PlantillaRepository implements PlantillaRepositoryInterface {
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        
+         public function getInformePlantilla(int $id_plantilla) : array{
+            $sql = "
+               SELECT 
+                    p.nombre AS nombre_plantilla,
+                    p.fecha_creacion,
+
+                    pc.id_comida,
+                    c.hora,
+                    c.tipo_comida,
+                    c.notas,
+                    c.calorias_totales_comida,
+                    c.proteinas_totales_comida,
+                    c.grasas_totales_comida,
+                    c.carbohidratos_totales_comida,
+
+                    ca.categoria,
+                    ca.cantidad,
+                    ca.cantidad_equivalente,
+                    ca.cantidad_equivalente1,
+                    ca.cantidad_equivalente3,
+                    ca.cantidad_equivalente4,
+                    ca.cantidad_equivalente5,
+                    ca.cantidad_equivalente6,
+                    ca.cantidad_equivalente7,
+                    ca.cantidad_equivalente8,
+                    ca.cantidad_equivalente9,
+                    ca.cantidad_equivalente10,
+
+                    ca.id_alimento,
+                    ca.id_alimento_equivalente,
+                    ca.id_alimento_equivalente1,
+                    ca.id_alimento_equivalente3,
+                    ca.id_alimento_equivalente4,
+                    ca.id_alimento_equivalente5,
+                    ca.id_alimento_equivalente6,
+                    ca.id_alimento_equivalente7,
+                    ca.id_alimento_equivalente8,
+                    ca.id_alimento_equivalente9,
+                    ca.id_alimento_equivalente10,
+
+                    a.nombre AS nombre_alimento,
+                    ae.nombre AS nombre_alimento_equivalente,
+                    ae1.nombre AS nombre_alimento_equivalente1,
+                    ae3.nombre AS nombre_alimento_equivalente3,
+                    ae4.nombre AS nombre_alimento_equivalente4,
+                    ae5.nombre AS nombre_alimento_equivalente5,
+                    ae6.nombre AS nombre_alimento_equivalente6,
+                    ae7.nombre AS nombre_alimento_equivalente7,
+                    ae8.nombre AS nombre_alimento_equivalente8,
+                    ae9.nombre AS nombre_alimento_equivalente9,
+                    ae10.nombre AS nombre_alimento_equivalente10
+
+                FROM plantillas p
+
+                LEFT JOIN plantilla_comida pc ON p.id_plantilla = pc.id_plantilla
+                LEFT JOIN comidas c ON pc.id_comida = c.id_comida
+                LEFT JOIN comida_alimento ca ON c.id_comida = ca.id_comida
+
+                LEFT JOIN alimentos a ON ca.id_alimento = a.id_alimento
+                LEFT JOIN alimentos ae ON ca.id_alimento_equivalente = ae.id_alimento
+                LEFT JOIN alimentos ae1 ON ca.id_alimento_equivalente1 = ae1.id_alimento
+                LEFT JOIN alimentos ae3 ON ca.id_alimento_equivalente3 = ae3.id_alimento
+                LEFT JOIN alimentos ae4 ON ca.id_alimento_equivalente4 = ae4.id_alimento
+                LEFT JOIN alimentos ae5 ON ca.id_alimento_equivalente5 = ae5.id_alimento
+                LEFT JOIN alimentos ae6 ON ca.id_alimento_equivalente6 = ae6.id_alimento
+                LEFT JOIN alimentos ae7 ON ca.id_alimento_equivalente7 = ae7.id_alimento
+                LEFT JOIN alimentos ae8 ON ca.id_alimento_equivalente8 = ae8.id_alimento
+                LEFT JOIN alimentos ae9 ON ca.id_alimento_equivalente9 = ae9.id_alimento
+                LEFT JOIN alimentos ae10 ON ca.id_alimento_equivalente10 = ae10.id_alimento
+
+                WHERE p.id_plantilla = :id_plantilla;
+            ";
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindParam(':id_plantilla', $id_plantilla, PDO::PARAM_INT);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+        }
+
+
 
 
    

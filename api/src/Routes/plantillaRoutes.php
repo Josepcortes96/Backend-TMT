@@ -12,7 +12,8 @@ return function (App $app, ContainerInterface $container) {
         $group->post('', [$controller, 'create']); // Crear plantilla
         $group->post('/{id}/asociar-comidas', [$controller, 'asociarComidas']); // Asociar comidas a plantilla
         $group->delete('/{id}', [$controller, 'delete']); // Eliminar plantilla
-        $group->get('/centro', [$controller, 'getByCentro']); // Obtener todas las plantillas de un centro
+        $group->get('/centro', [$controller, 'getByCentro']);
+        $group->get('/informe/{id}', [$controller, 'obtenerInforme']); // Obtener todas las plantillas de un centro
     })->add($jwtMiddleware);
 };
 ?>
