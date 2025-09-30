@@ -13,8 +13,6 @@ return function (App $app, ContainerInterface $container) {
         $group->post('/{id}/asociar-comidas', [$controller, 'asociarComidas']); // Asociar comidas a plantilla
         $group->delete('/{id}', [$controller, 'delete']); // Eliminar plantilla
         $group->get('/centro', [$controller, 'getByCentro']); // Obtener todas las plantillas de un centro
-        $group->get('/{id}', [$controller, 'getOne']); // Obtener una plantilla por ID (extra, si lo implementas)
-        $group->get('', [$controller, 'getAll']); // Listar todas las plantillas (extra, si lo implementas)
     })->add($jwtMiddleware);
 };
 ?>

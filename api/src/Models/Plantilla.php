@@ -12,11 +12,13 @@ class Plantilla
 
     public function __construct(
         int $id_usuario,
+        int $id_centro,
         ?string $nombre = null,
         ?string $fecha_creacion = null,
 
     ) {
         $this->id_usuario = $id_usuario;
+        $this->id_centro = $id_centro;
         $this->nombre = $nombre;
         $this->fecha_creacion = $fecha_creacion ?? date('Y-m-d');
     }
