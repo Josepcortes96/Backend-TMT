@@ -411,7 +411,7 @@ class DietaRepository implements DietaRepositoryInterface {
                 LEFT JOIN alimentos ae ON ca.id_alimento_equivalente = ae.id_alimento
                 LEFT JOIN alimentos ae1 ON ca.id_alimento_equivalente1 = ae1.id_alimento
                 LEFT JOIN alimentos ae3 ON ca.id_alimento_equivalente3 = ae3.id_alimento
-                LEFT JOIN alimentos ae4 ON ca.id_alimento_equivalente4 = ae4.i_alimento
+                LEFT JOIN alimentos ae4 ON ca.id_alimento_equivalente4 = ae4.id_alimento
                 LEFT JOIN alimentos ae5 ON ca.id_alimento_equivalente5 = ae5.id_alimento
                 LEFT JOIN alimentos ae6 ON ca.id_alimento_equivalente6 = ae6.id_alimento
                 LEFT JOIN alimentos ae7 ON ca.id_alimento_equivalente7 = ae7.id_alimento
