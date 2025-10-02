@@ -144,7 +144,7 @@ class PlantillaRepository implements PlantillaRepositoryInterface {
          */
 
         public function getPlantillaPorCentro(int $id_centro): array {
-            $sql = "SELECT id_plantilla, nombre FROM plantillas WHERE id_centro = :id_centro";
+            $sql = "SELECT id_plantilla, nombre, fecha_creacion FROM plantillas WHERE id_centro = :id_centro";
 
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([':id_centro' => $id_centro]);
