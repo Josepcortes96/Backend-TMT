@@ -232,30 +232,36 @@ class DatoRepository implements DatoRepositoryInterface
     {
         $sql = "
                 SELECT 
-                    cuello, 
-                    brazo , 
-                    cintura, 
-                    abdomen, 
-                    cadera ,
-                    muslo , 
-                    imc , 
-                    indice_masa_magra , 
-                    triceps, subescapular, 
-                    abdomen_pliegue, 
-                    supra_iliaco, 
-                    muslo_pliegue , 
-                    humero_biepicondileo, 
-                    femur_bicondileo, 
-                    muneca_estiloideo, 
-                    complex_osea , 
-                    peso_oseo_rocha, 
-                    peso_residual,
-                    peso_extracelular,
-                    peso_intracelular, 
-                    kg_masa_magra, 
-                    peso
-                FROM datos
-                WHERE id_dato = :id_dato AND id_usuario = :id_usuario ";
+                    d.cuello, 
+                    d.brazo, 
+                    d.cintura, 
+                    d.abdomen, 
+                    d.cadera,
+                    d.muslo, 
+                    d.imc, 
+                    d.indice_masa_magra, 
+                    d.triceps, 
+                    d.subescapular, 
+                    d.abdomen_pliegue, 
+                    d.supra_iliaco, 
+                    d.muslo_pliegue, 
+                    d.humero_biepicondileo, 
+                    d.femur_bicondileo, 
+                    d.muneca_estiloideo, 
+                    d.complex_osea, 
+                    d.peso_oseo_rocha, 
+                    d.peso_residual,
+                    d.peso_extracelular,
+                    d.peso_intracelular, 
+                    d.kg_masa_magra, 
+                    d.peso,
+                    u.nombre,
+                    u.apellidos,
+                    u.telefono,
+                    u.fecha_de_nacimiento
+                FROM datos d
+                INNER JOIN usuarios u ON d.id_usuario = u.id_usuario
+                WHERE d.id_dato = :id_dato AND d.id_usuario = :id_usuario";
 
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
