@@ -24,9 +24,7 @@
         
         public function getInformeDieta(int $id_dieta) : array;
 
-        public function getInformeDato(int $idUsuario, int $id_dato): ?array;
-        
-        public function getInformeDatoHistorico(int $idUsuario): ?array;
+    
     }
 
 ?>

@@ -225,7 +225,7 @@ public function getInformeDato(Request $request, Response $response, array $args
     try {
         $idUsuario = (int) $args['id_usuario'];
         $idDato = (int) $args['id_dato'];
-        $informe = $this->datosService->getInformeDato($idUsuario, $idDato);
+        $informe = $this->datoService->getInformeDato($idUsuario, $idDato);
 
         $response->getBody()->write(json_encode([
             'success' => true,
@@ -245,7 +245,7 @@ public function getInformeDatoHistorico(Request $request, Response $response, ar
 {
     try {
         $idUsuario = (int) $args['id_usuario'];
-        $historico = $this->datosService->getInformeDatoHistorico($idUsuario);
+        $historico = $this->datoService->getInformeDatoHistorico($idUsuario);
 
         $response->getBody()->write(json_encode([
             'success' => true,

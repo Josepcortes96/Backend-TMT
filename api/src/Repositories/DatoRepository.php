@@ -271,7 +271,8 @@ class DatoRepository implements DatoRepositoryInterface
     {
         $sql = "
                 
-                SELECT 
+                SELECT
+                nombre,
                     cuello, 
                     brazo, 
                     cintura, 
@@ -303,7 +304,7 @@ class DatoRepository implements DatoRepositoryInterface
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([ ':id_usuario' => $idUsuario]);
 
-        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: null;
     }
 
 }
