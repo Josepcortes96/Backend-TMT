@@ -220,6 +220,47 @@ public function obtenerControles(Request $request, Response $response, array $ar
     }
 }
 
+public function getInformeDato(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $idDato = (int) $args['id_dato'];
+        $informe = $this->datosService->getInformeDato($idUsuario, $idDato);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $informe
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
+public function getInformeDatoHistorico(Request $request, Response $response, array $args): Response
+{
+    try {
+        $idUsuario = (int) $args['id_usuario'];
+        $historico = $this->datosService->getInformeDatoHistorico($idUsuario);
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $historico
+        ]));
+        return $response->withHeader('Content-Type', 'application/json');
+    } catch (\Throwable $e) {
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+    }
+}
+
 
 
 }

@@ -22,7 +22,10 @@ interface DatoServiceInterface
 
     public function getTodosControles(int $idUsuario): array;
 
+    public function getUltimoControlPorId(int $idUsuario): ?array;
 
-     public function getUltimoControlPorId(int $idUsuario): ?array;
+    public function getInformeDato(int $idUsuario, int $idDato): ?array;
+    
+    public function getInformeDatoHistorico(int $idUsuario): ?array;
 }
 ?>

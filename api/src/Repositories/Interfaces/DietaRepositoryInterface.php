@@ -23,6 +23,10 @@
         public function insertDietaRol(int $id_dieta, int $id_usuario, string $rol): array;
         
         public function getInformeDieta(int $id_dieta) : array;
+
+        public function getInformeDato(int $idUsuario, int $id_dato): ?array;
+        
+        public function getInformeDatoHistorico(int $idUsuario): ?array;
     }
 
 ?>

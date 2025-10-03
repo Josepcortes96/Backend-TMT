@@ -53,6 +53,20 @@ class DatoService implements DatoServiceInterface
 
     public function getUltimoControlPorId(int $idUsuario): ?array{
         return $this->datoRepository->getUltimoControlPorId($idUsuario);
-     }
+    }
+
+     public function getInformeDato(int $idUsuario, int $idDato): ?array
+    {
+        return $this->datoRepository->getInformeDato($idUsuario, $idDato);
+    }
+
+    public function getInformeDatoHistorico(int $idUsuario): ?array
+    {
+        return $this->datoRepository->getInformeDatoHistorico($idUsuario);
+    }
+
+
+
+
 }
 ?>

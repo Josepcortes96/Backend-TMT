@@ -16,6 +16,8 @@
             $group->get('/last/{id_usuario}', [$controller, 'obtenerUltimoControl']);
             $group->get('/usuario/{id_usuario}', [$controller, 'obtenerControles']);
             $group->get('/usuario/{id_usuario}/control/{nombre}', [$controller, 'obtenerPorControl']);
+            $group->get('/usuario/{id_usuario}/dato/{id_dato}', [$controller, 'getInformeDato']);
+            $group->get('/usuario/{id_usuario}/historico', [$controller, 'getInformeDatoHistorico']);
             $group->get('/detalle/{id}', [$controller, 'obtener']);
             $group->put('/{id}', [$controller, 'actualizar']);
             $group->delete('/{id}', [$controller, 'eliminar']);

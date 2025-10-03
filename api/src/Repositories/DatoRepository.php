@@ -228,7 +228,84 @@ class DatoRepository implements DatoRepositoryInterface
     }
 
 
+    public function getInformeDato(int $idUsuario, int $id_dato): ?array
+    {
+        $sql = "
+                SELECT 
+                    cuello, 
+                    brazo , 
+                    cintura, 
+                    abdomen, 
+                    cadera ,
+                    muslo , 
+                    imc , 
+                    indice_masa_magra , 
+                    triceps, subescapular, 
+                    abdomen_pliegue, 
+                    supra_iliaco, 
+                    muslo_pliegue , 
+                    humero_biepicondileo, 
+                    femur_bicondileo, 
+                    muneca_estiloideo, 
+                    complex_osea , 
+                    peso_oseo_rocha, 
+                    peso_residual,
+                    peso_extracelular,
+                    peso_intracelular, 
+                    kg_masa_magra, 
+                    peso
+                FROM datos
+                WHERE id_dato = :id_dato AND id_usuario = :id_usuario ";
 
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':id_dato' => $id_dato,
+                ':id_usuario' => $idUsuario
+            ]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+    }
+
+
+        public function getInformeDatoHistorico(int $idUsuario): ?array
+    {
+        $sql = "
+                
+                SELECT 
+                    cuello, 
+                    brazo, 
+                    cintura, 
+                    abdomen, 
+                    cadera, 
+                    muslo, 
+                    imc, 
+                    indice_masa_magra, 
+                    triceps, 
+                    subescapular, 
+                    abdomen_pliegue, 
+                    supra_iliaco, 
+                    muslo_pliegue, 
+                    humero_biepicondileo, 
+                    femur_bicondileo, 
+                    muneca_estiloideo, 
+                    complex_osea, 
+                    peso_oseo_rocha, 
+                    peso_residual,
+                    peso_extracelular,
+                    peso_intracelular, 
+                    kg_masa_magra, 
+                    peso, 
+                    fecha 
+                FROM datos
+                WHERE id_usuario = :id_usuario
+                ORDER BY fecha DESC;";
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([ ':id_usuario' => $idUsuario]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+    }
 
 }
 ?>
+
