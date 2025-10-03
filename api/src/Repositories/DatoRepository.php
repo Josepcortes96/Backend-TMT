@@ -255,7 +255,10 @@ class DatoRepository implements DatoRepositoryInterface
                     d.peso_oseo_rocha, 
                     d.peso_residual,
                     d.peso_extracelular,
-                    d.peso_intracelular, 
+                    d.peso_intracelular,
+                    d.porcentaje_extracelular,
+                    d.porcentaje_intracelular,
+                    d.porcentaje_residual,
                     d.kg_masa_magra, 
                     d.kg_grasa,
                     d.peso,
@@ -309,7 +312,8 @@ class DatoRepository implements DatoRepositoryInterface
                     d.peso_intracelular, 
                     d.kg_masa_magra, 
                     d.kg_grasa,
-                    d.peso
+                    d.peso,
+                    d.fecha
                 FROM datos d
                 WHERE id_usuario = :id_usuario
                 ORDER BY fecha DESC;";
