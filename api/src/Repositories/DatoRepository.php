@@ -232,6 +232,8 @@ class DatoRepository implements DatoRepositoryInterface
     {
         $sql = "
                 SELECT 
+                    d.nombre as nombre_control
+                    d.edad,
                     d.cuello, 
                     d.brazo, 
                     d.cintura, 
