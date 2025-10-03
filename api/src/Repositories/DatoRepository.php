@@ -262,6 +262,7 @@ class DatoRepository implements DatoRepositoryInterface
                     d.kg_masa_magra, 
                     d.kg_grasa,
                     d.peso,
+                    d.fecha,
                     u.nombre,
                     u.apellidos,
                     u.telefono,
