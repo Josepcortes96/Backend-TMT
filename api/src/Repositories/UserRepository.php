@@ -630,9 +630,9 @@ class UserRepository implements UserRepositoryInterface {
         INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario
         WHERE cu.id_centro = :id_centro;
         ");
-        $stmt->execute([':centro_id' => $centroId]);
+        $stmt->execute([':id_centro' => $centroId]);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 
