@@ -5,7 +5,7 @@ use DateTime;
 use Exception;
 
 class User {
-    public string $username;
+
     public string $nombre;
     public string $apellidos;
     public string $password;
@@ -20,7 +20,7 @@ class User {
     public int $centroId;
 
     public function __construct(array $data) {
-        $this->username = $data['username'] ?? '';
+
         $this->nombre = $data['nombre'] ?? '';
         $this->apellidos = $data['apellidos'] ?? '';
         $this->password = $data['password'] ?? '';

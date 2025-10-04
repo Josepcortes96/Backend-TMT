@@ -123,4 +123,8 @@
             return $this->userRepository->getActivosCentro($centroId);
         }
 
+        public function getUltimoNumero(int $centroId): array{
+            return $this->userRepository->getUltimoNumero($centroId);
+        }
+
     }

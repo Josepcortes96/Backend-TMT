@@ -623,6 +623,18 @@ class UserRepository implements UserRepositoryInterface {
     }
 
 
+      public function getUltimoNumero(int $centroId): array{
+        $stmt = $this->pdo->prepare("
+        SELECT MAX(u.numero_usuario) as numero_mas_alto
+        FROM usuarios u
+        INNER JOIN centro_usuario cu ON u.id_usuario = cu.id_usuario
+        WHERE cu.id_centro = :id_centro;
+        ");
+        $stmt->execute([':centro_id' => $centroId]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
 
 

@@ -7,7 +7,7 @@
     use Psr\Container\ContainerInterface;
 
     return function (App $app, ContainerInterface $container) {
-        $pdo = $container->get(PDO::class); // <-- ahora funciona correctamente
+        $pdo = $container->get(PDO::class); 
 
         $authRepository = new AuthRepository($pdo);
         $authService = new AuthService($authRepository);
@@ -24,6 +24,7 @@
             $group->get('/centro/activos', [UserController::class, 'getActivosCentro']);
             $group->get('/centro/ultimos', [UserController::class, 'getUltimosClientesCentro']);
             $group->get('/centro/cumpleaños', [UserController::class, 'getCumpleañosByCentro']);
+            $group->get('/centro/numero', [UserController::class, 'getUltimoNumero']);
             $group->get('/ultimos', [UserController::class, 'getUltimosClientes']);
             $group->post('', [UserController::class, 'create']);
             $group->get('/{id}', [UserController::class, 'getOne']);

@@ -219,6 +219,28 @@
         }
 
 
+        public function getUltimoNumero(Request $request, Response $response): Response {
+            $user = $request->getAttribute('user');
+
+            if (!$user || !isset($user['centro_id'])) {
+                $response->getBody()->write(json_encode(['error' => 'Centro no identificado.']));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
+            }
+
+            $centroId = (int) $user['centro_id'];
+
+            try {
+                $usuarios = $this->userService->getUltimoNumero($centroId);
+                $response->getBody()->write(json_encode($usuarios));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+            } catch (\Exception $e) {
+                $response->getBody()->write(json_encode([
+                    'error' => 'Error al obtener los usuarios del centro.',
+                    'details' => $e->getMessage()
+                ]));
+                return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
+            }
+        }
 
 
 

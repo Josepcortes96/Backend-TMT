@@ -30,6 +30,7 @@
         public function getUltimosClientesCentro(int $centroId): array;
         public function getActivos(): array;
         public function getActivosCentro(int $centroId): array;
+        public function getUltimoNumero(int $centroId): array;
          
     }
 
