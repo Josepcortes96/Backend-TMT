@@ -193,7 +193,17 @@ class DietaService implements DietaServiceInterface
         return $informe;
     }
 
+    public function getUltimaDietaCreada(int $id_usuario): ?int{
 
+        if (!$this->dietaRepository->getDietaById($id_dieta)) {
+            throw new \Exception("La dieta con ID $id_dieta no existe.");
+        }
+
+        $ultima= $this->dietaRepository->getUltimaDietaCreada($id_dieta);
+
+        return $ultima;
+    }
 }
 
 ?>
+ 

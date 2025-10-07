@@ -275,7 +275,37 @@ class DietaController
     }
 
 
+      public function getUltimaDietaCreada(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_usuario = (int) $args['id_usuario'];
+
+            if (!$id_usuario) {
+                throw new \InvalidArgumentException("ID de usuario no válido.");
+            }
+
+            $dietas = $this->dietaService->getUltimaDietaCreada($id_usuario);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $dietas
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json');
+
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
+        }
+    }
+
+
 
 
 }
 ?>
+
