@@ -19,7 +19,7 @@ return function (App $app, ContainerInterface $container) {
         $group->get('/informe/{id}', [$controller, 'obtenerInforme']); // Obtener informe completo de la dieta
         $group->get('/usuario/{id_usuario}', [$controller, 'obtenerPorUsuario']);
         $group->get('/{id}/dato', [$controller, 'obtenerConDato']);
-        $group->get('/usuario/ultima', [$controller, 'getUltimaDietaCreada']);
+        $group->get('/ultima', [$controller, 'getUltimaDietaCreada']);
     })->add($jwtMiddleware);
 };
 
