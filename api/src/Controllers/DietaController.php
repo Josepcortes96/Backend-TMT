@@ -275,15 +275,19 @@ class DietaController
     }
 
 
-      public function getUltimaDietaCreada(Request $request, Response $response, array $args): Response
+  public function getUltimaDietaCreada(Request $request, Response $response, array $args): Response
 {
     try {
-        // Validar que existe y es numérico antes de castear
-        if (!isset($args['id_usuario']) || !is_numeric($args['id_usuario'])) {
+        // Obtener el parámetro de la query string
+        $queryParams = $request->getQueryParams();
+        $id_usuario_param = $queryParams['id_usuario'] ?? null;
+
+        // Validar que existe y es numérico
+        if (!$id_usuario_param || !is_numeric($id_usuario_param)) {
             throw new \InvalidArgumentException("ID de usuario no válido.");
         }
 
-        $id_usuario = (int) $args['id_usuario'];
+        $id_usuario = (int) $id_usuario_param;
 
         // Validar que sea mayor a 0
         if ($id_usuario <= 0) {
@@ -316,10 +320,6 @@ class DietaController
         return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
     }
 }
-
-
-
-
 }
 ?>
 
