@@ -448,7 +448,7 @@ class DietaRepository implements DietaRepositoryInterface {
             return $stmt->fetchAll(PDO::FETCH_ASSOC); 
         }
 
-        public function getUltimaDietaCreada(int $id_usuario): ?int {
+        public function getUltimaDietaCreada(int $id_usuario): array{
             $sql = "SELECT id_dieta, id_dato FROM dietas WHERE id_usuario = :id_usuario ORDER BY id_dieta DESC LIMIT 1";
             
             $stmt = $this->pdo->prepare($sql);

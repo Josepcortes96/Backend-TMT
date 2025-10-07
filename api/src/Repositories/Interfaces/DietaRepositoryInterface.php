@@ -24,7 +24,7 @@
         
         public function getInformeDieta(int $id_dieta) : array;
 
-        public function getUltimaDietaCreada(int $id_usuario): ?int;
+        public function getUltimaDietaCreada(int $id_usuario): array;
 
     
     }

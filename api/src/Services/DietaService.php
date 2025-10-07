@@ -193,7 +193,7 @@ class DietaService implements DietaServiceInterface
         return $informe;
     }
 
-    public function getUltimaDietaCreada(int $id_usuario): ?int{
+    public function getUltimaDietaCreada(int $id_usuario): array{
 
        
 
