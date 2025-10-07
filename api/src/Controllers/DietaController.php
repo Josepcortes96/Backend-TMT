@@ -275,51 +275,33 @@ class DietaController
     }
 
 
-  public function getUltimaDietaCreada(Request $request, Response $response, array $args): Response
-{
-    try {
-        // Obtener el parámetro de la query string
-        $queryParams = $request->getQueryParams();
-        $id_usuario_param = $queryParams['id_usuario'] ?? null;
+     public function ultimaDietaCreada(Request $request, Response $response, array $args): Response
+    {
+        try {
+            $id_usuario = (int) $args['id_usuario'];
 
-        // Validar que existe y es numérico
-        if (!$id_usuario_param || !is_numeric($id_usuario_param)) {
-            throw new \InvalidArgumentException("ID de usuario no válido.");
+            if (!$id_usuario) {
+                throw new \InvalidArgumentException("ID de usuario no válido.");
+            }
+
+            $dietas = $this->dietaService->getUltimaDietaCreada($id_usuario);
+
+            $response->getBody()->write(json_encode([
+                'success' => true,
+                'data' => $dietas
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json');
+
+        } catch (\Throwable $e) {
+            $response->getBody()->write(json_encode([
+                'success' => false,
+                'message' => $e->getMessage()
+            ]));
+
+            return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
         }
-
-        $id_usuario = (int) $id_usuario_param;
-
-        // Validar que sea mayor a 0
-        if ($id_usuario <= 0) {
-            throw new \InvalidArgumentException("ID de usuario no válido.");
-        }
-
-        $idDieta = $this->dietaService->getUltimaDietaCreada($id_usuario);
-
-        $response->getBody()->write(json_encode([
-            'success' => true,
-            'data' => ['id_dieta' => $idDieta]
-        ]));
-
-        return $response->withHeader('Content-Type', 'application/json');
-
-    } catch (\InvalidArgumentException $e) {
-        $response->getBody()->write(json_encode([
-            'success' => false,
-            'message' => $e->getMessage()
-        ]));
-
-        return $response->withStatus(400)->withHeader('Content-Type', 'application/json');
-
-    } catch (\Throwable $e) {
-        $response->getBody()->write(json_encode([
-            'success' => false,
-            'message' => $e->getMessage()
-        ]));
-
-        return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
     }
-}
 }
 ?>
 

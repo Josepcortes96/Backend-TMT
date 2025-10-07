@@ -6,21 +6,28 @@ use App\Middlewares\JwtMiddleware;
 
 return function (App $app, ContainerInterface $container) {
     $controller = $container->get(DietaController::class);
-     $jwtMiddleware = $container->get(JwtMiddleware::class);
+    $jwtMiddleware = $container->get(JwtMiddleware::class);
 
     $app->group('/api/v1/dietas', function ($group) use ($controller) {
-        $group->post('', [$controller, 'crear']); // Crear dieta con macros
-        $group->post('/asociar-comidas', [$controller, 'asociarComidas']); // Asociar comidas a dieta
-        $group->post('/{id}/asignar-rol', [$controller, 'asignarRol']); // Asignar dieta por rol
-        $group->put('/{id}', [$controller, 'actualizar']); // Actualizar macros de dieta
-        $group->delete('/{id}', [$controller, 'eliminar']); // Eliminar dieta
-        $group->get('', [$controller, 'listar']); // Listar todas las dietas
-        $group->get('/{id}', [$controller, 'obtener']); // Obtener dieta por ID
-        $group->get('/informe/{id}', [$controller, 'obtenerInforme']); // Obtener informe completo de la dieta
+        //  RUTAS ESTÁTICAS Y MÁS ESPECÍFICAS PRIMERO
+        $group->post('', [$controller, 'crear']); 
+        $group->get('', [$controller, 'listar']);
+        $group->post('/asociar-comidas', [$controller, 'asociarComidas']);
+        
+        //  Rutas con /usuario y /last ANTES de /{id}
+        $group->get('/last/{id_usuario}', [$controller, 'ultimaDietaCreada']);
         $group->get('/usuario/{id_usuario}', [$controller, 'obtenerPorUsuario']);
+        
+        //  Rutas con /informe ANTES de /{id}
+        $group->get('/informe/{id}', [$controller, 'obtenerInforme']);
+        
+        //  RUTAS GENÉRICAS CON /{id} AL FINAL
+        $group->post('/{id}/asignar-rol', [$controller, 'asignarRol']);
         $group->get('/{id}/dato', [$controller, 'obtenerConDato']);
-        $group->get('/ultima', [$controller, 'getUltimaDietaCreada']);
+        $group->put('/{id}', [$controller, 'actualizar']);
+        $group->delete('/{id}', [$controller, 'eliminar']);
+        $group->get('/{id}', [$controller, 'obtener']);
+       
     })->add($jwtMiddleware);
 };
-
 ?>
