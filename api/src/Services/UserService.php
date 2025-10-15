@@ -16,9 +16,12 @@
         }
 
         public function createUser(User $user): int {
-            $this->validarFormatoPassword($user->password); // ⬅️ validación
-
-            $user->password = password_hash($user->password, PASSWORD_DEFAULT); // ⬅️ solo aquí se hashea
+            if (empty($user->password)) {
+                    $user->password = null;
+                } else {
+                    $this->validarFormatoPassword($user->password);
+                    $user->password = password_hash($user->password, PASSWORD_DEFAULT);
+                }
 
             return $this->userRepository->create($user); // el repositorio ya no vuelve a hashear
         }
