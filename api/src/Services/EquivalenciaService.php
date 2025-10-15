@@ -48,6 +48,7 @@ class EquivalenciaService implements EquivalenciaServiceInterface
                 break;
             case 'fruta':
             case 'verdura':
+            case 'otros':
                 $valorBase = $alimentoBase['calorias'] ?? 0;
                 $valorEq = $alimentoEquivalente['calorias'] ?? 0;
                 break;
