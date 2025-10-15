@@ -16,16 +16,18 @@
         }
 
         public function createUser(User $user): int {
-            if (empty($user->password)) {
-                    $user->password = null;
-                } else {
-                    $this->validarFormatoPassword($user->password);
-                    $user->password = password_hash($user->password, PASSWORD_DEFAULT);
-                }
+            // Solo validar y hashear si el password NO está vacío
+            if (!empty($user->password)) {
+                $this->validarFormatoPassword($user->password);
+                $user->password = password_hash($user->password, PASSWORD_DEFAULT);
+            } else {
+                // Si está vacío, establecer explícitamente como null
+                $user->password = null;
+            }
 
-            return $this->userRepository->create($user); // el repositorio ya no vuelve a hashear
+            return $this->userRepository->create($user);
         }
-
+        
         public function getAll(): array {
             return $this->userRepository->read();
         }
