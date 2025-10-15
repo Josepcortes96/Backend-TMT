@@ -8,7 +8,7 @@ class User {
 
     public string $nombre;
     public string $apellidos;
-    public string $password;
+    public ?string $password;
     public string $rol;
     public string $correo;
     public string $estado;
