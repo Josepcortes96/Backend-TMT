@@ -320,7 +320,7 @@ class DatoRepository implements DatoRepositoryInterface
                     d.peso,
                     d.fecha,
                     d.peso_graso,
-                    d.porcentaje_masa_magra,
+                    d.porcentaje_masa_magra
                 FROM datos d
                 WHERE id_usuario = :id_usuario
                 ORDER BY fecha DESC;";
