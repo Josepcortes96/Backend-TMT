@@ -381,6 +381,7 @@ class UserRepository implements UserRepositoryInterface {
          SELECT u.nombre, 
                 u.apellidos,
                 u.correo,
+                u.estado,
                 u.rol,
                 u.fecha_de_nacimiento,
                 u.ciudad,
@@ -410,6 +411,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.id_usuario,
                 u.nombre, 
                 u.apellidos,
+                u.estado,
                 u.correo,
                 u.rol,
                 u.fecha_de_nacimiento,
@@ -476,7 +478,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.rol,
                 u.fecha_de_nacimiento,
                 u.ciudad,
-                u.numero_usuario, , c.nombre AS centro
+                u.numero_usuario, c.nombre AS centro
             FROM usuarios u
             LEFT JOIN propietarios pr ON u.id_usuario = pr.id_usuario
             LEFT JOIN centro_propietario cp ON pr.id_propietario = cp.id_propietario
