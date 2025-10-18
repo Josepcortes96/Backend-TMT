@@ -49,13 +49,24 @@
          * @return void.
          */
         
-        public function asociarAlimento(
+       public function asociarAlimento(
             int $comidaId,
             int $alimentoId,
             float $cantidad,
             array $nutricion,
             ?string $categoria = null 
         ): void {
+            // AGREGAR ESTA VALIDACIÓN AQUÍ
+            $categoriasValidas = ['verdura', 'fruta', 'proteina', 'carbohidrato', 'grasa'];
+            $categoriaFinal = 'carbohidrato'; // valor por defecto
+            
+            if ($categoria !== null) {
+                $categoriaLimpia = strtolower(trim($categoria));
+                if (in_array($categoriaLimpia, $categoriasValidas)) {
+                    $categoriaFinal = $categoriaLimpia;
+                }
+            }
+
             $sql = "INSERT INTO comida_alimento (
                         id_comida, 
                         id_alimento, 
@@ -86,7 +97,7 @@
                 ':prot' => $nutricion['proteinas_totales_alimento'],
                 ':carb' => $nutricion['carbohidratos_totales_alimento'],
                 ':gras' => $nutricion['grasas_totales_alimento'],
-                ':categoria' => $categoria
+                ':categoria' => $categoriaFinal  // CAMBIAR AQUÍ: usar $categoriaFinal en lugar de $categoria
             ]);
         }
 
