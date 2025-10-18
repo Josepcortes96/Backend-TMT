@@ -18,7 +18,7 @@
 
         public function asociarComidaDieta(int $id_dieta, int $id_comida): void;
 
-        public function actualizarDieta(int $id_dieta, string $nombre, string $descripcion, float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta): array;
+        public function actualizarDieta(int $id_dieta,  float $proteinas_dieta, float $grasas_dieta, float $carbohidratos_dieta): array;
         
         public function insertDietaRol(int $id_dieta, int $id_usuario, string $rol): array;
         

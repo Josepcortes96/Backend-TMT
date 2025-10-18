@@ -70,8 +70,6 @@ class DietaController
 
             $result = $this->dietaService->actualizarMacros(
                 $id_dieta,
-                $nombre = $data['nombre'] ?? '',
-                $descripcion = $data['descripcion'] ?? '',
                 $data['proteinas_dieta'] ?? 0,
                 $data['grasas_dieta'] ?? 0,
                 $data['carbohidratos_dieta'] ?? 0
