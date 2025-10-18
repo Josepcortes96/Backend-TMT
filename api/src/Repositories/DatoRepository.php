@@ -234,6 +234,7 @@ class DatoRepository implements DatoRepositoryInterface
                 SELECT 
                     d.nombre as nombre_control,
                     d.edad,
+                    d.altura,
                     d.cuello, 
                     d.brazo, 
                     d.cintura, 
@@ -263,6 +264,8 @@ class DatoRepository implements DatoRepositoryInterface
                     d.kg_grasa,
                     d.peso,
                     d.fecha,
+                    d.peso_graso,
+                    d.porcentaje_masa_magra,
                     u.nombre,
                     u.apellidos,
                     u.telefono,
@@ -316,6 +319,8 @@ class DatoRepository implements DatoRepositoryInterface
                     d.kg_grasa,
                     d.peso,
                     d.fecha
+                    d.peso_graso,
+                    d.porcentaje_masa_magra,
                 FROM datos d
                 WHERE id_usuario = :id_usuario
                 ORDER BY fecha DESC;";
