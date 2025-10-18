@@ -378,7 +378,14 @@ class UserRepository implements UserRepositoryInterface {
      */
     public function getUsersByCentro(int $centroId): array {
         $stmt = $this->pdo->prepare("
-         SELECT u.*, 
+         SELECT u.nombre, 
+                u.apellidos,
+                u.correo,
+                u.rol,
+                u.fecha_de_nacimiento,
+                u.ciudad,
+                u.numero_usuario,
+                u.id_usuario,
             c.nombre AS nombre_centro
         FROM usuarios u
         INNER JOIN clientes cli ON u.id_usuario = cli.id_usuario
@@ -399,7 +406,16 @@ class UserRepository implements UserRepositoryInterface {
 
     public function getUsersClientes(): array{
         $stmt = $this->pdo->prepare("
-            SELECT u.*, c.nombre AS centro
+            SELECT
+                u.id_usuario,
+                u.nombre, 
+                u.apellidos,
+                u.correo,
+                u.rol,
+                u.fecha_de_nacimiento,
+                u.ciudad,
+                u.numero_usuario, 
+                c.nombre AS centro
             FROM usuarios u
             LEFT JOIN clientes cli ON u.id_usuario = cli.id_usuario
             LEFT JOIN centro_cliente cc ON cli.id_cliente = cc.id_cliente
@@ -422,7 +438,15 @@ class UserRepository implements UserRepositoryInterface {
 
       public function getUsersPreparadores(): array{
         $stmt = $this->pdo->prepare("
-       SELECT u.*, c.nombre AS centro
+       SELECT  u.id_usuario,
+                u.nombre, 
+                u.apellidos,
+                u.correo,
+                u.rol,
+                u.fecha_de_nacimiento,
+                u.ciudad,
+                u.numero_usuario
+                , c.nombre AS centro
         FROM usuarios u
         LEFT JOIN preparadores pr ON u.id_usuario = pr.id_usuario
         LEFT JOIN centro_preparador cp ON pr.id_preparador = cp.id_preparador
@@ -445,7 +469,14 @@ class UserRepository implements UserRepositoryInterface {
 
       public function getUsersPropietarios(): array{
         $stmt = $this->pdo->prepare("
-           SELECT u.*, c.nombre AS centro
+           SELECT  u.id_usuario,
+                u.nombre, 
+                u.apellidos,
+                u.correo,
+                u.rol,
+                u.fecha_de_nacimiento,
+                u.ciudad,
+                u.numero_usuario, , c.nombre AS centro
             FROM usuarios u
             LEFT JOIN propietarios pr ON u.id_usuario = pr.id_usuario
             LEFT JOIN centro_propietario cp ON pr.id_propietario = cp.id_propietario

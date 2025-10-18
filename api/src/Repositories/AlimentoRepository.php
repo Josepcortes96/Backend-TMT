@@ -86,7 +86,7 @@
 
         public function getAlimentoPorId(int $id_alimento): ?array
         {
-            $sql = "SELECT * FROM alimentos WHERE id_alimento = :id_alimento";
+            $sql = "SELECT id_alimento, nombre,calorias,proteinas,carbohidratos,grasas,familia,categoria FROM alimentos WHERE id_alimento = :id_alimento";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([':id_alimento' => $id_alimento]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -165,7 +165,7 @@
         public function getAlimentos(): array
         {
             try {
-                $sql = "SELECT * FROM alimentos";
+                $sql = "SELECT id_alimento, nombre,calorias,proteinas,carbohidratos,grasas,familia,categoria FROM alimentos";
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute();
                 return $stmt->fetchAll(PDO::FETCH_ASSOC);
