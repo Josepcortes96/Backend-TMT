@@ -6,7 +6,7 @@ interface DietaServiceInterface
 {
     public function crearDietaConMacros(array $datos): int;
 
-    public function actualizarMacros(int $id_dieta, string $nombre, string $descripcion, float $proteinas, float $grasas, float $carbohidratos): array;
+    public function actualizarMacros(int $id_dieta, float $proteinas, float $grasas, float $carbohidratos): array;
 
     public function asociarComidas(int $id_dieta, array $comidas): void;
 
