@@ -382,6 +382,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.apellidos,
                 u.correo,
                 u.estado,
+                u.telefono,
                 u.rol,
                 u.fecha_de_nacimiento,
                 u.ciudad,
@@ -416,7 +417,8 @@ class UserRepository implements UserRepositoryInterface {
                 u.rol,
                 u.fecha_de_nacimiento,
                 u.ciudad,
-                u.numero_usuario, 
+                u.numero_usuario,
+                u.telefono, 
                 c.nombre AS centro
             FROM usuarios u
             LEFT JOIN clientes cli ON u.id_usuario = cli.id_usuario
@@ -444,9 +446,11 @@ class UserRepository implements UserRepositoryInterface {
                 u.nombre, 
                 u.apellidos,
                 u.correo,
+                u.estado,
                 u.rol,
                 u.fecha_de_nacimiento,
                 u.ciudad,
+                u.telefono,
                 u.numero_usuario
                 , c.nombre AS centro
         FROM usuarios u
@@ -476,8 +480,10 @@ class UserRepository implements UserRepositoryInterface {
                 u.apellidos,
                 u.correo,
                 u.rol,
+                u.estado,
                 u.fecha_de_nacimiento,
                 u.ciudad,
+                u.telefono,
                 u.numero_usuario, c.nombre AS centro
             FROM usuarios u
             LEFT JOIN propietarios pr ON u.id_usuario = pr.id_usuario
