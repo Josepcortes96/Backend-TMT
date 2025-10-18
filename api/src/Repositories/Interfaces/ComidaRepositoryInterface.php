@@ -12,7 +12,7 @@
             int $alimentoId,
             float $cantidad,
             array $nutricion,
-            string $categoria 
+            ?string $categoria = null 
         ): void; 
         public function actualizarCantidadAlimento(int $comidaId, int $alimentoId, float $cantidad, array $nutricion): bool;
         public function eliminarAlimentoDeComida(int $comidaId, int $alimentoId): bool;

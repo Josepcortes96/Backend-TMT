@@ -54,7 +54,7 @@
             int $alimentoId,
             float $cantidad,
             array $nutricion,
-            string $categoria 
+            ?string $categoria = null 
         ): void {
             $sql = "INSERT INTO comida_alimento (
                         id_comida, 
