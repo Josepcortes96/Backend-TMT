@@ -318,7 +318,7 @@ class DatoRepository implements DatoRepositoryInterface
                     d.kg_masa_magra, 
                     d.kg_grasa,
                     d.peso,
-                    d.fecha
+                    d.fecha,
                     d.peso_graso,
                     d.porcentaje_masa_magra,
                 FROM datos d
