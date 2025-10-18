@@ -416,6 +416,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.correo,
                 u.rol,
                 u.fecha_de_nacimiento,
+                u.fecha_creacion,
                 u.ciudad,
                 u.numero_usuario,
                 u.telefono, 
@@ -449,6 +450,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.estado,
                 u.rol,
                 u.fecha_de_nacimiento,
+                u.fecha_creacion,
                 u.ciudad,
                 u.telefono,
                 u.numero_usuario
@@ -482,6 +484,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.rol,
                 u.estado,
                 u.fecha_de_nacimiento,
+                u.fecha_creacion,
                 u.ciudad,
                 u.telefono,
                 u.numero_usuario, c.nombre AS centro
