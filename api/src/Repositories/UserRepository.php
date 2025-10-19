@@ -385,6 +385,7 @@ class UserRepository implements UserRepositoryInterface {
                 u.telefono,
                 u.rol,
                 u.fecha_de_nacimiento,
+                u.fecha_creacion,
                 u.ciudad,
                 u.numero_usuario,
                 u.id_usuario,
