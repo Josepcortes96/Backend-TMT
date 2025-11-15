@@ -12,6 +12,7 @@
         public string $grado_actividad;
         public string $objetivo;
         public ?float $peso_oseo_rocha = null;
+        public ?float $porcentaje_oseo = null;
         public ?float $peso_residual = null;
         public ?float $porcentaje_residual = null;
         public ?float $peso_extracelular = null;
