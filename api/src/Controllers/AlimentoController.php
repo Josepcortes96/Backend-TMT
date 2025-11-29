@@ -78,7 +78,7 @@ class AlimentoController
 
     public function getByFamilia(Request $request, Response $response, array $args): Response
     {
-        $alimentos = $this->alimentoService->getAlimentosFamilia($args['familia']);
+        $alimentos = $this->alimentoService->getAlimentosFamilia($args['categoria']);
 
         $response->getBody()->write(json_encode($alimentos ?? ['error' => 'No se encontraron alimentos para esa familia']));
         return $response->withHeader('Content-Type', 'application/json');

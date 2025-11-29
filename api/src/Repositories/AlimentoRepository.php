@@ -120,9 +120,9 @@
 
         public function getAlimentosFamilia(string $familia): ?array
         {
-            $sql = "SELECT nombre FROM alimentos WHERE familia = :familia";
+            $sql = "SELECT nombre FROM alimentos WHERE categoria = :categoria";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([':familia' => $familia]);
+            $stmt->execute([':categoria' => $familia]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result ?: null;
         }
