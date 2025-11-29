@@ -15,11 +15,10 @@ class AlimentoController
         $this->alimentoService = $alimentoService;
     }
 
-    public function create(Request $request, Response $response): Response
+  public function create(Request $request, Response $response): Response
 {
-    $data = $request->getParsedBody();
+    $data = json_decode($request->getBody()->getContents(), true);
     $results = [];
-
 
     if (isset($data['nombre'])) {
         $data = [$data];
@@ -50,6 +49,7 @@ class AlimentoController
     $response->getBody()->write(json_encode($results));
     return $response->withHeader('Content-Type', 'application/json');
 }
+
 
 
     public function getAll(Request $request, Response $response): Response
