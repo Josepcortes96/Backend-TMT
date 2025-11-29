@@ -47,6 +47,10 @@ class AlimentoController
     }
 
     $response->getBody()->write(json_encode($results));
+    $raw = $request->getBody()->getContents();
+        error_log("RAW BODY: " . $raw);
+        $data = json_decode($raw, true);
+
     return $response->withHeader('Content-Type', 'application/json');
 }
 
