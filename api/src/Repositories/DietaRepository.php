@@ -162,8 +162,6 @@ class DietaRepository implements DietaRepositoryInterface {
          * Actualiza los datos principales de una dieta.
          *
          * @param int    $id_dieta          Identificador único de la dieta.
-         * @param string $nombre            Nombre de la dieta.
-         * @param string $descripcion       Descripción de la dieta.
          * @param float  $proteinas_dieta   Proteínas totales.
          * @param float  $grasas_dieta      Grasas totales.
          * @param float  $carbohidratos_dieta Carbohidratos totales.
@@ -174,11 +172,11 @@ class DietaRepository implements DietaRepositoryInterface {
          * }
          */
 
-        public function actualizarDieta($id_dieta,$proteinas_dieta, $grasas_dieta, $carbohidratos_dieta):array {
+        public function actualizarDieta($id_dieta, $proteinas_dieta, $grasas_dieta, $carbohidratos_dieta):array {
             $stmt = $this->pdo->prepare("
                 UPDATE dietas
                 SET
-         
+               ,
                 proteinas_dieta = :proteinas_dieta,
                     grasas_dieta = :grasas_dieta,
                     carbohidratos_dieta = :carbohidratos_dieta
@@ -186,6 +184,7 @@ class DietaRepository implements DietaRepositoryInterface {
             ");
             $stmt->execute([
                 'id_dieta' => $id_dieta,
+
                 'proteinas_dieta' => $proteinas_dieta,
                 'grasas_dieta' => $grasas_dieta,
                 'carbohidratos_dieta' => $carbohidratos_dieta

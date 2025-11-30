@@ -121,4 +121,36 @@ class PlantillaController
             return $response->withStatus(500)->withHeader('Content-Type', 'application/json');
         }
     }
+
+    public function actualizar(Request $request, Response $response, array $args): Response
+{
+    try {
+
+        $id_plantilla = (int) $args['id'];
+        $data = $request->getParsedBody();
+
+        // Llamamos al servicio
+        $result = $this->plantillaService->actualizarPlantilla(
+            $id_plantilla,
+            $data['nombre'] ?? ''
+        );
+
+        $response->getBody()->write(json_encode([
+            'success' => true,
+            'data' => $result
+        ]));
+
+    } catch (\Throwable $e) {
+
+        $response->getBody()->write(json_encode([
+            'success' => false,
+            'message' => $e->getMessage()
+        ]));
+
+        return $response->withStatus(500);
+    }
+
+    return $response->withHeader('Content-Type', 'application/json');
+}
+
 }

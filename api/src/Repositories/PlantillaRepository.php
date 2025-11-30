@@ -234,6 +234,28 @@ class PlantillaRepository implements PlantillaRepositoryInterface {
         }
 
 
+        public function actualizarPlantilla($id_plantilla, $nombre): array
+        {
+            $stmt = $this->pdo->prepare("
+                UPDATE plantillas
+                SET nombre = :nombre
+                WHERE id_plantilla = :id_plantilla
+            ");
+
+            $stmt->execute([
+                'id_plantilla' => $id_plantilla,
+                'nombre'       => $nombre
+            ]);
+
+            return [
+                "success" => true,
+                "message" => "Plantilla actualizada correctamente"
+            ];
+        }
+
+
+
+
 
 
    

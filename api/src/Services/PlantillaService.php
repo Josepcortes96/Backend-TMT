@@ -69,6 +69,12 @@ class PlantillaService implements PlantillaServiceInterface
         return $informe;
     }
 
+
+   public function actualizarPlantilla($id_plantilla, $nombre): array
+    {
+        return $this->plantillaRepository-> actualizarPlantilla($id_plantilla, $nombre);
+    }
+
 }
 
 ?>

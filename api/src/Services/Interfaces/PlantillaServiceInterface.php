@@ -9,6 +9,7 @@ interface PlantillaServiceInterface
     public function eliminarPlantilla(int $id_plantilla): bool;
     public function obtenerPlantillasPorCentro(int $id_centro): array;
     public function obtenerInformePlantilla(int $id_plantilla): array;
+    public function actualizarPlantilla($id_plantilla, $nombre): array;
 }
 ?>
 

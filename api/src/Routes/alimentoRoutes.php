@@ -16,3 +16,5 @@ return function (App $app, ContainerInterface $container) {
         $group->post('/calcular', [$controller, 'calcular']);       // Calcular valores nutricionales
     });
 };
+
+?>
