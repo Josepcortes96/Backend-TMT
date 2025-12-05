@@ -176,7 +176,7 @@ class DietaRepository implements DietaRepositoryInterface {
             $stmt = $this->pdo->prepare("
                 UPDATE dietas
                 SET
-               ,
+               
                 proteinas_dieta = :proteinas_dieta,
                     grasas_dieta = :grasas_dieta,
                     carbohidratos_dieta = :carbohidratos_dieta
